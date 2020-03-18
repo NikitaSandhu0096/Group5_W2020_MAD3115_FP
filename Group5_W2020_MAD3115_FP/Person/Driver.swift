@@ -9,6 +9,8 @@
 import Foundation
 
 class Driver : Person{
+    var type: String = "Driver"
+    
     var id: Int
     var firstName: String
     var lastName: String

@@ -9,6 +9,8 @@
 import Foundation
 
 class Owner : Person{
+    var type: String = "Owner"
+    
     var id: Int
     var firstName: String
     var lastName: String

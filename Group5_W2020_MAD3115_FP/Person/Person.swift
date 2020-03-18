@@ -26,6 +26,8 @@ protocol Person : IDisplay
     var email : String { get set }
     var userName : String { get set }
     var password : String { get set }
+    
+    var type : String {get set}
 
     func display()
 }

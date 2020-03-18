@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EE62DC0C24229C2700B18BA9 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62DC0B24229C2700B18BA9 /* DataStorage.swift */; };
 		EE62DC0E2422A78F00B18BA9 /* PersonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62DC0D2422A78F00B18BA9 /* PersonListViewController.swift */; };
+		EE62DC102422BAA600B18BA9 /* PersonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62DC0F2422BAA600B18BA9 /* PersonDetailsViewController.swift */; };
 		EE76162F2421A67600CC8606 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE76162E2421A67600CC8606 /* AppDelegate.swift */; };
 		EE7616312421A67600CC8606 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7616302421A67600CC8606 /* SceneDelegate.swift */; };
 		EE7616332421A67600CC8606 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7616322421A67600CC8606 /* LoginViewController.swift */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		EE62DC0B24229C2700B18BA9 /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
 		EE62DC0D2422A78F00B18BA9 /* PersonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewController.swift; sourceTree = "<group>"; };
+		EE62DC0F2422BAA600B18BA9 /* PersonDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewController.swift; sourceTree = "<group>"; };
 		EE76162B2421A67600CC8606 /* Group5_W2020_MAD3115_FP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Group5_W2020_MAD3115_FP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE76162E2421A67600CC8606 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE7616302421A67600CC8606 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			children = (
 				EE7616322421A67600CC8606 /* LoginViewController.swift */,
 				EE62DC0D2422A78F00B18BA9 /* PersonListViewController.swift */,
+				EE62DC0F2422BAA600B18BA9 /* PersonDetailsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				EE7616332421A67600CC8606 /* LoginViewController.swift in Sources */,
 				EE62DC0C24229C2700B18BA9 /* DataStorage.swift in Sources */,
 				EE7616512421A80C00CC8606 /* VehicleRent.swift in Sources */,
+				EE62DC102422BAA600B18BA9 /* PersonDetailsViewController.swift in Sources */,
 				EE76162F2421A67600CC8606 /* AppDelegate.swift in Sources */,
 				EE7616522421A80C00CC8606 /* IDisplay.swift in Sources */,
 				EE7616312421A67600CC8606 /* SceneDelegate.swift in Sources */,

@@ -24,6 +24,9 @@ class PersonListViewController: UIViewController {
         ownerNames = DataStorage.getInstance().getAllOwners()
         tblPersons.reloadData()
     }
+    @IBAction func bbLogout(_ sender: UIBarButtonItem) {
+        self.navigationController?.popViewController(animated: true)
+    }
     
     @IBAction func segPerson(_ sender: UISegmentedControl) {
         tblPersons.reloadData()
@@ -58,13 +61,22 @@ extension PersonListViewController : UITableViewDataSource, UITableViewDelegate{
         return cell!
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
-//        let c = DataStorage.getInstance().getAllCustomers()
-//        let sc = c[indexPath.row]
-//        let sb = UIStoryboard(name: "Main", bundle: nil)
-//        let showBillDetailsVC = sb.instantiateViewController(identifier: "showBillDetailsVC") as! ShowBillDetailsViewController
-//        showBillDetailsVC.customer = sc
-//        self.navigationController?.pushViewController(showBillDetailsVC, animated: true)
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        if segPerson.selectedSegmentIndex == 0{
+            let c = DataStorage.getInstance().getAllCustomers()
+            let sc = c[indexPath.row]
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let personDetailsViewController = sb.instantiateViewController(identifier: "PersonDetailsViewController") as! PersonDetailsViewController
+            personDetailsViewController.person = sc
+            self.navigationController?.pushViewController(personDetailsViewController, animated: true)
+        }else{
+            let c = DataStorage.getInstance().getAllOwners()
+            let sc = c[indexPath.row]
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let personDetailsViewController = sb.instantiateViewController(identifier: "PersonDetailsViewController") as! PersonDetailsViewController
+            personDetailsViewController.person = sc
+            self.navigationController?.pushViewController(personDetailsViewController, animated: true)
+        }
+    }
 }
