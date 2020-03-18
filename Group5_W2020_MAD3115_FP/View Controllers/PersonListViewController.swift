@@ -10,8 +10,10 @@ import UIKit
 
 class PersonListViewController: UIViewController {
 
+    @IBOutlet weak var segPerson: UISegmentedControl!
     @IBOutlet weak var tblPersons: UITableView!
     var customerNames : [Customer] = []
+    var ownerNames : [Owner] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +21,11 @@ class PersonListViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         customerNames = DataStorage.getInstance().getAllCustomers()
+        ownerNames = DataStorage.getInstance().getAllOwners()
+        tblPersons.reloadData()
+    }
+    
+    @IBAction func segPerson(_ sender: UISegmentedControl) {
         tblPersons.reloadData()
     }
     
@@ -30,15 +37,23 @@ extension PersonListViewController : UITableViewDataSource, UITableViewDelegate{
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if segPerson.selectedSegmentIndex == 0{
         return customerNames.count
+        } else{
+            return ownerNames.count
+        }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PersonCell")
     
-        let customer = customerNames[indexPath.row]
-
-        cell?.textLabel?.text = customer.firstName
+        if segPerson.selectedSegmentIndex == 0{
+            let customer = customerNames[indexPath.row]
+            cell?.textLabel?.text = customer.firstName
+        }else{
+            let owner = ownerNames[indexPath.row]
+            cell?.textLabel?.text = owner.firstName
+        }
 
         return cell!
     }

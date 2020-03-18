@@ -94,6 +94,9 @@
                                     <segment title="Customer"/>
                                     <segment title="Owner"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segPerson:" destination="qG6-BH-cwp" eventType="valueChanged" id="Rna-Xb-GEV"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -101,6 +104,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Person List" id="EoB-Hs-pKr"/>
                     <connections>
+                        <outlet property="segPerson" destination="yqs-2x-6jZ" id="fQQ-hB-gPC"/>
                         <outlet property="tblPersons" destination="Qti-B2-Fhp" id="xCj-8w-jLH"/>
                     </connections>
                 </viewController>
