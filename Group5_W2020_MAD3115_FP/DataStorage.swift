@@ -167,16 +167,16 @@ class DataStorage{
         addOwner(owner: owner5)
     }
         
-    func getAllCustomer() -> [Person]{
-        var customerList : [Person] = []
+    func getAllCustomers() -> [Customer]{
+        var customerList : [Customer] = []
         for i in customerDictionary{
             customerList.append(i.value)
         }
         return customerList
     }
     
-    func getAllOwners() -> [Person]{
-        var ownerList : [Person] = []
+    func getAllOwners() -> [Owner]{
+        var ownerList : [Owner] = []
         for j in ownerDictionary{
             ownerList.append(j.value)
         }

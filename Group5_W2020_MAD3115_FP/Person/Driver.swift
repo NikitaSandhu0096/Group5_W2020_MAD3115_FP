@@ -31,9 +31,9 @@ class Driver : Person{
         self.gender = gender
         self.birthDate = birthDate
         self.mobileNumber = mobileNumber
-        if(!email.emailValid()){
-            throw DriverError.InvalidEmail
-        }
+//        if(!email.emailValid()){
+//            throw DriverError.InvalidEmail
+//        }
         self.email = email
         self.userName = userName
         self.password = password

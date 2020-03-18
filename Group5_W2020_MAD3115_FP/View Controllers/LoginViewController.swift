@@ -33,13 +33,13 @@ class LoginViewController: UIViewController {
 //    @objc func login(){
         if (txtEmail.text == "nsandhu@gmail.com" && txtPassword.text == "nsandhu"){
         if (txtEmail.text?.emailValid() == true && txtPassword.text != ""){
-            let alertController = UIAlertController(title: "Login Successful", message:
-                "Valid email and password", preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "OK", style: .default))
-            self.present(alertController, animated: true, completion: nil)
-//                let sb = UIStoryboard(name: "Main", bundle: nil)
-//                let customerListVC = sb.instantiateViewController(identifier: "customerListVC") as! CustomerListViewController
-//                self.navigationController?.pushViewController(customerListVC, animated: true)
+//            let alertController = UIAlertController(title: "Login Successful", message:
+//                "Valid email and password", preferredStyle: .alert)
+//            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+//            self.present(alertController, animated: true, completion: nil)
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+                let customerListVC = sb.instantiateViewController(identifier: "PersonListViewController") as! PersonListViewController
+                self.navigationController?.pushViewController(customerListVC, animated: true)
             }
         }else{
             let alertController = UIAlertController(title: "Login Failed", message:
