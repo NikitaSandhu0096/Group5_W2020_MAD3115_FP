@@ -25,6 +25,7 @@
 		EE76165A2421A81B00CC8606 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE76164D2421A7FA00CC8606 /* Vehicle.swift */; };
 		EE76165B2421A82600CC8606 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE76164E2421A7FA00CC8606 /* Car.swift */; };
 		EE76165C2421A82600CC8606 /* MotorCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE76164F2421A7FA00CC8606 /* MotorCycle.swift */; };
+		EE76165F2421ACEC00CC8606 /* Screen Shot 2020-03-17 at 9.10.41 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = EE76165E2421ACEC00CC8606 /* Screen Shot 2020-03-17 at 9.10.41 PM.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		EE76164E2421A7FA00CC8606 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		EE76164F2421A7FA00CC8606 /* MotorCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorCycle.swift; sourceTree = "<group>"; };
 		EE7616502421A7FA00CC8606 /* VehicleRent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleRent.swift; sourceTree = "<group>"; };
+		EE76165E2421ACEC00CC8606 /* Screen Shot 2020-03-17 at 9.10.41 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2020-03-17 at 9.10.41 PM.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		EE76162D2421A67600CC8606 /* Group5_W2020_MAD3115_FP */ = {
 			isa = PBXGroup;
 			children = (
+				EE76165D2421ABC300CC8606 /* Image */,
 				EE7616462421A7FA00CC8606 /* Person */,
 				EE7616422421A7FA00CC8606 /* Util */,
 				EE76164B2421A7FA00CC8606 /* Vehicle */,
@@ -125,6 +128,14 @@
 				EE76164F2421A7FA00CC8606 /* MotorCycle.swift */,
 			);
 			path = Vehicle;
+			sourceTree = "<group>";
+		};
+		EE76165D2421ABC300CC8606 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				EE76165E2421ACEC00CC8606 /* Screen Shot 2020-03-17 at 9.10.41 PM.png */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +199,7 @@
 				EE76163B2421A67700CC8606 /* LaunchScreen.storyboard in Resources */,
 				EE7616382421A67700CC8606 /* Assets.xcassets in Resources */,
 				EE7616362421A67600CC8606 /* Main.storyboard in Resources */,
+				EE76165F2421ACEC00CC8606 /* Screen Shot 2020-03-17 at 9.10.41 PM.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
