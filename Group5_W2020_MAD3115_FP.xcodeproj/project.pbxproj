@@ -13,6 +13,18 @@
 		EE7616362421A67600CC8606 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE7616342421A67600CC8606 /* Main.storyboard */; };
 		EE7616382421A67700CC8606 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE7616372421A67700CC8606 /* Assets.xcassets */; };
 		EE76163B2421A67700CC8606 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE7616392421A67700CC8606 /* LaunchScreen.storyboard */; };
+		EE7616512421A80C00CC8606 /* VehicleRent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7616502421A7FA00CC8606 /* VehicleRent.swift */; };
+		EE7616522421A80C00CC8606 /* IDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7616452421A7FA00CC8606 /* IDisplay.swift */; };
+		EE7616532421A81400CC8606 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7616472421A7FA00CC8606 /* Person.swift */; };
+		EE7616542421A81400CC8606 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7616482421A7FA00CC8606 /* Customer.swift */; };
+		EE7616552421A81400CC8606 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7616492421A7FA00CC8606 /* Driver.swift */; };
+		EE7616562421A81400CC8606 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE76164A2421A7FA00CC8606 /* Owner.swift */; };
+		EE7616572421A81B00CC8606 /* CustomException.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7616432421A7FA00CC8606 /* CustomException.swift */; };
+		EE7616582421A81B00CC8606 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7616442421A7FA00CC8606 /* Extensions.swift */; };
+		EE7616592421A81B00CC8606 /* Bus.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE76164C2421A7FA00CC8606 /* Bus.swift */; };
+		EE76165A2421A81B00CC8606 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE76164D2421A7FA00CC8606 /* Vehicle.swift */; };
+		EE76165B2421A82600CC8606 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE76164E2421A7FA00CC8606 /* Car.swift */; };
+		EE76165C2421A82600CC8606 /* MotorCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE76164F2421A7FA00CC8606 /* MotorCycle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +36,18 @@
 		EE7616372421A67700CC8606 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE76163A2421A67700CC8606 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE76163C2421A67700CC8606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE7616432421A7FA00CC8606 /* CustomException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomException.swift; sourceTree = "<group>"; };
+		EE7616442421A7FA00CC8606 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		EE7616452421A7FA00CC8606 /* IDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDisplay.swift; sourceTree = "<group>"; };
+		EE7616472421A7FA00CC8606 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		EE7616482421A7FA00CC8606 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		EE7616492421A7FA00CC8606 /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
+		EE76164A2421A7FA00CC8606 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		EE76164C2421A7FA00CC8606 /* Bus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bus.swift; sourceTree = "<group>"; };
+		EE76164D2421A7FA00CC8606 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		EE76164E2421A7FA00CC8606 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		EE76164F2421A7FA00CC8606 /* MotorCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorCycle.swift; sourceTree = "<group>"; };
+		EE7616502421A7FA00CC8606 /* VehicleRent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleRent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +80,10 @@
 		EE76162D2421A67600CC8606 /* Group5_W2020_MAD3115_FP */ = {
 			isa = PBXGroup;
 			children = (
+				EE7616462421A7FA00CC8606 /* Person */,
+				EE7616422421A7FA00CC8606 /* Util */,
+				EE76164B2421A7FA00CC8606 /* Vehicle */,
+				EE7616502421A7FA00CC8606 /* VehicleRent.swift */,
 				EE76162E2421A67600CC8606 /* AppDelegate.swift */,
 				EE7616302421A67600CC8606 /* SceneDelegate.swift */,
 				EE7616322421A67600CC8606 /* ViewController.swift */,
@@ -63,8 +91,40 @@
 				EE7616372421A67700CC8606 /* Assets.xcassets */,
 				EE7616392421A67700CC8606 /* LaunchScreen.storyboard */,
 				EE76163C2421A67700CC8606 /* Info.plist */,
+				EE7616452421A7FA00CC8606 /* IDisplay.swift */,
 			);
 			path = Group5_W2020_MAD3115_FP;
+			sourceTree = "<group>";
+		};
+		EE7616422421A7FA00CC8606 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				EE7616432421A7FA00CC8606 /* CustomException.swift */,
+				EE7616442421A7FA00CC8606 /* Extensions.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		EE7616462421A7FA00CC8606 /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				EE7616472421A7FA00CC8606 /* Person.swift */,
+				EE7616482421A7FA00CC8606 /* Customer.swift */,
+				EE7616492421A7FA00CC8606 /* Driver.swift */,
+				EE76164A2421A7FA00CC8606 /* Owner.swift */,
+			);
+			path = Person;
+			sourceTree = "<group>";
+		};
+		EE76164B2421A7FA00CC8606 /* Vehicle */ = {
+			isa = PBXGroup;
+			children = (
+				EE76164D2421A7FA00CC8606 /* Vehicle.swift */,
+				EE76164C2421A7FA00CC8606 /* Bus.swift */,
+				EE76164E2421A7FA00CC8606 /* Car.swift */,
+				EE76164F2421A7FA00CC8606 /* MotorCycle.swift */,
+			);
+			path = Vehicle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +198,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE76165B2421A82600CC8606 /* Car.swift in Sources */,
+				EE76165C2421A82600CC8606 /* MotorCycle.swift in Sources */,
+				EE7616572421A81B00CC8606 /* CustomException.swift in Sources */,
+				EE7616582421A81B00CC8606 /* Extensions.swift in Sources */,
+				EE7616592421A81B00CC8606 /* Bus.swift in Sources */,
+				EE76165A2421A81B00CC8606 /* Vehicle.swift in Sources */,
+				EE7616532421A81400CC8606 /* Person.swift in Sources */,
+				EE7616542421A81400CC8606 /* Customer.swift in Sources */,
+				EE7616552421A81400CC8606 /* Driver.swift in Sources */,
+				EE7616562421A81400CC8606 /* Owner.swift in Sources */,
 				EE7616332421A67600CC8606 /* ViewController.swift in Sources */,
+				EE7616512421A80C00CC8606 /* VehicleRent.swift in Sources */,
 				EE76162F2421A67600CC8606 /* AppDelegate.swift in Sources */,
+				EE7616522421A80C00CC8606 /* IDisplay.swift in Sources */,
 				EE7616312421A67600CC8606 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
