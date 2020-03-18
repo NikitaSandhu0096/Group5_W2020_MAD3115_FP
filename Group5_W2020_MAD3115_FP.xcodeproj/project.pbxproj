@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		EE76162F2421A67600CC8606 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE76162E2421A67600CC8606 /* AppDelegate.swift */; };
 		EE7616312421A67600CC8606 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7616302421A67600CC8606 /* SceneDelegate.swift */; };
-		EE7616332421A67600CC8606 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7616322421A67600CC8606 /* ViewController.swift */; };
+		EE7616332421A67600CC8606 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7616322421A67600CC8606 /* LoginViewController.swift */; };
 		EE7616362421A67600CC8606 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE7616342421A67600CC8606 /* Main.storyboard */; };
 		EE7616382421A67700CC8606 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE7616372421A67700CC8606 /* Assets.xcassets */; };
 		EE76163B2421A67700CC8606 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE7616392421A67700CC8606 /* LaunchScreen.storyboard */; };
@@ -32,7 +32,7 @@
 		EE76162B2421A67600CC8606 /* Group5_W2020_MAD3115_FP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Group5_W2020_MAD3115_FP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE76162E2421A67600CC8606 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE7616302421A67600CC8606 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EE7616322421A67600CC8606 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EE7616322421A67600CC8606 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EE7616352421A67600CC8606 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE7616372421A67700CC8606 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE76163A2421A67700CC8606 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -82,6 +82,7 @@
 		EE76162D2421A67600CC8606 /* Group5_W2020_MAD3115_FP */ = {
 			isa = PBXGroup;
 			children = (
+				EE7616602421B0CC00CC8606 /* View Controllers */,
 				EE76165D2421ABC300CC8606 /* Image */,
 				EE7616462421A7FA00CC8606 /* Person */,
 				EE7616422421A7FA00CC8606 /* Util */,
@@ -89,7 +90,6 @@
 				EE7616502421A7FA00CC8606 /* VehicleRent.swift */,
 				EE76162E2421A67600CC8606 /* AppDelegate.swift */,
 				EE7616302421A67600CC8606 /* SceneDelegate.swift */,
-				EE7616322421A67600CC8606 /* ViewController.swift */,
 				EE7616342421A67600CC8606 /* Main.storyboard */,
 				EE7616372421A67700CC8606 /* Assets.xcassets */,
 				EE7616392421A67700CC8606 /* LaunchScreen.storyboard */,
@@ -136,6 +136,14 @@
 				EE76165E2421ACEC00CC8606 /* Screen Shot 2020-03-17 at 9.10.41 PM.png */,
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		EE7616602421B0CC00CC8606 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EE7616322421A67600CC8606 /* LoginViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,7 +228,7 @@
 				EE7616542421A81400CC8606 /* Customer.swift in Sources */,
 				EE7616552421A81400CC8606 /* Driver.swift in Sources */,
 				EE7616562421A81400CC8606 /* Owner.swift in Sources */,
-				EE7616332421A67600CC8606 /* ViewController.swift in Sources */,
+				EE7616332421A67600CC8606 /* LoginViewController.swift in Sources */,
 				EE7616512421A80C00CC8606 /* VehicleRent.swift in Sources */,
 				EE76162F2421A67600CC8606 /* AppDelegate.swift in Sources */,
 				EE7616522421A80C00CC8606 /* IDisplay.swift in Sources */,
