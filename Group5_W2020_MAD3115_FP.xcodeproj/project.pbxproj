@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE62DC0C24229C2700B18BA9 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62DC0B24229C2700B18BA9 /* DataStorage.swift */; };
 		EE76162F2421A67600CC8606 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE76162E2421A67600CC8606 /* AppDelegate.swift */; };
 		EE7616312421A67600CC8606 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7616302421A67600CC8606 /* SceneDelegate.swift */; };
 		EE7616332421A67600CC8606 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7616322421A67600CC8606 /* LoginViewController.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE62DC0B24229C2700B18BA9 /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
 		EE76162B2421A67600CC8606 /* Group5_W2020_MAD3115_FP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Group5_W2020_MAD3115_FP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE76162E2421A67600CC8606 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE7616302421A67600CC8606 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				EE7616392421A67700CC8606 /* LaunchScreen.storyboard */,
 				EE76163C2421A67700CC8606 /* Info.plist */,
 				EE7616452421A7FA00CC8606 /* IDisplay.swift */,
+				EE62DC0B24229C2700B18BA9 /* DataStorage.swift */,
 			);
 			path = Group5_W2020_MAD3115_FP;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				EE7616552421A81400CC8606 /* Driver.swift in Sources */,
 				EE7616562421A81400CC8606 /* Owner.swift in Sources */,
 				EE7616332421A67600CC8606 /* LoginViewController.swift in Sources */,
+				EE62DC0C24229C2700B18BA9 /* DataStorage.swift in Sources */,
 				EE7616512421A80C00CC8606 /* VehicleRent.swift in Sources */,
 				EE76162F2421A67600CC8606 /* AppDelegate.swift in Sources */,
 				EE7616522421A80C00CC8606 /* IDisplay.swift in Sources */,
