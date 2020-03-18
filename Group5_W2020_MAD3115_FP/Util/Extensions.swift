@@ -23,16 +23,6 @@ extension String{
         return mobileTest.evaluate(with: self)
     }
     
-//    func toDate(withFormat format: String = "yyyy-MM-dd") -> Date                                       //https://medium.com/@lugearma/converting-date-string-to-date-type-with-swift-8b6b2f07d50
-//    {
-//      let dateFormatter = DateFormatter()
-//      dateFormatter.dateFormat = format
-//      guard let date = dateFormatter.date(from: self) else {
-//        preconditionFailure("not valid date")
-//      }
-//      return date
-//    }
-    
     // Password Encryption
     //https://forums.developer.apple.com/thread/89272
     func encrypt(key:String, iv:String, options:Int = kCCOptionPKCS7Padding) -> String? {
