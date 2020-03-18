@@ -10,6 +10,8 @@ import Foundation
 
 class Bus  : Vehicle
 {
+    var type: String = "Bus"
+    
     var identificationNumber: String
     var description: String
     var isSelfDrive: Bool

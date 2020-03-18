@@ -9,7 +9,9 @@
 import Foundation
 
 class MotorCycle : Vehicle
-     {
+{
+    var type: String = "Motorcycle"
+    
           
          var identificationNumber: String
          var description: String

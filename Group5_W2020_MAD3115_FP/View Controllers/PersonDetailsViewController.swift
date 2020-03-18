@@ -10,6 +10,7 @@ import UIKit
 
 class PersonDetailsViewController: UIViewController {
     
+    @IBOutlet weak var tblVehicle: UITableView!
     var person : Person?
     
     @IBOutlet weak var lblID: UILabel!
@@ -26,6 +27,7 @@ class PersonDetailsViewController: UIViewController {
     @IBOutlet weak var lblDetail12: UILabel!
     @IBOutlet weak var lblDetail13: UILabel!
     @IBOutlet weak var lblDetail14: UILabel!
+    @IBOutlet weak var lblVehicleList: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +50,7 @@ class PersonDetailsViewController: UIViewController {
             lblDetail11.text = "Company Title : \(owner.companyTitle)"
             lblDetail12.text = "Business Landline Number : \(owner.businessLandLineNumber)"
             lblDetail13.text = "Website : \(owner.website)"
+            lblVehicleList.text = "Vehicles Owned by Owner"
         }else{
             lblDetail14.text = "Customer's Details"
             let customer = person as! Customer
@@ -64,6 +67,55 @@ class PersonDetailsViewController: UIViewController {
             lblDetail11.text = "CAddress : \(customer.address)"
             lblDetail12.text = "City : \(customer.city)"
             lblDetail13.text = "Amount to pay for all the rented vehicles : \(customer.amountToPayForAllRentedVehicles.currency())"
+            lblVehicleList.text = "Vehicles rented by customer"
         }
     }
+}
+extension PersonDetailsViewController : UITableViewDataSource, UITableViewDelegate{
+    func numberOfSections(in tableView: UITableView) -> Int{
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if person?.type == "Owner"{
+            let owner = person as! Owner
+            return owner.getVehicles().count
+        }
+            else{
+            let customer = person as! Customer
+            return customer.getVehicleRented().count
+        }
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "VehicleCell")
+
+        if person?.type == "Owner"{
+            let owner = person as! Owner
+            let owner1 = owner.getVehicles()[indexPath.row]
+            cell?.textLabel?.text = owner1.type
+        }
+            else{
+            let customer = person as! Customer
+            let customer1 = customer.getVehicleRented()[indexPath.row]
+
+        }
+
+        return cell!
+    }
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return CGFloat(100.0)
+//    }
+//
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        tableView.deselectRow(at: indexPath, animated: true)
+////        let c = DataStorage.getInstance().getAllBills()
+////        let sa = c[indexPath.row]
+//        let sc = customer?.getBills()[indexPath.row]
+//        let sb = UIStoryboard(name: "Main", bundle: nil)
+//        let billInfoVC = sb.instantiateViewController(identifier: "billInfoVC") as! BillInfoViewController
+//        billInfoVC.bill = sc
+//        self.navigationController?.pushViewController(billInfoVC, animated: true)
+//    }
 }

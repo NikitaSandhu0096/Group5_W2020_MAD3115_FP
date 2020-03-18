@@ -61,24 +61,9 @@ class VehicleRent: IDisplay
         vehicles.removeValue(forKey: identificationNumber)
     }
     
-//    func rentForDays() -> Float{
-//        for i in vehicles{
-//            rentInNumberOfDays = i.value.ratePerDay * Float(totalDays())
-//        }
-//        return rentInNumberOfDays
-//    }
-//
-//    func rentForKm() -> Float{
-//        for i in vehicles{
-//            rentInKm = i.value.ratePerKm * Float(self.numberOfKmDrived)
-//        }
-//        return rentInKm
-//    }
-//
-//    func calculateTotalBill() -> Float{
-//        totalBillToPay = rentInNumberOfDays + rentInKm
-//        return totalBillToPay
-//    }
+    func getVehicles() -> [Vehicle] {
+        return Array(self.vehicles.values)
+    }
     
     func display() {
         print("     ------VEHICLE RENTED BY THE CUSTOMER------        ")

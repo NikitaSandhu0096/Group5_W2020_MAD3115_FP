@@ -21,6 +21,9 @@ class Driver : Person{
     var email: String
     var userName: String
     var password: String
+    var fullName : String {
+        return "\(firstName) \(lastName)"
+    }
     
     var drivingLicenseNumber : String
     var isDrivingHistoryCleared : Bool

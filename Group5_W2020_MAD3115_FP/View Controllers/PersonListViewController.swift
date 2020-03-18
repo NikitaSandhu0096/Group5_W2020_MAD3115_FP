@@ -52,10 +52,10 @@ extension PersonListViewController : UITableViewDataSource, UITableViewDelegate{
     
         if segPerson.selectedSegmentIndex == 0{
             let customer = customerNames[indexPath.row]
-            cell?.textLabel?.text = customer.firstName
+            cell?.textLabel?.text = customer.fullName
         }else{
             let owner = ownerNames[indexPath.row]
-            cell?.textLabel?.text = owner.firstName
+            cell?.textLabel?.text = owner.fullName
         }
 
         return cell!

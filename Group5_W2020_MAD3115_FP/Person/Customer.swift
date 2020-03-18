@@ -20,6 +20,9 @@ class Customer : Person{
     var email: String
     var userName: String
     var password: String
+    var fullName : String {
+        return "\(firstName) \(lastName)"
+    }
     
     var address : String
     var city : String
@@ -76,6 +79,10 @@ class Customer : Person{
     
     func removeVehicleRent(vehicleRentID: Int){
         vehicleListRented.removeValue(forKey: vehicleRentID)
+    }
+    
+    func getVehicleRented() -> [VehicleRent] {
+        return Array(self.vehicleListRented.values)
     }
     
     func display() {

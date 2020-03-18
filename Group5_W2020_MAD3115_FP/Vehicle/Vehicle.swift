@@ -22,7 +22,8 @@ protocol Vehicle: IDisplay
     var fuelType: String { get set }
     var ratePerDay: Float { get set }
     var ratePerKm: Float { get set}
-    //var driver;
+    
+    var type : String {get set}
       
     func display()
 }

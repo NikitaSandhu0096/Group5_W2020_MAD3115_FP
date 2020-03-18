@@ -21,6 +21,9 @@ class Owner : Person{
     var email: String
     var userName: String
     var password: String
+    var fullName : String {
+        return "\(firstName) \(lastName)"
+    }
     
     var companyTitle : String
     var businessLandLineNumber : String
@@ -80,6 +83,10 @@ class Owner : Person{
     func removeVehicleRent(vehicleIdentificationNumber: String)
     {
         vehicleListOwned.removeValue(forKey: vehicleIdentificationNumber)
+    }
+    
+    func getVehicles() -> [Vehicle] {
+        return Array(self.vehicleListOwned.values)
     }
     
      func display() {
