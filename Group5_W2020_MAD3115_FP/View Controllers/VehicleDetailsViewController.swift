@@ -29,7 +29,7 @@ class VehicleDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        display()
     }
     
     func display(){

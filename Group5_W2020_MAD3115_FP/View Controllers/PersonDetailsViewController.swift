@@ -108,14 +108,15 @@ extension PersonDetailsViewController : UITableViewDataSource, UITableViewDelega
 //        return CGFloat(100.0)
 //    }
 //
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
-////        let c = DataStorage.getInstance().getAllBills()
-////        let sa = c[indexPath.row]
-//        let sc = customer?.getBills()[indexPath.row]
-//        let sb = UIStoryboard(name: "Main", bundle: nil)
-//        let billInfoVC = sb.instantiateViewController(identifier: "billInfoVC") as! BillInfoViewController
-//        billInfoVC.bill = sc
-//        self.navigationController?.pushViewController(billInfoVC, animated: true)
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        if person?.type == "Owner"{
+            let owner = person as! Owner
+            let sc = owner.getVehicles()[indexPath.row]
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let vehicleDetailsViewController = sb.instantiateViewController(identifier: "VehicleDetailsViewController") as! VehicleDetailsViewController
+            vehicleDetailsViewController.vehicle = sc
+            self.navigationController?.pushViewController(vehicleDetailsViewController, animated: true)
+        }
+    }
 }
