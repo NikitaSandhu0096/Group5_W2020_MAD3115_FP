@@ -10,22 +10,24 @@ import Foundation
 
 import Foundation
 
-class VehicleRent: IDisplay
+class VehicleRent
 {
     var vehicleRentID : Int
     var rentStartDate : String
     var rentEndDate : String
     var rentInNumberOfDays : Float = 0.0
-    var vehicles = [String: Vehicle]()
+//    var vehicles = [String: Vehicle]()
+    var vehicle:Vehicle;
     var numberOfKmDrived : Int
     var rentInKm : Float = 0.0
     var totalBillToPay : Float = 0.0
     
-    init(vehicleRentID : Int, rentStartDate : String, rentEndDate : String, numberOfKmDrived : Int) {
+    init(vehicleRentID : Int, rentStartDate : String, rentEndDate : String, numberOfKmDrived : Int,vehicle:Vehicle) {
         self.vehicleRentID = vehicleRentID
         self.rentStartDate = rentStartDate
         self.rentEndDate = rentEndDate
         self.numberOfKmDrived = numberOfKmDrived
+        self.vehicle = vehicle;
     }
     
     func startingDate(string : String) -> Date {    //https://stackoverflow.com/questions/35700281/date-format-in-swift
@@ -51,39 +53,39 @@ class VehicleRent: IDisplay
         return numberOfDays.day!
     }
     
-    func addVehicle(vehicle: Vehicle, identificationNumber: String)
-    {
-        vehicles.updateValue(vehicle, forKey: identificationNumber)
-    }
+//    func addVehicle(vehicle: Vehicle, identificationNumber: String)
+//    {
+//        vehicles.updateValue(vehicle, forKey: identificationNumber)
+//    }
+//
+//    func removeVehicle(identificationNumber: String)
+//    {
+//        vehicles.removeValue(forKey: identificationNumber)
+//    }
+//
+//    func getVehicles() -> [Vehicle] {
+//        return Array(self.vehicles.values)
+//    }
     
-    func removeVehicle(identificationNumber: String)
-    {
-        vehicles.removeValue(forKey: identificationNumber)
-    }
-    
-    func getVehicles() -> [Vehicle] {
-        return Array(self.vehicles.values)
-    }
-    
-    func display() {
-        print("     ------VEHICLE RENTED BY THE CUSTOMER------        ")
-        print("====================================================")
-        for i in vehicles
-        {
-            i.value.display()
-            rentInNumberOfDays = i.value.ratePerDay * Float(totalDays())
-            rentInKm = i.value.ratePerKm * Float(self.numberOfKmDrived)
-            totalBillToPay = rentInNumberOfDays + rentInKm
-            print("\n-------------------- RENT DETAILS -------------------\n")
-            print("Rent Start Date : \(self.rentStartDate)")
-            print("Rent End Date : \(self.rentEndDate)")
-            print("Rent in number of days : \(rentInNumberOfDays.currency())")
-            print("Number of KM Drived : \(self.numberOfKmDrived)")
-            print("Rent in number of KM : \(rentInKm.currency())")
-            print("=====================================================")
-            print("Total rent to pay : \(totalBillToPay.currency())")
-            print("=====================================================")
-            
-        }
-    }
+//    func display() {
+//        print("     ------VEHICLE RENTED BY THE CUSTOMER------        ")
+//        print("====================================================")
+//        for i in vehicles
+//        {
+//            i.value.display()
+//            rentInNumberOfDays = i.value.ratePerDay * Float(totalDays())
+//            rentInKm = i.value.ratePerKm * Float(self.numberOfKmDrived)
+//            totalBillToPay = rentInNumberOfDays + rentInKm
+//            print("\n-------------------- RENT DETAILS -------------------\n")
+//            print("Rent Start Date : \(self.rentStartDate)")
+//            print("Rent End Date : \(self.rentEndDate)")
+//            print("Rent in number of days : \(rentInNumberOfDays.currency())")
+//            print("Number of KM Drived : \(self.numberOfKmDrived)")
+//            print("Rent in number of KM : \(rentInKm.currency())")
+//            print("=====================================================")
+//            print("Total rent to pay : \(totalBillToPay.currency())")
+//            print("=====================================================")
+//
+//        }
+//    }
 }

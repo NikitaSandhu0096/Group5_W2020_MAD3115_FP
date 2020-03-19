@@ -97,8 +97,8 @@ extension PersonDetailsViewController : UITableViewDataSource, UITableViewDelega
         }
             else{
             let customer = person as! Customer
-            let customer1 = customer.getVehicleRented()[indexPath.row]
-
+            let vehicleRented = customer.getVehicleRented()[indexPath.row];
+            cell?.textLabel?.text = vehicleRented.vehicle.type;
         }
 
         return cell!
@@ -116,6 +116,13 @@ extension PersonDetailsViewController : UITableViewDataSource, UITableViewDelega
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let vehicleDetailsViewController = sb.instantiateViewController(identifier: "VehicleDetailsViewController") as! VehicleDetailsViewController
             vehicleDetailsViewController.vehicle = sc
+            self.navigationController?.pushViewController(vehicleDetailsViewController, animated: true)
+        }else{
+            let customer = person as! Customer
+            let sc = customer.getVehicleRented()[indexPath.row];
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let vehicleDetailsViewController = sb.instantiateViewController(identifier: "VehicleDetailsViewController") as! VehicleDetailsViewController
+            vehicleDetailsViewController.vehicle = sc.vehicle;
             self.navigationController?.pushViewController(vehicleDetailsViewController, animated: true)
         }
     }

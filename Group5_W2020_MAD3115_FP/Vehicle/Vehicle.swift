@@ -9,7 +9,7 @@
 import Foundation
 
 
-protocol Vehicle: IDisplay
+protocol Vehicle
 {
 
     var identificationNumber: String { get set }
@@ -25,6 +25,6 @@ protocol Vehicle: IDisplay
     
     var type : String {get set}
       
-    func display()
+//    func display()
 }
 

@@ -84,20 +84,20 @@ class Driver : Person{
         return numberOfYears.year!
     }
     
-     func display() {
-        print(" \n          ------ DRIVER DETAILS ------\n")
-        print("Driver's ID                          : \(self.id)")
-        print("Driver's First Name                  : \(self.firstName)")
-        print("Driver's Last Name                   : \(self.lastName)")
-        print("Driver's gender                      : \(self.gender)")
-        print("Driver's Birth Date                  : \(self.birthDate)")
-        print("Driver's Age                         : \(calculateAge())")
-        print("Driver's Mobile Number               : \(self.mobileNumber)")
-        print("Driver's email                       : \(self.email)")
-        print("Driver's username                    : \(self.userName)")
-        print("Driver's password                    : \(self.password)")
-        print("Driver's Driving License Number      : \(self.drivingLicenseNumber)")
-        print("Driver's Driving History Cleared     : \(self.isDrivingHistoryCleared)")
-        print("Driver's Salary                      : \(self.salary)")
-    }
+//     func display() {
+//        print(" \n          ------ DRIVER DETAILS ------\n")
+//        print("Driver's ID                          : \(self.id)")
+//        print("Driver's First Name                  : \(self.firstName)")
+//        print("Driver's Last Name                   : \(self.lastName)")
+//        print("Driver's gender                      : \(self.gender)")
+//        print("Driver's Birth Date                  : \(self.birthDate)")
+//        print("Driver's Age                         : \(calculateAge())")
+//        print("Driver's Mobile Number               : \(self.mobileNumber)")
+//        print("Driver's email                       : \(self.email)")
+//        print("Driver's username                    : \(self.userName)")
+//        print("Driver's password                    : \(self.password)")
+//        print("Driver's Driving License Number      : \(self.drivingLicenseNumber)")
+//        print("Driver's Driving History Cleared     : \(self.isDrivingHistoryCleared)")
+//        print("Driver's Salary                      : \(self.salary)")
+//    }
 }

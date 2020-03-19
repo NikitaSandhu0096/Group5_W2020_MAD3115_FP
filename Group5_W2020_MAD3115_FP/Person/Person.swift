@@ -14,7 +14,7 @@ enum Gender{
     case Others
 }
 
-protocol Person : IDisplay
+protocol Person
 {
     var id : Int { get set }
     var firstName : String { get set }
@@ -29,5 +29,4 @@ protocol Person : IDisplay
     
     var type : String {get set}
 
-    func display()
 }

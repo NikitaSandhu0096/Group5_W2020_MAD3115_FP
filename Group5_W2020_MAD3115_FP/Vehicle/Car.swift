@@ -54,30 +54,30 @@ class Car: Vehicle
         
     
     
-     func display() {
-
-        print("                 ------CAR------")
-        print("Car IdentificationNumber         : \(identificationNumber)")
-        print("Car Description                  : \(description)")
-        print("Car ManufacturerName             : \(manufacturerName)")
-        print("Car IsSelfDrive                  : \(isSelfDrive)")
-        print("Car IsInsured                    : \(isInsured)")
-        print("Car InsuranceProviderName        : \(insuranceProviderName)")
-        print("Car VehicleNoOfSeats             : \(vehicleNoOfSeats)")
-        print("Car FuelType                     : \(fuelType)")
-        print("Car RatePerKm                    : \(ratePerKm.currency())")
-        print("Car ratePerDay                   : \(ratePerDay.currency())")
-        print("Car Color                        : \(carColor)")
-        print("Car Type                         : \(carType)")
-
-        if driver.count == 0{
-            print("---------------------------------------------")
-            print("This vehicle doesn't have a driver")
-        } else{
-            for i in driver
-            {
-                i.value.display()
-            }
-        }
-    }
+//     func display() {
+//
+//        print("                 ------CAR------")
+//        print("Car IdentificationNumber         : \(identificationNumber)")
+//        print("Car Description                  : \(description)")
+//        print("Car ManufacturerName             : \(manufacturerName)")
+//        print("Car IsSelfDrive                  : \(isSelfDrive)")
+//        print("Car IsInsured                    : \(isInsured)")
+//        print("Car InsuranceProviderName        : \(insuranceProviderName)")
+//        print("Car VehicleNoOfSeats             : \(vehicleNoOfSeats)")
+//        print("Car FuelType                     : \(fuelType)")
+//        print("Car RatePerKm                    : \(ratePerKm.currency())")
+//        print("Car ratePerDay                   : \(ratePerDay.currency())")
+//        print("Car Color                        : \(carColor)")
+//        print("Car Type                         : \(carType)")
+//
+//        if driver.count == 0{
+//            print("---------------------------------------------")
+//            print("This vehicle doesn't have a driver")
+//        } else{
+//            for i in driver
+//            {
+//                i.value.display()
+//            }
+//        }
+//    }
 }
