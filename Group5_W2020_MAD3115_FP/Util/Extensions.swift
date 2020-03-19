@@ -23,6 +23,19 @@ extension String{
         return mobileTest.evaluate(with: self)
     }
     
+    func evaluateDate() -> String {      //https://stackoverflow.com/questions/35700281/date-format-in-swift
+        
+        let dateformatGet = DateFormatter()
+        dateformatGet.dateFormat = "dd/MM/yyyy"
+
+        let dateformatSet = DateFormatter()
+        dateformatSet.dateFormat = "EEE, d MMM, yyyy"
+
+        let date : Date? = dateformatGet.date(from: self)
+        return dateformatSet.string(from: date!)
+        
+    }
+    
     // Password Encryption
     //https://forums.developer.apple.com/thread/89272
     func encrypt(key:String, iv:String, options:Int = kCCOptionPKCS7Padding) -> String? {

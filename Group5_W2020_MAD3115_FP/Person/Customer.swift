@@ -43,19 +43,6 @@ class Customer : Person{
         self.city = city
     }
     
-    func evaluateDate(string : String) -> String {      //https://stackoverflow.com/questions/35700281/date-format-in-swift
-        
-        let dateformatGet = DateFormatter()
-        dateformatGet.dateFormat = "dd/MM/yyyy"
-
-        let dateformatSet = DateFormatter()
-        dateformatSet.dateFormat = "EEE, d MMMM, yyyy"
-
-        let date : Date? = dateformatGet.date(from: birthDate)
-        return dateformatSet.string(from: date!)
-        
-    }
-    
     func calculateBirthDate(string : String) -> Date {      //https://stackoverflow.com/questions/35700281/date-format-in-swift
         
         let dateformatGet1 = DateFormatter()

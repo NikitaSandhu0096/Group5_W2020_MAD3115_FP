@@ -105,20 +105,20 @@ class DataStorage{
             "encrypt", companyTitle: "Multimedia", businessLandLineNumber: "658494", website: "multimedia.com")
         
         // Adding vehicle rent to each vehicles
-        let rent1 = VehicleRent(vehicleRentID: 1, rentStartDate: "01/01/20", rentEndDate: "06/01/20", numberOfKmDrived: 20,vehicle: bus1)
+        let rent1 = VehicleRent(vehicleRentID: 1, rentStartDate: "01/01/2020", rentEndDate: "06/01/2020", numberOfKmDrived: 20, vehicle: bus1)
 //        rent1.addVehicle(vehicle: , identificationNumber: bus1.identificationNumber)
 
-        let rent2 = VehicleRent(vehicleRentID: 2, rentStartDate: "05/02/19", rentEndDate: "10/02/19", numberOfKmDrived: 40,vehicle: car1)
+        let rent2 = VehicleRent(vehicleRentID: 2, rentStartDate: "05/02/2019", rentEndDate: "10/02/2019", numberOfKmDrived: 40, vehicle: car1)
 
         
 
-        let rent3 = VehicleRent(vehicleRentID: 3, rentStartDate: "08/05/18", rentEndDate: "08/08/18", numberOfKmDrived: 200,vehicle: bus2)
+        let rent3 = VehicleRent(vehicleRentID: 3, rentStartDate: "08/05/2018", rentEndDate: "08/08/2018", numberOfKmDrived: 200, vehicle: bus2)
 //        rent3.addVehicle(vehicle: , identificationNumber: bus2.identificationNumber)
 
-        let rent4 = VehicleRent(vehicleRentID: 4, rentStartDate: "09/01/19", rentEndDate: "30/01/19", numberOfKmDrived: 140,vehicle:motorcycle2)
+        let rent4 = VehicleRent(vehicleRentID: 4, rentStartDate: "09/01/2019", rentEndDate: "30/01/2019", numberOfKmDrived: 140, vehicle:motorcycle2)
 //        rent4.addVehicle(vehicle: , identificationNumber: motorcycle2.identificationNumber)
 
-        let rent5 = VehicleRent(vehicleRentID: 5, rentStartDate: "10/10/19", rentEndDate: "1/12/19", numberOfKmDrived: 310,vehicle: car4)
+        let rent5 = VehicleRent(vehicleRentID: 5, rentStartDate: "10/10/2019", rentEndDate: "1/12/2019", numberOfKmDrived: 310, vehicle: car4)
        
         
         // Adding Owner's vehicle list

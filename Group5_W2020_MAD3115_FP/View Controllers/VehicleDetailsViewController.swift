@@ -59,8 +59,8 @@ class VehicleDetailsViewController: UIViewController {
             lblDetail2.text = "Car Color                               :  \(car.carColor)"
             if previousVC == "customer" {
                 lblRentDetails.text = "Car Rent Details"
-                lblRentStartDate.text = "Rent Start Date                      :  \(vehicleRent!.rentStartDate)"
-                lblRentEndDate.text = "Rent End Date                        :  \(vehicleRent!.rentEndDate)"
+                lblRentStartDate.text = "Rent Start Date                      :  \(vehicleRent!.rentStartDate.evaluateDate())"
+                lblRentEndDate.text = "Rent End Date                        :  \(vehicleRent!.rentEndDate.evaluateDate())"
                 lblRentInDays.text = "Rent in Number of Days        :  \(vehicleRent!.rentInNumberOfDays.currency())"
                 lblNoOfKm.text = "Number of KM Drived           :  \(vehicleRent!.numberOfKmDrived)"
                 lblRentInKm.text = "Rent in Number of KM           :  \(vehicleRent!.rentInKm.currency())"
@@ -83,8 +83,8 @@ class VehicleDetailsViewController: UIViewController {
             lblDetail2.text = "Milage                                   : \(motorcycle.milage)"
             if previousVC == "customer" {
                 lblRentDetails.text = "Motorcycle Rent Details"
-                lblRentStartDate.text = "Rent Start Date                      :  \(vehicleRent!.rentStartDate)"
-                lblRentEndDate.text = "Rent End Date                        :  \(vehicleRent!.rentEndDate)"
+                lblRentStartDate.text = "Rent Start Date                      :  \(vehicleRent!.rentStartDate.evaluateDate())"
+                lblRentEndDate.text = "Rent End Date                        :  \(vehicleRent!.rentEndDate.evaluateDate())"
                 lblRentInDays.text = "Rent in Number of Days        :  \(vehicleRent!.rentInNumberOfDays.currency())"
                 lblNoOfKm.text = "Number of KM Drived           :  \(vehicleRent!.numberOfKmDrived)"
                 lblRentInKm.text = "Rent in Number of KM           :  \(vehicleRent!.rentInKm.currency())"
@@ -107,8 +107,8 @@ class VehicleDetailsViewController: UIViewController {
             lblDetail3.text = "Is Wifi Available                               : \(bus.iswifiAvailable)"
             if previousVC == "customer" {
                 lblRentDetails.text = "Bus Rent Details"
-                lblRentStartDate.text = "Rent Start Date                               :  \(vehicleRent!.rentStartDate)"
-                lblRentEndDate.text = "Rent End Date                                 :  \(vehicleRent!.rentEndDate)"
+                lblRentStartDate.text = "Rent Start Date                               :  \(vehicleRent!.rentStartDate.evaluateDate())"
+                lblRentEndDate.text = "Rent End Date                                 :  \(vehicleRent!.rentEndDate.evaluateDate())"
                 lblRentInDays.text = "Rent in Number of Days                 :  \(vehicleRent!.rentInNumberOfDays.currency())"
                 lblNoOfKm.text = "Number of KM Drived                     :  \(vehicleRent!.numberOfKmDrived)"
                 lblRentInKm.text = "Rent in Number of KM                    :  \(vehicleRent!.rentInKm.currency())"
