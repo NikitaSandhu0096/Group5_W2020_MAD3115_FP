@@ -98,7 +98,7 @@ extension PersonDetailsViewController : UITableViewDataSource, UITableViewDelega
             else{
             let customer = person as! Customer
             let vehicleRented = customer.getVehicleRented()[indexPath.row];
-            cell?.textLabel?.text = vehicleRented.vehicle.type;
+            cell?.textLabel?.text = vehicleRented.vehicle.type
         }
 
         return cell!

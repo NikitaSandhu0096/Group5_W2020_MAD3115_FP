@@ -11,6 +11,7 @@ import UIKit
 class VehicleDetailsViewController: UIViewController {
     
     var vehicle : Vehicle?
+    var vehicleRent : VehicleRent?
 
     @IBOutlet weak var lblIdNo: UILabel!
     @IBOutlet weak var lblDescription: UILabel!
@@ -26,6 +27,13 @@ class VehicleDetailsViewController: UIViewController {
     @IBOutlet weak var lblDetail2: UILabel!
     @IBOutlet weak var lblDetail3: UILabel!
     @IBOutlet weak var lblDetail4: UILabel!
+    
+    @IBOutlet weak var lblRentDetails: UILabel!
+    @IBOutlet weak var lblRentStartDate: UILabel!
+    @IBOutlet weak var lblRentEndDate: UILabel!
+    @IBOutlet weak var lblRentInDays: UILabel!
+    @IBOutlet weak var lblNoOfKm: UILabel!
+    @IBOutlet weak var lblRentInKm: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,5 +88,6 @@ class VehicleDetailsViewController: UIViewController {
             lblDetail2.text = "Is Accessibility Service Available? : \(bus.isAccessibiltyServiceAvailable)"
             lblDetail3.text = "Is Wifi Available : \(bus.iswifiAvailable)"
         }
+        
     }
 }
