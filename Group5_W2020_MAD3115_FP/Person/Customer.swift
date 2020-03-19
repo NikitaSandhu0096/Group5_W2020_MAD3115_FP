@@ -75,6 +75,7 @@ class Customer : Person{
     
     func addVehicleRent(vehicleRent: VehicleRent, vehicleRentID: Int){
         vehicleListRented.updateValue(vehicleRent, forKey: vehicleRentID)
+        amountToPayForAllRentedVehicles = amountToPayForAllRentedVehicles + vehicleRent.calculateAmount()
     }
     
     func removeVehicleRent(vehicleRentID: Int){

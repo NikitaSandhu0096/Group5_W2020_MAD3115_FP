@@ -17,7 +17,7 @@ class VehicleRent
     var rentEndDate : String
     var rentInNumberOfDays : Float = 0.0
 //    var vehicles = [String: Vehicle]()
-    var vehicle:Vehicle;
+    var vehicle : Vehicle
     var numberOfKmDrived : Int
     var rentInKm : Float = 0.0
     var totalBillToPay : Float = 0.0
@@ -51,6 +51,13 @@ class VehicleRent
         let current = Calendar.current
         let numberOfDays = current.dateComponents([Calendar.Component.day], from: startingDate(string: rentStartDate), to: endingDate(string: rentEndDate))
         return numberOfDays.day!
+    }
+    
+    func calculateAmount() -> Float{
+        rentInNumberOfDays = vehicle.ratePerDay * Float(totalDays())
+        rentInKm = vehicle.ratePerKm * Float(self.numberOfKmDrived)
+        totalBillToPay = rentInNumberOfDays + rentInKm
+        return totalBillToPay
     }
     
 //    func addVehicle(vehicle: Vehicle, identificationNumber: String)

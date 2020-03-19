@@ -66,7 +66,7 @@ class PersonDetailsViewController: UIViewController {
             lblPassword.text = "Password : \(customer.password)"
             lblDetail11.text = "CAddress : \(customer.address)"
             lblDetail12.text = "City : \(customer.city)"
-            lblDetail13.text = "Amount to pay for all the rented vehicles : \(customer.amountToPayForAllRentedVehicles.currency())"
+            lblDetail13.text = "Amount to pay : \(customer.amountToPayForAllRentedVehicles.currency())"
             lblVehicleList.text = "Vehicles rented by customer"
         }
     }
