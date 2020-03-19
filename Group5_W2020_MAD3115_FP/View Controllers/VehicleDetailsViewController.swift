@@ -10,6 +10,7 @@ import UIKit
 
 class VehicleDetailsViewController: UIViewController {
     
+    var previousVC:String?;
     var vehicle : Vehicle?
     var vehicleRent : VehicleRent?
 
@@ -41,7 +42,7 @@ class VehicleDetailsViewController: UIViewController {
     }
     
     func display(){
-        if vehicle?.type == "Car"{
+            if vehicle?.type == "Car"{
             lblDetail4.text = "Car's Details"
             let car = vehicle as! Car
             lblIdNo.text = "Identification Number : \(car.identificationNumber)"
@@ -56,6 +57,15 @@ class VehicleDetailsViewController: UIViewController {
             lblRatePerKm.text = "Rate Per KM : \(car.ratePerKm)"
             lblDetail1.text = "Car Type : \(car.carType)"
             lblDetail2.text = "Car Color : \(car.carColor)"
+            if  previousVC == "customer" {
+                lblRentDetails.text = "Car Rent Details"
+                lblRentStartDate.text = "Rent Start Date : \(vehicleRent!.rentStartDate)"
+                lblRentEndDate.text = "Rent End Date : \(vehicleRent!.rentEndDate)"
+                lblRentInDays.text = "Rent in Number of Days : \(vehicleRent!.rentInNumberOfDays)"
+                lblNoOfKm.text = "Number of KM Drived : \(vehicleRent!.numberOfKmDrived)"
+                lblRentInKm.text = "Rent in Number of KM : \(vehicleRent!.rentInKm)"
+            }
+                
         }else if vehicle?.type == "Motorcycle"{
             lblDetail4.text = "Motorcycle's Details"
             let motorcycle = vehicle as! MotorCycle
@@ -71,6 +81,14 @@ class VehicleDetailsViewController: UIViewController {
             lblRatePerKm.text = "Rate Per KM : \(motorcycle.ratePerKm)"
             lblDetail1.text = "Max Top Speed : \(motorcycle.maxTopSpeed)"
             lblDetail2.text = "Milage : \(motorcycle.milage)"
+            if  previousVC == "customer" {
+                lblRentDetails.text = "Motorcycle Rent Details"
+                lblRentStartDate.text = "Rent Start Date : \(vehicleRent!.rentStartDate)"
+                lblRentEndDate.text = "Rent End Date : \(vehicleRent!.rentEndDate)"
+                lblRentInDays.text = "Rent in Number of Days : \(vehicleRent!.rentInNumberOfDays)"
+                lblNoOfKm.text = "Number of KM Drived : \(vehicleRent!.numberOfKmDrived)"
+                lblRentInKm.text = "Rent in Number of KM : \(vehicleRent!.rentInKm)"
+            }
         }else{
             lblDetail4.text = "Bus's Details"
             let bus = vehicle as! Bus
@@ -87,7 +105,14 @@ class VehicleDetailsViewController: UIViewController {
             lblDetail1.text = "Type of Bus : \(bus.busType)"
             lblDetail2.text = "Is Accessibility Service Available? : \(bus.isAccessibiltyServiceAvailable)"
             lblDetail3.text = "Is Wifi Available : \(bus.iswifiAvailable)"
+            if  previousVC == "customer" {
+                lblRentDetails.text = "Bus Rent Details"
+                lblRentStartDate.text = "Rent Start Date : \(vehicleRent!.rentStartDate)"
+                lblRentEndDate.text = "Rent End Date : \(vehicleRent!.rentEndDate)"
+                lblRentInDays.text = "Rent in Number of Days : \(vehicleRent!.rentInNumberOfDays)"
+                lblNoOfKm.text = "Number of KM Drived : \(vehicleRent!.numberOfKmDrived)"
+                lblRentInKm.text = "Rent in Number of KM : \(vehicleRent!.rentInKm)"
+            }
         }
-        
     }
 }

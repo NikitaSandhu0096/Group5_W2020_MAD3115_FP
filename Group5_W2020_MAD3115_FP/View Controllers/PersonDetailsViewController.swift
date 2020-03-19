@@ -116,6 +116,7 @@ extension PersonDetailsViewController : UITableViewDataSource, UITableViewDelega
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let vehicleDetailsViewController = sb.instantiateViewController(identifier: "VehicleDetailsViewController") as! VehicleDetailsViewController
             vehicleDetailsViewController.vehicle = sc
+            vehicleDetailsViewController.previousVC = "owner";
             self.navigationController?.pushViewController(vehicleDetailsViewController, animated: true)
         }else{
             let customer = person as! Customer
@@ -123,6 +124,8 @@ extension PersonDetailsViewController : UITableViewDataSource, UITableViewDelega
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let vehicleDetailsViewController = sb.instantiateViewController(identifier: "VehicleDetailsViewController") as! VehicleDetailsViewController
             vehicleDetailsViewController.vehicle = sc.vehicle;
+            vehicleDetailsViewController.vehicleRent = sc;
+            vehicleDetailsViewController.previousVC = "customer";
             self.navigationController?.pushViewController(vehicleDetailsViewController, animated: true)
         }
     }
