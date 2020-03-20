@@ -19,7 +19,7 @@ class DataStorage{
         return instance
     }
     
-    func addPerson(customer : Customer){
+    func addCustomer(customer : Customer){
         let cid = customer.id
         self.customerDictionary.updateValue(customer, forKey: cid)
     }
@@ -154,11 +154,11 @@ class DataStorage{
         
         customer5.addVehicleRent(vehicleRent: rent5, vehicleRentID: rent5.vehicleRentID)
 
-        addPerson(customer: customer1)
-        addPerson(customer: customer2)
-        addPerson(customer: customer3)
-        addPerson(customer: customer4)
-        addPerson(customer: customer5)
+        addCustomer(customer: customer1)
+        addCustomer(customer: customer2)
+        addCustomer(customer: customer3)
+        addCustomer(customer: customer4)
+        addCustomer(customer: customer5)
         
         addOwner(owner: owner1)
         addOwner(owner: owner2)

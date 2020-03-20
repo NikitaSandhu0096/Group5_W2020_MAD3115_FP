@@ -103,8 +103,8 @@ class VehicleDetailsViewController: UIViewController {
             lblRatePerDay.text = "Rate Per Day                         :  \(bus.ratePerDay.currency())"
             lblRatePerKm.text = "Rate Per KM                          :  \(bus.ratePerKm.currency())"
             lblDetail1.text = "Type of Bus                           : \(bus.busType)"
-            lblDetail2.text = "Is Accessibility Available?   : \(bus.isAccessibiltyServiceAvailable)"
-            lblDetail3.text = "Is Wifi Available?                    : \(bus.iswifiAvailable)"
+            lblDetail2.text = "Is Accessibility Available?    : \(bus.isAccessibiltyServiceAvailable)"
+            lblDetail3.text = "Is Wifi Available?                   : \(bus.iswifiAvailable)"
             if previousVC == "customer" {
                 lblRentDetails.text = "Bus Rent Details"
                 lblRentStartDate.text = "Rent Start Date                    :  \(vehicleRent!.rentStartDate.evaluateDate())"
