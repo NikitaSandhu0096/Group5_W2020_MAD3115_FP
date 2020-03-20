@@ -32,6 +32,9 @@
 		EE76165F2421ACEC00CC8606 /* Screen Shot 2020-03-17 at 9.10.41 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = EE76165E2421ACEC00CC8606 /* Screen Shot 2020-03-17 at 9.10.41 PM.png */; };
 		EE920F96242468D200B120ED /* AddNewCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE920F95242468D200B120ED /* AddNewCustomerViewController.swift */; };
 		EE920F982424693100B120ED /* AddNewOwnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE920F972424693100B120ED /* AddNewOwnerViewController.swift */; };
+		EE920F9A242529E700B120ED /* AddNewCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE920F99242529E700B120ED /* AddNewCarViewController.swift */; };
+		EE920F9C242529F600B120ED /* AddNewBusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE920F9B242529F600B120ED /* AddNewBusViewController.swift */; };
+		EE920F9E24252A0600B120ED /* AddNewMotorcycleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE920F9D24252A0600B120ED /* AddNewMotorcycleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +65,9 @@
 		EE76165E2421ACEC00CC8606 /* Screen Shot 2020-03-17 at 9.10.41 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2020-03-17 at 9.10.41 PM.png"; sourceTree = "<group>"; };
 		EE920F95242468D200B120ED /* AddNewCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCustomerViewController.swift; sourceTree = "<group>"; };
 		EE920F972424693100B120ED /* AddNewOwnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewOwnerViewController.swift; sourceTree = "<group>"; };
+		EE920F99242529E700B120ED /* AddNewCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCarViewController.swift; sourceTree = "<group>"; };
+		EE920F9B242529F600B120ED /* AddNewBusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewBusViewController.swift; sourceTree = "<group>"; };
+		EE920F9D24252A0600B120ED /* AddNewMotorcycleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewMotorcycleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +166,9 @@
 				EE62DC112422EB2C00B18BA9 /* VehicleDetailsViewController.swift */,
 				EE920F95242468D200B120ED /* AddNewCustomerViewController.swift */,
 				EE920F972424693100B120ED /* AddNewOwnerViewController.swift */,
+				EE920F99242529E700B120ED /* AddNewCarViewController.swift */,
+				EE920F9B242529F600B120ED /* AddNewBusViewController.swift */,
+				EE920F9D24252A0600B120ED /* AddNewMotorcycleViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -238,12 +247,15 @@
 			files = (
 				EE76165B2421A82600CC8606 /* Car.swift in Sources */,
 				EE62DC0E2422A78F00B18BA9 /* PersonListViewController.swift in Sources */,
+				EE920F9E24252A0600B120ED /* AddNewMotorcycleViewController.swift in Sources */,
 				EE76165C2421A82600CC8606 /* MotorCycle.swift in Sources */,
 				EE7616572421A81B00CC8606 /* CustomException.swift in Sources */,
+				EE920F9A242529E700B120ED /* AddNewCarViewController.swift in Sources */,
 				EE7616582421A81B00CC8606 /* Extensions.swift in Sources */,
 				EE7616592421A81B00CC8606 /* Bus.swift in Sources */,
 				EE920F96242468D200B120ED /* AddNewCustomerViewController.swift in Sources */,
 				EE62DC122422EB2C00B18BA9 /* VehicleDetailsViewController.swift in Sources */,
+				EE920F9C242529F600B120ED /* AddNewBusViewController.swift in Sources */,
 				EE76165A2421A81B00CC8606 /* Vehicle.swift in Sources */,
 				EE7616532421A81400CC8606 /* Person.swift in Sources */,
 				EE7616542421A81400CC8606 /* Customer.swift in Sources */,
