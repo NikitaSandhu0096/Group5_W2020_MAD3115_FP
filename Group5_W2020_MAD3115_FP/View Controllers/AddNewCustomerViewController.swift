@@ -22,7 +22,6 @@ class AddNewCustomerViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var txtAddress: UITextField!
     @IBOutlet weak var txtCity: UITextField!
     
-    
     var datePicker : UIDatePicker!
     
     override func viewDidLoad() {
@@ -34,46 +33,63 @@ class AddNewCustomerViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func addCustomer(){
-//        if (((txtBillID.text == "" && textField_Date.text == "") && (txtBillAmount.text == "" && txtAgencyName.text == "")) && txtUnitConsumed.text == ""){
-//                    let alertController = UIAlertController(title: "No new Hydro Bill created", message:
-//                        "Enter all the required details to create new Hydro Bill", preferredStyle: .alert)
-//                    alertController.addAction(UIAlertAction(title: "OK", style: .default))
-//                    self.present(alertController, animated: true, completion: nil)
-//                } else if txtBillID.text == ""{
-//                    let alertController = UIAlertController(title: "No new Hydro Bill created", message:
-//                        "Enter Bill ID", preferredStyle: .alert)
-//                    alertController.addAction(UIAlertAction(title: "OK", style: .default))
-//                    self.present(alertController, animated: true, completion: nil)
-//                }else if textField_Date.text == ""{
-//                    let alertController = UIAlertController(title: "No new Hydro Bill created", message:
-//                        "Enter Bill Date", preferredStyle: .alert)
-//                    alertController.addAction(UIAlertAction(title: "OK", style: .default))
-//                    self.present(alertController, animated: true, completion: nil)
-//                }else if txtBillAmount.text == ""{
-//                    let alertController = UIAlertController(title: "No new Hydro Bill created", message:
-//                        "Enter Bill Amount", preferredStyle: .alert)
-//                    alertController.addAction(UIAlertAction(title: "OK", style: .default))
-//                    self.present(alertController, animated: true, completion: nil)
-//                }else if txtAgencyName.text == ""{
-//                    let alertController = UIAlertController(title: "No new Hydro Bill created", message:
-//                        "Enter Agency Name", preferredStyle: .alert)
-//                    alertController.addAction(UIAlertAction(title: "OK", style: .default))
-//                    self.present(alertController, animated: true, completion: nil)
-//                }else if txtUnitConsumed.text == ""{
-//                    let alertController = UIAlertController(title: "No new Hydro Bill created", message:
-//                        "Enter Unit Consumed", preferredStyle: .alert)
-//                    alertController.addAction(UIAlertAction(title: "OK", style: .default))
-//                    self.present(alertController, animated: true, completion: nil)
-//                }else{
-//        //            DataStorage.getInstance().addBillToCustomer(bill: Hydro(billId: txtBillID.text ?? "", billDate: textField_Date.text ?? "", totalBillAmount: Float(txtBillAmount.text ?? "")!, agencyName: txtAgencyName.text ?? "", unitConsumed: Int(txtUnitConsumed.text ?? "")!))
-//        //
-//
-//                    let tempObj1 = Hydro(billId: txtBillID.text ?? "", billDate: textField_Date.text ?? "", totalBillAmount: Float(txtBillAmount.text ?? "")!, agencyName: txtAgencyName.text ?? "", unitConsumed: Int(txtUnitConsumed.text ?? "")!)
-//
-//                    customer?.addBill(bill: tempObj1, billId: tempObj1.billId)
-//
-//                    navigationController?.popViewController(animated: true)
-//                }
+        if ((((txtID.text == "" && txtFirstName.text == "") && (txtLastName.text == "" && txtGender.text == "")) && ((textField_Date.text == "" && txtMobile.text == "") && (txtEmail.text == "" && txtUserName.text == ""))) && ((txtPassword.text == "" && txtAddress.text == "") && txtCity.text == "")){
+            let alertController = UIAlertController(title: "No new Customer created", message: "Enter all the required details to create new Customer", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(alertController, animated: true, completion: nil)
+        }else if txtID.text == "" {
+            let alertController = UIAlertController(title: "No new Customer created", message: "Enter Customer's ID", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }else if txtFirstName.text == "" {
+            let alertController = UIAlertController(title: "No new Customer created", message: "Enter Customer's First Name", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }else if txtLastName.text == "" {
+            let alertController = UIAlertController(title: "No new Customer created", message: "Enter Customer's Last Name", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }else if txtGender.text == "" {
+            let alertController = UIAlertController(title: "No new Customer created", message: "Enter Customer's Gender", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }else if textField_Date.text == "" {
+            let alertController = UIAlertController(title: "No new Customer created", message: "Enter Customer's Birth Date", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }else if txtMobile.text == "" {
+            let alertController = UIAlertController(title: "No new Customer created", message: "Enter Customer's Mobile Number", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }else if txtEmail.text == "" {
+            let alertController = UIAlertController(title: "No new Customer created", message: "Enter Customer's Email", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }else if txtUserName.text == "" {
+            let alertController = UIAlertController(title: "No new Customer created", message: "Enter Customer's User Name", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }else if txtPassword.text == "" {
+            let alertController = UIAlertController(title: "No new Customer created", message: "Enter Customer's Password", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }else if txtAddress.text == "" {
+            let alertController = UIAlertController(title: "No new Customer created", message: "Enter Customer's Address", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }else if txtCity.text == "" {
+            let alertController = UIAlertController(title: "No new Customer created", message: "Enter Customer's City", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }else{
+            if (txtMobile.text?.mobileValid() == true && txtEmail.text?.emailValid() == true) {
+               navigationController?.popViewController(animated: true)
+            } else{
+                let alertController = UIAlertController(title: "No New Customer created", message: "Enter valid Mobile Number and Email", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(alertController, animated: true, completion: nil)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning()
