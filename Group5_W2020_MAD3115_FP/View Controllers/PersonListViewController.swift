@@ -34,22 +34,33 @@ class PersonListViewController: UIViewController {
     }
     
     @IBAction func bbAdd(_ sender: UIBarButtonItem) {
-        let alert = UIAlertController(title: "Add Person", message: "Select type of person", preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "Customer", style: .default, handler: { (action) in
-            
+        if segPerson.selectedSegmentIndex == 0{
             let sb = UIStoryboard(name: "Main", bundle: nil)
-            let addNewCustomerViewController = sb.instantiateViewController(identifier: "AddNewCustomerViewController") as! AddNewCustomerViewController
-//            addNewCustomerViewController.person = self.customerNames
-            self.navigationController?.pushViewController(addNewCustomerViewController, animated: true)
-        }))
-        alert.addAction(UIAlertAction(title: "Owner", style: .default, handler:{ (action) in
-            
+                        let addNewCustomerViewController = sb.instantiateViewController(identifier: "AddNewCustomerViewController") as! AddNewCustomerViewController
+            //            addNewCustomerViewController.person = self.customerNames
+                        self.navigationController?.pushViewController(addNewCustomerViewController, animated: true)
+        }else{
             let sb = UIStoryboard(name: "Main", bundle: nil)
-            let addNewOwnerViewController = sb.instantiateViewController(identifier: "AddNewOwnerViewController") as! AddNewOwnerViewController
-//            addNewOwnerViewController.customer = self.customer
-            self.navigationController?.pushViewController(addNewOwnerViewController, animated: true)
-        }))
-        self.present(alert, animated: true, completion: nil)
+                        let addNewOwnerViewController = sb.instantiateViewController(identifier: "AddNewOwnerViewController") as! AddNewOwnerViewController
+            //            addNewOwnerViewController.customer = self.customer
+                        self.navigationController?.pushViewController(addNewOwnerViewController, animated: true)
+        }
+//        let alert = UIAlertController(title: "Add Person", message: "Select type of person", preferredStyle: .actionSheet)
+//        alert.addAction(UIAlertAction(title: "Customer", style: .default, handler: { (action) in
+//
+//            let sb = UIStoryboard(name: "Main", bundle: nil)
+//            let addNewCustomerViewController = sb.instantiateViewController(identifier: "AddNewCustomerViewController") as! AddNewCustomerViewController
+////            addNewCustomerViewController.person = self.customerNames
+//            self.navigationController?.pushViewController(addNewCustomerViewController, animated: true)
+//        }))
+//        alert.addAction(UIAlertAction(title: "Owner", style: .default, handler:{ (action) in
+//
+//            let sb = UIStoryboard(name: "Main", bundle: nil)
+//            let addNewOwnerViewController = sb.instantiateViewController(identifier: "AddNewOwnerViewController") as! AddNewOwnerViewController
+////            addNewOwnerViewController.customer = self.customer
+//            self.navigationController?.pushViewController(addNewOwnerViewController, animated: true)
+//        }))
+//        self.present(alert, animated: true, completion: nil)
     }
 }
 
