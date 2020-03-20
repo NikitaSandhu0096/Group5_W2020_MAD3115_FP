@@ -193,20 +193,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Company Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mzp-KB-8ap">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jvb-RJ-2xf">
                                 <rect key="frame" x="20" y="535" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Business Landline Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aa7-Y9-WrT">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bYf-7q-DMo">
                                 <rect key="frame" x="20" y="577" width="374" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Website" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RdJ-Ck-lZA">
-                                <rect key="frame" x="20" y="619" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -217,17 +211,16 @@
                     </view>
                     <connections>
                         <outlet property="textField_Date" destination="yZQ-HF-X4Y" id="7P3-4J-sFJ"/>
-                        <outlet property="txtCompany" destination="mzp-KB-8ap" id="29A-du-FpQ"/>
+                        <outlet property="txtAddress" destination="jvb-RJ-2xf" id="Hd6-b5-gCR"/>
+                        <outlet property="txtCity" destination="bYf-7q-DMo" id="89X-2U-cu1"/>
                         <outlet property="txtEmail" destination="NgL-Iw-dBk" id="Bkp-uq-MJG"/>
                         <outlet property="txtFirstName" destination="6BI-nH-HPH" id="GGc-Hv-TsZ"/>
                         <outlet property="txtGender" destination="cPs-7V-zsM" id="QK7-rO-7F8"/>
                         <outlet property="txtID" destination="Ckb-zR-ju0" id="Mhu-Gu-Buk"/>
-                        <outlet property="txtLandlineNo" destination="Aa7-Y9-WrT" id="CcW-qz-gVf"/>
                         <outlet property="txtLastName" destination="3kC-n6-1eB" id="zLU-wx-qw8"/>
                         <outlet property="txtMobile" destination="a4G-IS-kNg" id="sLc-Pt-AR4"/>
                         <outlet property="txtPassword" destination="Icw-zn-zQM" id="juc-7M-zXD"/>
                         <outlet property="txtUserName" destination="mVE-5N-qKE" id="KiV-6c-fqV"/>
-                        <outlet property="txtWebsite" destination="RdJ-Ck-lZA" id="gig-6m-s3E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5IX-By-Fl4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -249,74 +242,74 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kf1-IQ-0BL">
-                                <rect key="frame" x="20" y="154" width="374" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="es4-Td-2GO">
+                                <rect key="frame" x="20" y="158" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qXe-0H-v2o">
-                                <rect key="frame" x="20" y="196" width="374" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8x2-Is-9zM">
+                                <rect key="frame" x="20" y="200" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lm0-EZ-sRL">
-                                <rect key="frame" x="20" y="238" width="374" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bb2-Fo-uVb">
+                                <rect key="frame" x="20" y="242" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Gender" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nMH-61-jQa">
-                                <rect key="frame" x="20" y="280" width="374" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Gender" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bJ3-uc-BVY">
+                                <rect key="frame" x="20" y="284" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Birth Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r3P-FG-aqe">
-                                <rect key="frame" x="20" y="322" width="374" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Birth Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LhK-ud-7C1">
+                                <rect key="frame" x="20" y="326" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8lC-xQ-Dp5">
-                                <rect key="frame" x="20" y="364" width="374" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3wa-Vw-4BO">
+                                <rect key="frame" x="20" y="368" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bro-rn-POY">
-                                <rect key="frame" x="20" y="406" width="374" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vRk-8r-pt7">
+                                <rect key="frame" x="20" y="410" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M1r-aB-Ap5">
-                                <rect key="frame" x="20" y="448" width="374" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="noq-c6-ori">
+                                <rect key="frame" x="20" y="452" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n0O-2R-MBW">
-                                <rect key="frame" x="20" y="490" width="374" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yHs-Gc-UXa">
+                                <rect key="frame" x="20" y="494" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Company Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rq4-EK-7Da">
-                                <rect key="frame" x="20" y="532" width="374" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Company Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gfp-D7-JzB">
+                                <rect key="frame" x="20" y="536" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Business Landline Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RfS-eC-yfn">
-                                <rect key="frame" x="20" y="574" width="374" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Business Landline Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nOE-re-vSk">
+                                <rect key="frame" x="20" y="578" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Website" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W6j-pu-ZaQ">
-                                <rect key="frame" x="20" y="616" width="374" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Website" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IUw-Ei-APL">
+                                <rect key="frame" x="20" y="620" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -326,18 +319,18 @@
                         <viewLayoutGuide key="safeArea" id="wFf-Dw-f9p"/>
                     </view>
                     <connections>
-                        <outlet property="lblCompany" destination="rq4-EK-7Da" id="2Rc-Ha-Jx9"/>
-                        <outlet property="lblEmail" destination="Bro-rn-POY" id="q4B-JR-gkf"/>
-                        <outlet property="lblFirstName" destination="qXe-0H-v2o" id="tY4-Rg-dqY"/>
-                        <outlet property="lblGender" destination="nMH-61-jQa" id="n9b-Ao-Lxg"/>
-                        <outlet property="lblID" destination="kf1-IQ-0BL" id="GvV-fE-WZf"/>
-                        <outlet property="lblLandline" destination="RfS-eC-yfn" id="tJu-Hz-rxD"/>
-                        <outlet property="lblLastName" destination="lm0-EZ-sRL" id="sXU-D9-DCc"/>
-                        <outlet property="lblMobile" destination="8lC-xQ-Dp5" id="QLt-Sg-tSZ"/>
-                        <outlet property="lblPassword" destination="n0O-2R-MBW" id="Dct-b5-pju"/>
-                        <outlet property="lblUserName" destination="M1r-aB-Ap5" id="BpH-eT-4f3"/>
-                        <outlet property="lblWebsite" destination="W6j-pu-ZaQ" id="cYS-kU-DMr"/>
-                        <outlet property="textField_Date" destination="r3P-FG-aqe" id="v41-p9-idE"/>
+                        <outlet property="textField_Date" destination="LhK-ud-7C1" id="SaD-Qm-VDU"/>
+                        <outlet property="txtCompany" destination="Gfp-D7-JzB" id="gBL-C4-GeN"/>
+                        <outlet property="txtEmail" destination="vRk-8r-pt7" id="aPd-id-ELx"/>
+                        <outlet property="txtFirstName" destination="8x2-Is-9zM" id="Uw3-NA-bPp"/>
+                        <outlet property="txtGender" destination="bJ3-uc-BVY" id="P6a-mr-k8K"/>
+                        <outlet property="txtID" destination="es4-Td-2GO" id="JdG-nm-DmN"/>
+                        <outlet property="txtLandline" destination="nOE-re-vSk" id="5dB-sm-jVl"/>
+                        <outlet property="txtLastName" destination="bb2-Fo-uVb" id="Sbl-cQ-9KK"/>
+                        <outlet property="txtMobile" destination="3wa-Vw-4BO" id="5By-pq-w5F"/>
+                        <outlet property="txtPassword" destination="yHs-Gc-UXa" id="ovq-hF-1yK"/>
+                        <outlet property="txtUserName" destination="noq-c6-ori" id="2Pn-m9-7ug"/>
+                        <outlet property="txtWebsite" destination="IUw-Ei-APL" id="Hig-sF-OgX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rJV-wU-Nzy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -520,74 +513,74 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Identification Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="95i-y7-zRo">
-                                <rect key="frame" x="20" y="187" width="374" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Identification Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A3O-GB-sPc">
+                                <rect key="frame" x="20" y="183" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rgt-Im-Ka8">
-                                <rect key="frame" x="20" y="229" width="374" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CEM-zl-fCp">
+                                <rect key="frame" x="20" y="225" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Is Self Drive?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="US9-0M-WY1">
-                                <rect key="frame" x="20" y="271" width="374" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Is Self Drive?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K6p-vV-doS">
+                                <rect key="frame" x="20" y="267" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Manufacturer's Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z7I-kD-RnH">
-                                <rect key="frame" x="20" y="313" width="374" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Manufacturer's Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JGN-Lt-eji">
+                                <rect key="frame" x="20" y="309" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Is Insured?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kFq-V0-niI">
-                                <rect key="frame" x="20" y="355" width="374" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Is Insured?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1HD-jJ-WP1">
+                                <rect key="frame" x="20" y="351" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Number of Seats" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lGl-hV-WlC">
-                                <rect key="frame" x="20" y="397" width="374" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Number of Seats" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n7X-AL-WSD">
+                                <rect key="frame" x="20" y="393" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Insurance Provider's Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gJZ-31-Vad">
-                                <rect key="frame" x="20" y="439" width="374" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Insurance Provider's Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8sF-JJ-MRo">
+                                <rect key="frame" x="20" y="435" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Fuel Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nc6-A7-SFf">
-                                <rect key="frame" x="20" y="481" width="374" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Fuel Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UqB-GU-dT9">
+                                <rect key="frame" x="20" y="477" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Rate Per Day" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ytr-lC-Fuz">
-                                <rect key="frame" x="20" y="523" width="374" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Rate Per Day" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mvc-wc-4UI">
+                                <rect key="frame" x="20" y="519" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Rate Per KM" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EkY-aB-V8l">
-                                <rect key="frame" x="20" y="565" width="374" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Rate Per KM" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8HU-fv-u5Q">
+                                <rect key="frame" x="20" y="561" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Car Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="omI-cZ-xil">
-                                <rect key="frame" x="20" y="607" width="374" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Car Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FXw-Oz-PW3">
+                                <rect key="frame" x="20" y="603" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Car Color" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ohz-FG-bQr">
-                                <rect key="frame" x="20" y="649" width="374" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Car Color" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l5g-YQ-tzx">
+                                <rect key="frame" x="20" y="645" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -597,19 +590,18 @@
                         <viewLayoutGuide key="safeArea" id="FWC-T5-H9d"/>
                     </view>
                     <connections>
-                        <outlet property="lblCarColor" destination="Ohz-FG-bQr" id="olh-ps-2Bl"/>
-                        <outlet property="lblCarType" destination="omI-cZ-xil" id="Sow-SG-lKV"/>
-                        <outlet property="lblDescprition" destination="Rgt-Im-Ka8" id="T1c-3m-X6y"/>
-                        <outlet property="lblDescription" destination="Rgt-Im-Ka8" id="azL-r9-205"/>
-                        <outlet property="lblFuelType" destination="Nc6-A7-SFf" id="Or2-4X-9Xr"/>
-                        <outlet property="lblIDNo" destination="95i-y7-zRo" id="aO0-6q-AmF"/>
-                        <outlet property="lblInsurancePName" destination="gJZ-31-Vad" id="G8s-Uf-6uL"/>
-                        <outlet property="lblInsured" destination="kFq-V0-niI" id="jEu-RM-Ic3"/>
-                        <outlet property="lblManufacturerName" destination="Z7I-kD-RnH" id="lVY-RO-cX7"/>
-                        <outlet property="lblNoofSeats" destination="lGl-hV-WlC" id="BNF-np-r1r"/>
-                        <outlet property="lblRateDay" destination="Ytr-lC-Fuz" id="BVp-z0-heq"/>
-                        <outlet property="lblRateKM" destination="EkY-aB-V8l" id="0Tr-z9-w2U"/>
-                        <outlet property="lblSelfDrive" destination="US9-0M-WY1" id="7bd-ol-Dyp"/>
+                        <outlet property="txtCarColor" destination="l5g-YQ-tzx" id="H4g-PV-qdt"/>
+                        <outlet property="txtCarType" destination="FXw-Oz-PW3" id="whp-Dh-QE4"/>
+                        <outlet property="txtDescription" destination="CEM-zl-fCp" id="BOB-dh-Qsg"/>
+                        <outlet property="txtFuelType" destination="UqB-GU-dT9" id="P7g-sd-ctV"/>
+                        <outlet property="txtIDNo" destination="A3O-GB-sPc" id="K8j-78-brC"/>
+                        <outlet property="txtInsurancePName" destination="8sF-JJ-MRo" id="8dw-2F-kc9"/>
+                        <outlet property="txtInsured" destination="1HD-jJ-WP1" id="UM2-MM-hIU"/>
+                        <outlet property="txtManufacturerName" destination="JGN-Lt-eji" id="Zht-xD-pB8"/>
+                        <outlet property="txtNoofSeats" destination="n7X-AL-WSD" id="Jf6-UN-dZh"/>
+                        <outlet property="txtRateDay" destination="mvc-wc-4UI" id="bz0-h7-X8Q"/>
+                        <outlet property="txtRateKM" destination="8HU-fv-u5Q" id="yWL-qg-zFU"/>
+                        <outlet property="txtSelfDrive" destination="K6p-vV-doS" id="ng9-aQ-Vcn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FRx-Vt-bSc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
