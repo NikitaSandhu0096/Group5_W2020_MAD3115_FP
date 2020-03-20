@@ -706,6 +706,21 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="2ym-2C-cld"/>
                     </view>
+                    <connections>
+                        <outlet property="lblAccessibility" destination="BSQ-ta-Jgm" id="z0U-fY-YFV"/>
+                        <outlet property="lblBusType" destination="aMs-hO-MaO" id="4vK-dm-PH0"/>
+                        <outlet property="lblDescription" destination="cdY-tU-ft1" id="sYN-a0-254"/>
+                        <outlet property="lblFuelType" destination="c8g-V1-M4J" id="91L-oZ-Kmg"/>
+                        <outlet property="lblIDNo" destination="xcO-hK-DT7" id="TrT-AY-ye8"/>
+                        <outlet property="lblInsurancePName" destination="rSf-s3-VWS" id="biR-Yc-mnE"/>
+                        <outlet property="lblInsured" destination="oyU-dC-ImW" id="FpT-vM-PuW"/>
+                        <outlet property="lblManufacturerName" destination="77g-c0-G2h" id="6ht-X5-7SK"/>
+                        <outlet property="lblNoofSeats" destination="0El-yo-Nio" id="SKs-Zh-VNB"/>
+                        <outlet property="lblRateDay" destination="owI-zM-hHR" id="dxw-Hh-Qcl"/>
+                        <outlet property="lblRateKM" destination="fjF-1R-jbx" id="cXW-CJ-CsL"/>
+                        <outlet property="lblSelfDrive" destination="KJa-LC-fHE" id="owc-4x-kuE"/>
+                        <outlet property="lblWifi" destination="jFW-fQ-Ujo" id="OVv-aW-aca"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h0r-C5-UHv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -802,6 +817,20 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="rKQ-PO-m4a"/>
                     </view>
+                    <connections>
+                        <outlet property="lblDescription" destination="zUE-Au-MNC" id="9QC-UA-U1Q"/>
+                        <outlet property="lblFuelType" destination="2gR-vC-yeW" id="wwx-NW-52K"/>
+                        <outlet property="lblIDNo" destination="O4Y-75-KR2" id="N95-Tx-yXT"/>
+                        <outlet property="lblInsurancePName" destination="Wfx-tb-z8z" id="nvW-nn-7vx"/>
+                        <outlet property="lblInsured" destination="R52-1O-Nao" id="Jgw-js-Dj3"/>
+                        <outlet property="lblManufacturerName" destination="VL0-FI-m95" id="x35-AC-IHd"/>
+                        <outlet property="lblMaxSpeed" destination="wcG-rs-a2j" id="eO1-Uj-Q1M"/>
+                        <outlet property="lblMilage" destination="9Fi-FM-APG" id="URS-6h-J3g"/>
+                        <outlet property="lblNoofSeats" destination="oQ4-Yx-Kig" id="nCJ-TU-666"/>
+                        <outlet property="lblRateDay" destination="ldF-uZ-02c" id="28j-7s-kuK"/>
+                        <outlet property="lblRateKM" destination="2v4-ch-oV9" id="u6Q-9S-Wkd"/>
+                        <outlet property="lblSelfDrive" destination="DcW-Er-mwD" id="YhV-nz-z7E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7aY-K8-jx0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

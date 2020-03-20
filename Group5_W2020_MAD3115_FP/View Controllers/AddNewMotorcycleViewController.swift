@@ -10,21 +10,21 @@ import UIKit
 
 class AddNewMotorcycleViewController: UIViewController {
 
+    @IBOutlet weak var lblIDNo: UITextField!
+    @IBOutlet weak var lblDescription: UITextField!
+    @IBOutlet weak var lblSelfDrive: UITextField!
+    @IBOutlet weak var lblManufacturerName: UITextField!
+    @IBOutlet weak var lblInsured: UITextField!
+    @IBOutlet weak var lblNoofSeats: UITextField!
+    @IBOutlet weak var lblInsurancePName: UITextField!
+    @IBOutlet weak var lblFuelType: UITextField!
+    @IBOutlet weak var lblRateDay: UITextField!
+    @IBOutlet weak var lblRateKM: UITextField!
+    @IBOutlet weak var lblMaxSpeed: UITextField!
+    @IBOutlet weak var lblMilage: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
