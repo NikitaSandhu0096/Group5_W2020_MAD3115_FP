@@ -10,18 +10,18 @@ import UIKit
 
 class AddNewMotorcycleViewController: UIViewController {
 
-    @IBOutlet weak var lblIDNo: UITextField!
-    @IBOutlet weak var lblDescription: UITextField!
-    @IBOutlet weak var lblSelfDrive: UITextField!
-    @IBOutlet weak var lblManufacturerName: UITextField!
-    @IBOutlet weak var lblInsured: UITextField!
-    @IBOutlet weak var lblNoofSeats: UITextField!
-    @IBOutlet weak var lblInsurancePName: UITextField!
-    @IBOutlet weak var lblFuelType: UITextField!
-    @IBOutlet weak var lblRateDay: UITextField!
-    @IBOutlet weak var lblRateKM: UITextField!
-    @IBOutlet weak var lblMaxSpeed: UITextField!
-    @IBOutlet weak var lblMilage: UITextField!
+    @IBOutlet weak var txtIDNo: UITextField!
+    @IBOutlet weak var txtDescription: UITextField!
+    @IBOutlet weak var txtSelfDrive: UITextField!
+    @IBOutlet weak var txtManufacturerName: UITextField!
+    @IBOutlet weak var txtInsured: UITextField!
+    @IBOutlet weak var txtNoofSeats: UITextField!
+    @IBOutlet weak var txtInsurancePName: UITextField!
+    @IBOutlet weak var txtFuelType: UITextField!
+    @IBOutlet weak var txtRateDay: UITextField!
+    @IBOutlet weak var txtRateKM: UITextField!
+    @IBOutlet weak var txtMaxSpeed: UITextField!
+    @IBOutlet weak var txtMilage: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
