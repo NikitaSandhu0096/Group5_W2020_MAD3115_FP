@@ -26,7 +26,7 @@ class AddNewCarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let bbAddCar = UIBarButtonItem(title: "Add Owner", style: .plain, target: self, action: #selector(addCar))
+        let bbAddCar = UIBarButtonItem(title: "Add Car", style: .plain, target: self, action: #selector(addCar))
         navigationItem.rightBarButtonItem = bbAddCar
     }
     
