@@ -19,9 +19,8 @@ class AddNewCustomerViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtUserName: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
-    @IBOutlet weak var txtCompany: UITextField!
-    @IBOutlet weak var txtLandlineNo: UITextField!
-    @IBOutlet weak var txtWebsite: UITextField!
+    @IBOutlet weak var txtAddress: UITextField!
+    @IBOutlet weak var txtCity: UITextField!
     
     
     var datePicker : UIDatePicker!
