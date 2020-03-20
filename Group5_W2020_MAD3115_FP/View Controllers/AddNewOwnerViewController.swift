@@ -9,22 +9,22 @@
 import UIKit
 
 class AddNewOwnerViewController: UIViewController {
-
+    
+    @IBOutlet weak var lblID: UITextField!
+    @IBOutlet weak var lblFirstName: UITextField!
+    @IBOutlet weak var lblLastName: UITextField!
+    @IBOutlet weak var lblGender: UITextField!
+    @IBOutlet weak var textField_Date: UITextField!
+    @IBOutlet weak var lblMobile: UITextField!
+    @IBOutlet weak var lblEmail: UITextField!
+    @IBOutlet weak var lblUserName: UITextField!
+    @IBOutlet weak var lblPassword: UITextField!
+    @IBOutlet weak var lblCompany: UITextField!
+    @IBOutlet weak var lblLandline: UITextField!
+    @IBOutlet weak var lblWebsite: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

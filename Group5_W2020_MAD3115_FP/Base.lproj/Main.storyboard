@@ -314,6 +314,20 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="wFf-Dw-f9p"/>
                     </view>
+                    <connections>
+                        <outlet property="lblCompany" destination="rq4-EK-7Da" id="2Rc-Ha-Jx9"/>
+                        <outlet property="lblEmail" destination="Bro-rn-POY" id="q4B-JR-gkf"/>
+                        <outlet property="lblFirstName" destination="qXe-0H-v2o" id="tY4-Rg-dqY"/>
+                        <outlet property="lblGender" destination="nMH-61-jQa" id="n9b-Ao-Lxg"/>
+                        <outlet property="lblID" destination="kf1-IQ-0BL" id="GvV-fE-WZf"/>
+                        <outlet property="lblLandline" destination="RfS-eC-yfn" id="tJu-Hz-rxD"/>
+                        <outlet property="lblLastName" destination="lm0-EZ-sRL" id="sXU-D9-DCc"/>
+                        <outlet property="lblMobile" destination="8lC-xQ-Dp5" id="QLt-Sg-tSZ"/>
+                        <outlet property="lblPassword" destination="n0O-2R-MBW" id="Dct-b5-pju"/>
+                        <outlet property="lblUserName" destination="M1r-aB-Ap5" id="BpH-eT-4f3"/>
+                        <outlet property="lblWebsite" destination="W6j-pu-ZaQ" id="cYS-kU-DMr"/>
+                        <outlet property="textField_Date" destination="r3P-FG-aqe" id="v41-p9-idE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rJV-wU-Nzy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
