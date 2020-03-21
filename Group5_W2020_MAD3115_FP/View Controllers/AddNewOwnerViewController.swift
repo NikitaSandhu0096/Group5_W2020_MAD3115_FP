@@ -35,9 +35,9 @@ class AddNewOwnerViewController: UIViewController, UITextFieldDelegate {
     
      @objc func addOwner(){
         if ((((txtID.text == "" && txtFirstName.text == "") && (txtLastName.text == "" && txtGender.text == "")) && ((textField_Date.text == "" && txtMobile.text == "") && (txtEmail.text == "" && txtUserName.text == ""))) && ((txtPassword.text == "" && txtCompany.text == "") && (txtLandline.text == "" && txtWebsite.text == ""))){
-                let alertController = UIAlertController(title: "No new Owner created", message: "Enter all the required details to create new Owner", preferredStyle: .alert)
-                    alertController.addAction(UIAlertAction(title: "OK", style: .default))
-                    self.present(alertController, animated: true, completion: nil)
+            let alertController = UIAlertController(title: "No new Owner created", message: "Enter all the required details to create new Owner", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
         }else if txtID.text == "" {
             let alertController = UIAlertController(title: "No new Owner created", message: "Enter Owner's ID", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))

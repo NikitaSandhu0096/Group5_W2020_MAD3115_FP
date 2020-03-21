@@ -31,55 +31,55 @@ class AddNewMotorcycleViewController: UIViewController {
     }
      @objc func addMotorcycle(){
         if ((((txtIDNo.text == "" && txtDescription.text == "") && (txtSelfDrive.text == "" && txtManufacturerName.text == "")) && ((txtInsured.text == "" && txtNoofSeats.text == "") && (txtInsurancePName.text == "" && txtFuelType.text == ""))) && ((txtRateDay.text == "" && txtRateKM.text == "") && (txtMaxSpeed.text == "" && txtMilage.text == ""))){
-            let alertController = UIAlertController(title: "No new Car created", message: "Enter all the required details to create new Car", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "No new Motorcycle created", message: "Enter all the required details to create new Motorcycle", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alertController, animated: true, completion: nil)
         }else if txtIDNo.text == "" {
-            let alertController = UIAlertController(title: "No new Car created", message: "Enter Car's Identification Number", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "No new Motorcycle created", message: "Enter Motorcycle's Identification Number", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alertController, animated: true, completion: nil)
         }else if txtDescription.text == "" {
-            let alertController = UIAlertController(title: "No new Car created", message: "Enter Car's Description", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "No new Motorcycle created", message: "Enter Motorcycle's Description", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alertController, animated: true, completion: nil)
         }else if txtSelfDrive.text == "" {
-            let alertController = UIAlertController(title: "No new Car created", message: "Enter Car's Is Self Drive?", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "No new Motorcycle created", message: "Enter Motorcycle's Is Self Drive?", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alertController, animated: true, completion: nil)
         }else if txtManufacturerName.text == "" {
-            let alertController = UIAlertController(title: "No new Car created", message: "Enter Car's Manufacturer Name", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "No new Motorcycle created", message: "Enter Motorcycle's Manufacturer Name", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alertController, animated: true, completion: nil)
         }else if txtInsured.text == "" {
-            let alertController = UIAlertController(title: "No new Car created", message: "Enter Car's Is Insured?", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "No new Motorcycle created", message: "Enter Motorcycle's Is Insured?", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alertController, animated: true, completion: nil)
         }else if txtNoofSeats.text == "" {
-            let alertController = UIAlertController(title: "No new Car created", message: "Enter Car's Number of Seats", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "No new Motorcycle created", message: "Enter Motorcycle's Number of Seats", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alertController, animated: true, completion: nil)
         }else if txtInsurancePName.text == "" {
-            let alertController = UIAlertController(title: "No new Car created", message: "Enter Car's Insurance Provider's Name", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "No new Motorcycle created", message: "Enter Motorcycle's Insurance Provider's Name", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alertController, animated: true, completion: nil)
         }else if txtFuelType.text == "" {
-            let alertController = UIAlertController(title: "No new Car created", message: "Enter Car's Fuel Type", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "No new Motorcycle created", message: "Enter Motorcycle's Fuel Type", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alertController, animated: true, completion: nil)
         }else if txtRateDay.text == "" {
-            let alertController = UIAlertController(title: "No new Car created", message: "Enter Car's Rate Per Day", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "No new Motorcycle created", message: "Enter Motorcycle's Rate Per Day", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alertController, animated: true, completion: nil)
         }else if txtRateKM.text == "" {
-            let alertController = UIAlertController(title: "No new Car created", message: "Enter Car's Rate Per KM", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "No new Motorcycle created", message: "Enter Motorcycle's Rate Per KM", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alertController, animated: true, completion: nil)
         }else if txtMaxSpeed.text == "" {
-                let alertController = UIAlertController(title: "No new Car created", message: "Enter Car's Type", preferredStyle: .alert)
+                let alertController = UIAlertController(title: "No new Motorcycle created", message: "Enter Motorcycle's Max Top Speed", preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "OK", style: .default))
                 self.present(alertController, animated: true, completion: nil)
         }else if txtMilage.text == "" {
-            let alertController = UIAlertController(title: "No new Car created", message: "Enter Car's Color", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "No new Motorcycle created", message: "Enter Motorcycle's Milage", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alertController, animated: true, completion: nil)
         }else{

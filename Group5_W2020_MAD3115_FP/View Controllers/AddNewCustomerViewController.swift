@@ -35,8 +35,8 @@ class AddNewCustomerViewController: UIViewController, UITextFieldDelegate {
     @objc func addCustomer(){
         if ((((txtID.text == "" && txtFirstName.text == "") && (txtLastName.text == "" && txtGender.text == "")) && ((textField_Date.text == "" && txtMobile.text == "") && (txtEmail.text == "" && txtUserName.text == ""))) && ((txtPassword.text == "" && txtAddress.text == "") && txtCity.text == "")){
             let alertController = UIAlertController(title: "No new Customer created", message: "Enter all the required details to create new Customer", preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "OK", style: .default))
-                self.present(alertController, animated: true, completion: nil)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
         }else if txtID.text == "" {
             let alertController = UIAlertController(title: "No new Customer created", message: "Enter Customer's ID", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))

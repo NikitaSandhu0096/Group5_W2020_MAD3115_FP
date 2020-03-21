@@ -32,9 +32,9 @@ class AddNewCarViewController: UIViewController {
     
     @objc func addCar(){
         if ((((txtIDNo.text == "" && txtDescription.text == "") && (txtSelfDrive.text == "" && txtManufacturerName.text == "")) && ((txtInsured.text == "" && txtNoofSeats.text == "") && (txtInsurancePName.text == "" && txtFuelType.text == ""))) && ((txtRateDay.text == "" && txtRateKM.text == "") && (txtCarType.text == "" && txtCarColor.text == ""))){
-                let alertController = UIAlertController(title: "No new Car created", message: "Enter all the required details to create new Car", preferredStyle: .alert)
-                    alertController.addAction(UIAlertAction(title: "OK", style: .default))
-                    self.present(alertController, animated: true, completion: nil)
+            let alertController = UIAlertController(title: "No new Car created", message: "Enter all the required details to create new Car", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
         }else if txtIDNo.text == "" {
             let alertController = UIAlertController(title: "No new Car created", message: "Enter Car's Identification Number", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
