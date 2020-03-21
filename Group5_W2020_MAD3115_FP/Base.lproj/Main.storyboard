@@ -473,7 +473,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="akg-Sf-bQk"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Person's Details" id="NNZ-Rj-utp"/>
+                    <navigationItem key="navigationItem" title="Person's Details" id="NNZ-Rj-utp">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="vYw-Zq-CVn">
+                            <connections>
+                                <action selector="bbAdd:" destination="4Ta-Yd-hUj" id="q02-1Q-6o4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="lblAge" destination="9hj-pR-9h5" id="Naa-D2-8Os"/>
                         <outlet property="lblBirthdate" destination="bms-Dw-8Q5" id="GEJ-sb-bsc"/>

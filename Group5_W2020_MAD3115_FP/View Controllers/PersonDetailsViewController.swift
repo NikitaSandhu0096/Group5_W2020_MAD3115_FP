@@ -33,6 +33,7 @@ class PersonDetailsViewController: UIViewController {
         super.viewDidLoad()
         display()
     }
+    
     func display(){
         if person?.type == "Owner"{
             lblDetail14.text = "Owner's Details"
@@ -70,7 +71,36 @@ class PersonDetailsViewController: UIViewController {
             lblVehicleList.text = "Vehicles rented by customer"
         }
     }
+    
+    @IBAction func bbAdd(_ sender: UIBarButtonItem) {
+        if person?.type == "Owner"{
+            let alert = UIAlertController(title: "Add Vehicle", message: "Select type of vehicle", preferredStyle: .actionSheet)
+            alert.addAction(UIAlertAction(title: "Car", style: .default, handler: { (action) in
+            
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+                let addNewCarViewController = sb.instantiateViewController(identifier: "AddNewCarViewController") as! AddNewCarViewController
+//            addNewCustomerViewController.person = self.customerNames
+                self.navigationController?.pushViewController(addNewCarViewController, animated: true)
+            }))
+            alert.addAction(UIAlertAction(title: "Bus", style: .default, handler:{ (action) in
+            
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+                let addNewBusViewController = sb.instantiateViewController(identifier: "AddNewBusViewController") as! AddNewBusViewController
+//            addNewOwnerViewController.customer = self.customer
+                self.navigationController?.pushViewController(addNewBusViewController, animated: true)
+            }))
+            alert.addAction(UIAlertAction(title: "Motorcycle", style: .default, handler:{ (action) in
+                        
+                            let sb = UIStoryboard(name: "Main", bundle: nil)
+                            let addNewMotorcycleViewController = sb.instantiateViewController(identifier: "AddNewMotorcycleViewController") as! AddNewMotorcycleViewController
+            //            addNewOwnerViewController.customer = self.customer
+                            self.navigationController?.pushViewController(addNewMotorcycleViewController, animated: true)
+                        }))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
 }
+
 extension PersonDetailsViewController : UITableViewDataSource, UITableViewDelegate{
     func numberOfSections(in tableView: UITableView) -> Int{
         return 1
