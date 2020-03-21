@@ -26,7 +26,7 @@ extension String{
     func evaluateDate() -> String {      //https://stackoverflow.com/questions/35700281/date-format-in-swift
         
         let dateformatGet = DateFormatter()
-        dateformatGet.dateFormat = "dd/MM/yyyy"
+        dateformatGet.dateFormat = "MMM d, yyyy"
 
         let dateformatSet = DateFormatter()
         dateformatSet.dateFormat = "EEE, d MMM, yyyy"

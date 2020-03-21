@@ -48,7 +48,7 @@ class Owner : Person{
     func calculateBirthDate(string : String) -> Date {      //https://stackoverflow.com/questions/35700281/date-format-in-swift
         
         let dateformatGet1 = DateFormatter()
-        dateformatGet1.dateFormat = "dd/MM/yyyy"
+        dateformatGet1.dateFormat = "MMM d, yyyy"
      
         let birthDate1 : Date? = dateformatGet1.date(from: birthDate)
         return birthDate1!

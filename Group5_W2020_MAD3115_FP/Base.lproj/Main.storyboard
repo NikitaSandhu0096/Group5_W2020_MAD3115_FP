@@ -448,13 +448,33 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VehicleCell" id="DHu-mw-fLA">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VehicleCell" rowHeight="64" id="DHu-mw-fLA" customClass="VehicleCellTableViewCell" customModule="Group5_W2020_MAD3115_FP" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DHu-mw-fLA" id="LhR-jM-opK">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="64"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vehicle Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YcC-N1-y2r">
+                                                    <rect key="frame" x="18" y="3" width="336" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vehicle Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQM-Lb-hzi">
+                                                    <rect key="frame" x="18" y="32" width="336" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblVehicleDescription" destination="OQM-Lb-hzi" id="TYb-52-dLn"/>
+                                            <outlet property="lblVehicleType" destination="YcC-N1-y2r" id="Wn5-wa-bC7"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

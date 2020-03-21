@@ -32,7 +32,7 @@ class VehicleRent
     
     func startingDate(string : String) -> Date {    //https://stackoverflow.com/questions/35700281/date-format-in-swift
         let dateformatGet1 = DateFormatter()
-        dateformatGet1.dateFormat = "dd/MM/yyyy"
+        dateformatGet1.dateFormat = "MMM d, yyyy"
     
         let startDate1 : Date? = dateformatGet1.date(from: rentStartDate)
         return startDate1!
@@ -41,7 +41,7 @@ class VehicleRent
     func endingDate(string : String) -> Date {      //https://stackoverflow.com/questions/35700281/date-format-in-swift
         
      let dateformatGet2 = DateFormatter()
-     dateformatGet2.dateFormat = "dd/MM/yyyy"
+     dateformatGet2.dateFormat = "MMM d, yyyy"
      
      let endDate1 : Date? = dateformatGet2.date(from: rentEndDate)
      return endDate1!

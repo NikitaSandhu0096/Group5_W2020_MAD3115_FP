@@ -118,26 +118,28 @@ extension PersonDetailsViewController : UITableViewDataSource, UITableViewDelega
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "VehicleCell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "VehicleCell") as! VehicleCellTableViewCell
 
         if person?.type == "Owner"{
             let owner = person as! Owner
             let owner1 = owner.getVehicles()[indexPath.row]
-            cell?.textLabel?.text = owner1.type
+            cell.lblVehicleType.text = "Vehicle Type : \(owner1.type)"
+            cell.lblVehicleDescription.text = "Vehicle Descrption : \(owner1.description)"
         }
             else{
             let customer = person as! Customer
-            let vehicleRented = customer.getVehicleRented()[indexPath.row];
-            cell?.textLabel?.text = vehicleRented.vehicle.type
+            let vehicleRented = customer.getVehicleRented()[indexPath.row]
+            cell.lblVehicleType.text = "Vehicle Type : \(vehicleRented.vehicle.type)"
+            cell.lblVehicleDescription.text = "Vehicle Description : \(vehicleRented.vehicle.description)"
         }
 
-        return cell!
+        return cell
     }
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return CGFloat(100.0)
-//    }
-//
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(60.0)
+    }
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if person?.type == "Owner"{

@@ -14,10 +14,10 @@ protocol Vehicle
 
     var identificationNumber: String { get set }
     var description: String { get set }
-    var  isSelfDrive: Bool { get set }
+    var isSelfDrive: Bool { get set }
     var manufacturerName: String { get set }
-    var  isInsured: Bool { get set }
-    var  vehicleNoOfSeats: Int { get set }
+    var isInsured: Bool { get set }
+    var vehicleNoOfSeats: Int { get set }
     var insuranceProviderName: String { get set }
     var fuelType: String { get set }
     var ratePerDay: Float { get set }
