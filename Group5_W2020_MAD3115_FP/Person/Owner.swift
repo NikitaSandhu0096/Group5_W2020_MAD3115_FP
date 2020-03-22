@@ -14,7 +14,7 @@ class Owner : Person{
     var id: Int
     var firstName: String
     var lastName: String
-    var gender: Gender
+    var gender: String
     var birthDate: String
     var age: Int = 0
     var mobileNumber: String
@@ -30,7 +30,7 @@ class Owner : Person{
     var website : String
     private lazy var vehicleListOwned = [String : Vehicle]()
     
-    init(id: Int, firstName: String, lastName: String, gender: Gender, birthDate: String, mobileNumber: String, email: String, userName: String, password: String, companyTitle : String, businessLandLineNumber : String, website : String) {
+    init(id: Int, firstName: String, lastName: String, gender: String, birthDate: String, mobileNumber: String, email: String, userName: String, password: String, companyTitle : String, businessLandLineNumber : String, website : String) {
         self.id = id
         self.firstName = firstName
         self.lastName = lastName

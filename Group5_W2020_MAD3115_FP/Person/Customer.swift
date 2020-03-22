@@ -13,7 +13,7 @@ class Customer : Person{
     var id: Int
     var firstName: String
     var lastName: String
-    var gender: Gender
+    var gender: String
     var birthDate: String
     var age: Int = 0
     var mobileNumber: String
@@ -29,7 +29,7 @@ class Customer : Person{
     var vehicleListRented = [Int : VehicleRent]()
     var amountToPayForAllRentedVehicles : Float = 0.0
         
-    init(id: Int, firstName: String, lastName: String, gender: Gender, birthDate: String, mobileNumber: String, email: String, userName: String, password: String, address : String, city : String) {
+    init(id: Int, firstName: String, lastName: String, gender: String, birthDate: String, mobileNumber: String, email: String, userName: String, password: String, address : String, city : String) {
         self.id = id
         self.firstName = firstName
         self.lastName = lastName

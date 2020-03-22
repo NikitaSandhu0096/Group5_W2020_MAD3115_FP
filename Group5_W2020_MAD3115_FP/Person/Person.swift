@@ -19,7 +19,7 @@ protocol Person
     var id : Int { get set }
     var firstName : String { get set }
     var lastName : String { get set }
-    var gender : Gender { get set }
+    var gender : String { get set }
     var birthDate : String { get set }
     var age : Int { get set }
     var mobileNumber : String { get set }
