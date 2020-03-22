@@ -86,6 +86,7 @@ class PersonDetailsViewController: UIViewController {
             
                 let sb = UIStoryboard(name: "Main", bundle: nil)
                 let addNewBusViewController = sb.instantiateViewController(identifier: "AddNewBusViewController") as! AddNewBusViewController
+                
 //            addNewOwnerViewController.customer = self.customer
                 self.navigationController?.pushViewController(addNewBusViewController, animated: true)
             }))
@@ -148,7 +149,7 @@ extension PersonDetailsViewController : UITableViewDataSource, UITableViewDelega
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let vehicleDetailsViewController = sb.instantiateViewController(identifier: "VehicleDetailsViewController") as! VehicleDetailsViewController
             vehicleDetailsViewController.vehicle = sc
-            vehicleDetailsViewController.previousVC = "owner";
+            vehicleDetailsViewController.previousVC = "owner"
             self.navigationController?.pushViewController(vehicleDetailsViewController, animated: true)
         }else{
             let customer = person as! Customer
@@ -157,7 +158,7 @@ extension PersonDetailsViewController : UITableViewDataSource, UITableViewDelega
             let vehicleDetailsViewController = sb.instantiateViewController(identifier: "VehicleDetailsViewController") as! VehicleDetailsViewController
             vehicleDetailsViewController.vehicle = sc.vehicle;
             vehicleDetailsViewController.vehicleRent = sc;
-            vehicleDetailsViewController.previousVC = "customer";
+            vehicleDetailsViewController.previousVC = "customer"
             self.navigationController?.pushViewController(vehicleDetailsViewController, animated: true)
         }
     }
