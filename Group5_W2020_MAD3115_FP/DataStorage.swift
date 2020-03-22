@@ -12,6 +12,7 @@ class DataStorage{
     private static let instance = DataStorage()
     private lazy var customerDictionary = [Int : Customer]()
     private lazy var ownerDictionary = [Int : Owner]()
+    private lazy var driverDictionary = [Int : Driver]()
     
     private init(){}
     
@@ -27,6 +28,11 @@ class DataStorage{
     func addOwner(owner : Owner) {
         let oid = owner.id
         self.ownerDictionary.updateValue(owner, forKey: oid)
+    }
+    
+    func addDriver(driver : Driver){
+        let did = driver.id
+        self.driverDictionary.updateValue(driver, forKey: did)
     }
     
     func loadPersonDetails(){
@@ -160,6 +166,12 @@ class DataStorage{
         addOwner(owner: owner3)
         addOwner(owner: owner4)
         addOwner(owner: owner5)
+        
+        addDriver(driver: driver1)
+        addDriver(driver: driver2)
+        addDriver(driver: driver3)
+        addDriver(driver: driver4)
+        addDriver(driver: driver5)
     }
         
     func getAllCustomers() -> [Customer]{
@@ -176,5 +188,13 @@ class DataStorage{
             ownerList.append(j.value)
         }
         return ownerList
+    }
+    
+    func getAllDrivers() -> [Driver]{
+        var driverList : [Driver] = []
+        for k in driverDictionary{
+            driverList.append(k.value)
+        }
+        return driverList
     }
 }

@@ -8,9 +8,12 @@
 
 import UIKit
 
-class AddNewCarViewController: UIViewController {
+class AddNewCarViewController: UIViewController, UITextFieldDelegate {
     
     var person : Person?
+    var driverNames : [Driver] = []
+    
+    var driverPicker : UIPickerView!
 
     @IBOutlet weak var txtIDNo: UITextField!
     @IBOutlet weak var txtDescription: UITextField!
@@ -24,12 +27,20 @@ class AddNewCarViewController: UIViewController {
     @IBOutlet weak var txtRateKM: UITextField!
     @IBOutlet weak var txtCarType: UITextField!
     @IBOutlet weak var txtCarColor: UITextField!
+    @IBOutlet weak var lblDriver: UITextField!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
         let bbAddCar = UIBarButtonItem(title: "Add Car", style: .plain, target: self, action: #selector(addCar))
         navigationItem.rightBarButtonItem = bbAddCar
+        
+        lblDriver.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        driverNames = DataStorage.getInstance().getAllDrivers()
     }
     
     @objc func addCar(){
@@ -88,10 +99,10 @@ class AddNewCarViewController: UIViewController {
         }else{
 //            if person?.type == "Owner"{
 //                let owner = person as! Owner
-//                let tempobj = Car(identificationNumber: txtIDNo.text ?? "", description: txtDescription.text ?? "", isSelfDrive: Bool(txtSelfDrive.text ?? "")!, manufacturerName: txtManufacturerName.text ?? "", isInsured: Bool(txtInsured.text ?? "")!, insuranceProviderName: txtInsurancePName.text ?? "", vehicleNoOfSeats: Int(txtNoofSeats.text ?? "")!, fuelType: txtFuelType.text ?? "", ratePerDay: Float(txtRateDay.text ?? "")!, ratePerKm: Float(txtRateKM.text ?? "")!, carColor: txtCarColor.text ?? "", carType: txtCarType.text ?? "")
+//                let tempobj = Car(identificationNumber: txtIDNo.text ?? "", description: txtDescription.text ?? "", isSelfDrive: Bool(txtSelfDrive.text ?? "")!, manufacturerName: txtManufacturerName.text ?? "", isInsured: Bool(txtInsured.text ?? "")!, insuranceProviderName: txtInsurancePName.text ?? "", vehicleNoOfSeats: Int(txtNoofSeats.text ?? "")!, fuelType: txtFuelType.text ?? "", ratePerDay: Float(txtRateDay.text ?? "")!, ratePerKm: Float(txtRateKM.text ?? "")!, carColor: txtCarColor.text ?? "", carType: txtCarType.text ?? "", driver: <#Driver#>)
 //
 //                owner.addVehicleOwned(vehicleOwned: tempobj, vehicleIdentificationNumber: tempobj.identificationNumber)
-//
+
                 navigationController?.popViewController(animated: true)
 
 //            }else{
@@ -99,5 +110,75 @@ class AddNewCarViewController: UIViewController {
 //            }
         }
     }
-}
+    override func didReceiveMemoryWarning()
+         {
+             super.didReceiveMemoryWarning()
+         }
+        
+         func textFieldDidBeginEditing(_ textField: UITextField)
+         {
+             self.pickDriver(self.lblDriver)
+         }
+        
+         func pickDriver(_ textField : UITextField)
+         {
+             self.driverPicker = UIPickerView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 216))
+             self.driverPicker.backgroundColor = UIColor.white
+            
+//            self.driverPicker.numberOfRows(inComponent: driverNames.count)
+        
+             textField.inputView = self.driverPicker
+          
+             //ToolBar
+             let toolBar = UIToolbar()
+             toolBar.barStyle = .default
+             toolBar.isTranslucent = true
+             toolBar.tintColor = .blue//UIColor(red: 92/255, green: 216/255, blue 255/255, alpha : 1)
+             toolBar.sizeToFit()
+          
+             //Adding Button ToolBar
+          
+             let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(AddNewCarViewController.doneClick))
+          
+             let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+          
+             let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(AddNewCarViewController.cancelClick))
+          
+             toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+             toolBar.isUserInteractionEnabled = true
+             textField.inputAccessoryView = toolBar
+         }
+    
+//        func numberOfComponents(in pickerView: UIPickerView) -> Int {
+//            return 1
+//        }
+//
+//        func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+//            return driverNames.count
+//        }
+        
+//        func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+//
+//            let driver = driverNames[index(ofAccessibilityElement: row)]
+//            return driver.fullName
+//        }
+        
+//        func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+//            if component == 0{
+//                print(countryList[row])
+//            }else{
+//                print(codeList[row])
+//            }
+//        }
+         
+         @objc func doneClick(){
+//            lblDriver.text = driverPicker.d
+//             lblDriver.resignFirstResponder()
+         }
+         
+         @objc func cancelClick(){
+             lblDriver.resignFirstResponder()
+         }
+    }
+
 

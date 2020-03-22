@@ -611,11 +611,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Driver" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ny7-vh-4n8">
+                                <rect key="frame" x="20" y="687" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="FWC-T5-H9d"/>
                     </view>
                     <connections>
+                        <outlet property="lblDriver" destination="ny7-vh-4n8" id="nEe-S9-QfH"/>
                         <outlet property="txtCarColor" destination="l5g-YQ-tzx" id="H4g-PV-qdt"/>
                         <outlet property="txtCarType" destination="FXw-Oz-PW3" id="whp-Dh-QE4"/>
                         <outlet property="txtDescription" destination="CEM-zl-fCp" id="BOB-dh-Qsg"/>
