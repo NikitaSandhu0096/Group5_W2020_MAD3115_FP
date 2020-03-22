@@ -59,9 +59,10 @@ class VehicleDetailsViewController: UIViewController {
             lblRatePerKm.text = "Rate Per KM                          :  \(car.ratePerKm.currency())"
             lblDetail1.text = "Car Type                                :  \(car.carType)"
             lblDetail2.text = "Car Color                               :  \(car.carColor)"
-                if car.driver != nil{
-                    lblDriver.text = "\(car.driver.fullName)"
-                }
+                lblDriver.text = "Driver Details"
+//                if car.driver != nil{
+//                    lblDriver.text = "\(car.driver.fullName)"
+//                }
             if previousVC == "customer" {
                 lblRentDetails.text = "Car Rent Details"
                 lblRentStartDate.text = "Rent Start Date                      :  \(vehicleRent!.rentStartDate.evaluateDate())"
@@ -86,6 +87,7 @@ class VehicleDetailsViewController: UIViewController {
             lblRatePerKm.text = "Rate Per KM                          :  \(motorcycle.ratePerKm.currency())"
             lblDetail1.text = "Max Top Speed                    : \(motorcycle.maxTopSpeed)"
             lblDetail2.text = "Milage                                   : \(motorcycle.milage)"
+                lblDriver.text = "Driver Details"
             if previousVC == "customer" {
                 lblRentDetails.text = "Motorcycle Rent Details"
                 lblRentStartDate.text = "Rent Start Date                      :  \(vehicleRent!.rentStartDate.evaluateDate())"
@@ -110,9 +112,10 @@ class VehicleDetailsViewController: UIViewController {
             lblDetail1.text = "Type of Bus                           : \(bus.busType)"
             lblDetail2.text = "Is Accessibility Available?    : \(bus.isAccessibiltyServiceAvailable)"
             lblDetail3.text = "Is Wifi Available?                   : \(bus.iswifiAvailable)"
-                if bus.driver != nil{
-                    lblDriver.text = "\(bus.driver.fullName)"
-                }
+                lblDriver.text = "Driver Details"
+//                if bus.driver != nil{
+//                    lblDriver.text = "\(bus.driver.fullName)"
+//                }
             if previousVC == "customer" {
                 lblRentDetails.text = "Bus Rent Details"
                 lblRentStartDate.text = "Rent Start Date                    :  \(vehicleRent!.rentStartDate.evaluateDate())"
@@ -123,4 +126,52 @@ class VehicleDetailsViewController: UIViewController {
             }
         }
     }
+}
+
+extension VehicleDetailsViewController : UITableViewDataSource, UITableViewDelegate{
+    func numberOfSections(in tableView: UITableView) -> Int{
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PersonCell")
+    
+        if vehicle?.type == "Car"{
+            let car = vehicle as! Car
+            cell?.textLabel?.text = car.driver.fullName
+        } else if vehicle?.type == "Bus"{
+                let bus = vehicle as! Bus
+                cell?.textLabel?.text = bus.driver.fullName
+            
+        }else{
+            
+        }
+    
+        
+
+        return cell!
+    }
+    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        tableView.deselectRow(at: indexPath, animated: true)
+//        if segPerson.selectedSegmentIndex == 0{
+//            let c = DataStorage.getInstance().getAllCustomers()
+//            let sc = c[indexPath.row]
+//            let sb = UIStoryboard(name: "Main", bundle: nil)
+//            let personDetailsViewController = sb.instantiateViewController(identifier: "PersonDetailsViewController") as! PersonDetailsViewController
+//            personDetailsViewController.person = sc
+//            self.navigationController?.pushViewController(personDetailsViewController, animated: true)
+//        }else{
+//            let c = DataStorage.getInstance().getAllOwners()
+//            let sc = c[indexPath.row]
+//            let sb = UIStoryboard(name: "Main", bundle: nil)
+//            let personDetailsViewController = sb.instantiateViewController(identifier: "PersonDetailsViewController") as! PersonDetailsViewController
+//            personDetailsViewController.person = sc
+//            self.navigationController?.pushViewController(personDetailsViewController, animated: true)
+//        }
+//    }
 }
