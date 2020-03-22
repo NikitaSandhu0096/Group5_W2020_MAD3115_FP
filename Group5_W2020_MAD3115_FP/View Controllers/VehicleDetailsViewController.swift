@@ -10,6 +10,8 @@ import UIKit
 
 class VehicleDetailsViewController: UIViewController {
     
+    @IBOutlet weak var tblDriver: UITableView!
+    
     var previousVC:String?;
     var vehicle : Vehicle?
     var vehicleRent : VehicleRent?
@@ -138,7 +140,7 @@ extension VehicleDetailsViewController : UITableViewDataSource, UITableViewDeleg
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PersonCell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DriverCell")
     
         if vehicle?.type == "Car"{
             let car = vehicle as! Car
@@ -146,13 +148,11 @@ extension VehicleDetailsViewController : UITableViewDataSource, UITableViewDeleg
         } else if vehicle?.type == "Bus"{
                 let bus = vehicle as! Bus
                 cell?.textLabel?.text = bus.driver.fullName
-            
         }else{
-            
+            let motorcycle = vehicle as! MotorCycle
+            cell?.textLabel?.text = "This Vehicle Doesn't have a driver"
         }
     
-        
-
         return cell!
     }
     
