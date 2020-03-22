@@ -149,29 +149,33 @@ extension VehicleDetailsViewController : UITableViewDataSource, UITableViewDeleg
                 let bus = vehicle as! Bus
                 cell?.textLabel?.text = bus.driver.fullName
         }else{
-            let motorcycle = vehicle as! MotorCycle
             cell?.textLabel?.text = "This Vehicle Doesn't have a driver"
         }
     
         return cell!
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
-//        if segPerson.selectedSegmentIndex == 0{
-//            let c = DataStorage.getInstance().getAllCustomers()
-//            let sc = c[indexPath.row]
-//            let sb = UIStoryboard(name: "Main", bundle: nil)
-//            let personDetailsViewController = sb.instantiateViewController(identifier: "PersonDetailsViewController") as! PersonDetailsViewController
-//            personDetailsViewController.person = sc
-//            self.navigationController?.pushViewController(personDetailsViewController, animated: true)
-//        }else{
-//            let c = DataStorage.getInstance().getAllOwners()
-//            let sc = c[indexPath.row]
-//            let sb = UIStoryboard(name: "Main", bundle: nil)
-//            let personDetailsViewController = sb.instantiateViewController(identifier: "PersonDetailsViewController") as! PersonDetailsViewController
-//            personDetailsViewController.person = sc
-//            self.navigationController?.pushViewController(personDetailsViewController, animated: true)
-//        }
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        if vehicle?.type == "Car"{
+            let car = vehicle as! Car
+            let sc = car.driver
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let driverDetailsViewController = sb.instantiateViewController(identifier: "DriverDetailsViewController") as! DriverDetailsViewController
+            driverDetailsViewController.driver = sc
+            self.navigationController?.pushViewController(driverDetailsViewController, animated: true)
+        }else if vehicle?.type == "Bus"{
+            let bus = vehicle as! Bus
+            let sc = bus.driver
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let driverDetailsViewController = sb.instantiateViewController(identifier: "DriverDetailsViewController") as! DriverDetailsViewController
+            driverDetailsViewController.driver = sc
+            self.navigationController?.pushViewController(driverDetailsViewController, animated: true)
+        }else{
+            let alertController = UIAlertController(title: "Empty", message: "No Driver Exists for this Vehicle", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
 }
