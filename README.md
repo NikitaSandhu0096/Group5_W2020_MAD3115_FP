@@ -1,7 +1,7 @@
 # Group5_W2020_MAD3115_FP
 ## Vehicle Renting System
 
-# Nikita Sandu : C0766552
+# Nikita Sandhu : C0766552
 # Jyothi Thomas: C0775696
 # Kamalpreet Kaur: C0777682
 
