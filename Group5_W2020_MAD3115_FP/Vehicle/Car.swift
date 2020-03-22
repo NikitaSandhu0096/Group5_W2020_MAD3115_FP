@@ -6,7 +6,7 @@
 //  Copyright © 2020 MacStudent. All rights reserved.
 //
 
-class Car: Vehicle
+class Car : Vehicle
 {
     var type: String = "Car"
     

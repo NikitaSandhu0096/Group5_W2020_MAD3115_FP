@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Bus  : Vehicle
+class Bus : Vehicle
 {
     var type: String = "Bus"
     
