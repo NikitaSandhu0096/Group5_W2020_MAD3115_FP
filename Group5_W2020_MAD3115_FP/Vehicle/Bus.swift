@@ -22,12 +22,12 @@ class Bus : Vehicle
     var fuelType: String
     var ratePerDay: Float
     var ratePerKm: Float
-    var driver = [Int: Driver]()
+    var driver : Driver
     var busType: String
     var iswifiAvailable: Bool
     var isAccessibiltyServiceAvailable: Bool
            
-    init(identificationNumber: String, description: String, isSelfDrive: Bool, manufacturerName: String, isInsured: Bool, vehicleNoOfSeats: Int, insuranceProviderName: String,fuelType: String, ratePerDay: Float, ratePerKm: Float, busType : String , iswifiAvailable : Bool, isAccessibiltyServiceAvailable: Bool)
+    init(identificationNumber: String, description: String, isSelfDrive: Bool, manufacturerName: String, isInsured: Bool, vehicleNoOfSeats: Int, insuranceProviderName: String,fuelType: String, ratePerDay: Float, ratePerKm: Float, busType : String , iswifiAvailable : Bool, isAccessibiltyServiceAvailable: Bool, driver : Driver)
     {
              self.identificationNumber = identificationNumber
              self.description = description
@@ -42,18 +42,18 @@ class Bus : Vehicle
              self.busType = busType
              self.iswifiAvailable = iswifiAvailable
              self.isAccessibiltyServiceAvailable = isAccessibiltyServiceAvailable
-             
+        self.driver = driver
     }
     
-    func addDriver(drivers: Driver, driverId: Int)
-    {
-        driver.updateValue(drivers, forKey: driverId)
-    }
-    
-    func removeDriver(driverId: Int)
-    {
-        driver.removeValue(forKey: driverId)
-    }
+//    func addDriver(drivers: Driver, driverId: Int)
+//    {
+//        driver.updateValue(drivers, forKey: driverId)
+//    }
+//    
+//    func removeDriver(driverId: Int)
+//    {
+//        driver.removeValue(forKey: driverId)
+//    }
           
 //    func display()
 //    {

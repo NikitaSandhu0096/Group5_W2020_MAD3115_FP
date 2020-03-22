@@ -86,17 +86,17 @@ class AddNewCarViewController: UIViewController {
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alertController, animated: true, completion: nil)
         }else{
-            if person?.type == "Owner"{
-                let owner = person as! Owner
-                let tempobj = Car(identificationNumber: txtIDNo.text ?? "", description: txtDescription.text ?? "", isSelfDrive: Bool(txtSelfDrive.text ?? "")!, manufacturerName: txtManufacturerName.text ?? "", isInsured: Bool(txtInsured.text ?? "")!, insuranceProviderName: txtInsurancePName.text ?? "", vehicleNoOfSeats: Int(txtNoofSeats.text ?? "")!, fuelType: txtFuelType.text ?? "", ratePerDay: Float(txtRateDay.text ?? "")!, ratePerKm: Float(txtRateKM.text ?? "")!, carColor: txtCarColor.text ?? "", carType: txtCarType.text ?? "")
-                
-                owner.addVehicleOwned(vehicleOwned: tempobj, vehicleIdentificationNumber: tempobj.identificationNumber)
-                
+//            if person?.type == "Owner"{
+//                let owner = person as! Owner
+//                let tempobj = Car(identificationNumber: txtIDNo.text ?? "", description: txtDescription.text ?? "", isSelfDrive: Bool(txtSelfDrive.text ?? "")!, manufacturerName: txtManufacturerName.text ?? "", isInsured: Bool(txtInsured.text ?? "")!, insuranceProviderName: txtInsurancePName.text ?? "", vehicleNoOfSeats: Int(txtNoofSeats.text ?? "")!, fuelType: txtFuelType.text ?? "", ratePerDay: Float(txtRateDay.text ?? "")!, ratePerKm: Float(txtRateKM.text ?? "")!, carColor: txtCarColor.text ?? "", carType: txtCarType.text ?? "")
+//
+//                owner.addVehicleOwned(vehicleOwned: tempobj, vehicleIdentificationNumber: tempobj.identificationNumber)
+//
                 navigationController?.popViewController(animated: true)
 
-            }else{
-                print("Error")
-            }
+//            }else{
+//                print("Error")
+//            }
         }
     }
 }

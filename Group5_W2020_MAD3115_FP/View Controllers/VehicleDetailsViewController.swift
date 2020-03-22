@@ -36,6 +36,8 @@ class VehicleDetailsViewController: UIViewController {
     @IBOutlet weak var lblNoOfKm: UILabel!
     @IBOutlet weak var lblRentInKm: UILabel!
     
+    @IBOutlet weak var lblDriver: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         display()
@@ -57,6 +59,9 @@ class VehicleDetailsViewController: UIViewController {
             lblRatePerKm.text = "Rate Per KM                          :  \(car.ratePerKm.currency())"
             lblDetail1.text = "Car Type                                :  \(car.carType)"
             lblDetail2.text = "Car Color                               :  \(car.carColor)"
+                if car.driver != nil{
+                    lblDriver.text = "\(car.driver.fullName)"
+                }
             if previousVC == "customer" {
                 lblRentDetails.text = "Car Rent Details"
                 lblRentStartDate.text = "Rent Start Date                      :  \(vehicleRent!.rentStartDate.evaluateDate())"
@@ -105,6 +110,9 @@ class VehicleDetailsViewController: UIViewController {
             lblDetail1.text = "Type of Bus                           : \(bus.busType)"
             lblDetail2.text = "Is Accessibility Available?    : \(bus.isAccessibiltyServiceAvailable)"
             lblDetail3.text = "Is Wifi Available?                   : \(bus.iswifiAvailable)"
+                if bus.driver != nil{
+                    lblDriver.text = "\(bus.driver.fullName)"
+                }
             if previousVC == "customer" {
                 lblRentDetails.text = "Bus Rent Details"
                 lblRentStartDate.text = "Rent Start Date                    :  \(vehicleRent!.rentStartDate.evaluateDate())"

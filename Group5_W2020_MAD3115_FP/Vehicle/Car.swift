@@ -20,13 +20,13 @@ class Car : Vehicle
     var fuelType: String
     var ratePerDay: Float
     var ratePerKm: Float
-    var driver = [Int: Driver]()
+    var driver : Driver
     
     var carColor: String
     var carType: String
     
     init(identificationNumber:String,description:String,isSelfDrive:Bool,
-         manufacturerName: String,isInsured: Bool,insuranceProviderName: String, vehicleNoOfSeats : Int,fuelType: String,ratePerDay: Float,ratePerKm: Float, carColor: String, carType: String)
+         manufacturerName: String,isInsured: Bool,insuranceProviderName: String, vehicleNoOfSeats : Int,fuelType: String,ratePerDay: Float,ratePerKm: Float, carColor: String, carType: String, driver : Driver)
     {
         self.identificationNumber = identificationNumber
         self.description = description
@@ -40,18 +40,18 @@ class Car : Vehicle
         self.ratePerKm = ratePerKm
         self.carColor = carColor
         self.carType = carType
-    
+        self.driver = driver
       }
-    func addDriver(drivers: Driver, driverId: Int)
-    {
-        driver.updateValue(drivers, forKey: driverId)
-    }
-    
-    func removeDriver(driverId: Int)
-    {
-        driver.removeValue(forKey: driverId)
-    }
-        
+//    func addDriver(drivers: Driver, driverId: Int)
+//    {
+//        driver.updateValue(drivers, forKey: driverId)
+//    }
+//
+//    func removeDriver(driverId: Int)
+//    {
+//        driver.removeValue(forKey: driverId)
+//    }
+//
     
     
 //     func display() {

@@ -46,48 +46,48 @@ class DataStorage{
         let driver5 = Driver(id: 05, firstName: "Jasmine", lastName: "sharma", gender: "Female", birthDate: "Sep 07, 1990", mobileNumber: "6579246574", email: "jasmins36@gmail.com", userName: "sharmaJas", password: "jasmine".encrypt(key: "encrypt", iv: "encrypt") ?? "encrypt", drivingLicenseNumber: "C0983-6754-3421", isDrivingHistoryCleared: true, salary: 1000)
         
         // Bus objects
-        let bus1 = Bus(identificationNumber: "B01", description: "Ford Transit",isSelfDrive: false, manufacturerName: "Ford", isInsured: true, vehicleNoOfSeats: 20, insuranceProviderName: "Orient", fuelType: "Diesel", ratePerDay: 20, ratePerKm: 3, busType: "Volvo", iswifiAvailable: true, isAccessibiltyServiceAvailable: true)
-        if (bus1.isSelfDrive == false){
-            bus1.addDriver(drivers: driver1, driverId: driver1.id)
-        }
-        let bus2 = Bus(identificationNumber: "B02", description: "Mercedes-Benz Sprinter", isSelfDrive: false, manufacturerName: "Mercedes", isInsured: true, vehicleNoOfSeats: 24, insuranceProviderName: "TruSheild", fuelType: "Diesel", ratePerDay: 10 , ratePerKm: 2, busType: "Double Decker", iswifiAvailable: true, isAccessibiltyServiceAvailable: true)
-        if (bus2.isSelfDrive == false){
-            bus2.addDriver(drivers: driver2, driverId: driver2.id)
-        }
-        let bus3 = Bus(identificationNumber: "B03", description: "Hyundai Starex", isSelfDrive: false, manufacturerName: "Hyundai", isInsured: true, vehicleNoOfSeats: 18, insuranceProviderName:"Peter",  fuelType: "Diesel", ratePerDay: 15, ratePerKm: 4.5, busType: "Mini Bus", iswifiAvailable: false, isAccessibiltyServiceAvailable: true)
-        if (bus3.isSelfDrive == false){
-            bus3.addDriver(drivers: driver3, driverId: driver3.id)
-        }
-        let bus4 = Bus(identificationNumber: "B04", description: "Renault Master", isSelfDrive: false, manufacturerName: "Renault", isInsured: true, vehicleNoOfSeats: 45, insuranceProviderName: "MR.Yonge",  fuelType: "Diesel", ratePerDay: 30, ratePerKm: 5, busType: "School Bus", iswifiAvailable: false, isAccessibiltyServiceAvailable: true)
-        if (bus4.isSelfDrive == false){
-            bus4.addDriver(drivers: driver4, driverId: driver4.id)
-        }
-        let bus5 = Bus(identificationNumber: "B05", description: "Toyota Hiace", isSelfDrive: false, manufacturerName: "Toyota", isInsured: true, vehicleNoOfSeats: 20, insuranceProviderName: "Orient", fuelType: "Diesel", ratePerDay: 22, ratePerKm: 5, busType: "City Transit", iswifiAvailable: true, isAccessibiltyServiceAvailable: false)
-        if (bus5.isSelfDrive == false){
-            bus5.addDriver(drivers: driver5, driverId: driver5.id)
-        }
+        let bus1 = Bus(identificationNumber: "B01", description: "Ford Transit",isSelfDrive: false, manufacturerName: "Ford", isInsured: true, vehicleNoOfSeats: 20, insuranceProviderName: "Orient", fuelType: "Diesel", ratePerDay: 20, ratePerKm: 3, busType: "Volvo", iswifiAvailable: true, isAccessibiltyServiceAvailable: true, driver: driver1)
+//        if (bus1.isSelfDrive == false){
+//            bus1.addDriver(drivers: driver1, driverId: driver1.id)
+//        }
+        let bus2 = Bus(identificationNumber: "B02", description: "Mercedes-Benz Sprinter", isSelfDrive: false, manufacturerName: "Mercedes", isInsured: true, vehicleNoOfSeats: 24, insuranceProviderName: "TruSheild", fuelType: "Diesel", ratePerDay: 10 , ratePerKm: 2, busType: "Double Decker", iswifiAvailable: true, isAccessibiltyServiceAvailable: true, driver: driver2)
+//        if (bus2.isSelfDrive == false){
+//            bus2.addDriver(drivers: driver2, driverId: driver2.id)
+//        }
+        let bus3 = Bus(identificationNumber: "B03", description: "Hyundai Starex", isSelfDrive: false, manufacturerName: "Hyundai", isInsured: true, vehicleNoOfSeats: 18, insuranceProviderName:"Peter",  fuelType: "Diesel", ratePerDay: 15, ratePerKm: 4.5, busType: "Mini Bus", iswifiAvailable: false, isAccessibiltyServiceAvailable: true, driver: driver3)
+//        if (bus3.isSelfDrive == false){
+//            bus3.addDriver(drivers: driver3, driverId: driver3.id)
+//        }
+        let bus4 = Bus(identificationNumber: "B04", description: "Renault Master", isSelfDrive: false, manufacturerName: "Renault", isInsured: true, vehicleNoOfSeats: 45, insuranceProviderName: "MR.Yonge",  fuelType: "Diesel", ratePerDay: 30, ratePerKm: 5, busType: "School Bus", iswifiAvailable: false, isAccessibiltyServiceAvailable: true, driver: driver4)
+//        if (bus4.isSelfDrive == false){
+//            bus4.addDriver(drivers: driver4, driverId: driver4.id)
+//        }
+        let bus5 = Bus(identificationNumber: "B05", description: "Toyota Hiace", isSelfDrive: false, manufacturerName: "Toyota", isInsured: true, vehicleNoOfSeats: 20, insuranceProviderName: "Orient", fuelType: "Diesel", ratePerDay: 22, ratePerKm: 5, busType: "City Transit", iswifiAvailable: true, isAccessibiltyServiceAvailable: false, driver: driver5)
+//        if (bus5.isSelfDrive == false){
+//            bus5.addDriver(drivers: driver5, driverId: driver5.id)
+//        }
         
         // Car objects
-        let car1 = Car(identificationNumber: "C01", description: "Sedan", isSelfDrive: false, manufacturerName: "Polo", isInsured: true, insuranceProviderName: "National", vehicleNoOfSeats: 4, fuelType: "Petrol", ratePerDay: 10, ratePerKm: 5, carColor: "White", carType: "Sedan")
-        if (car1.isSelfDrive == false){
-            car1.addDriver(drivers: driver1, driverId: driver1.id)
-        }
-        let car2 = Car(identificationNumber: "C02", description: "SUV", isSelfDrive: true, manufacturerName: "Mahindra", isInsured: true, insuranceProviderName: "Thomas", vehicleNoOfSeats: 5, fuelType: "Petrol", ratePerDay: 12, ratePerKm: 3 , carColor: "Black", carType: "HatchBack")
-        if (car2.isSelfDrive == false){
-            car2.addDriver(drivers: driver2, driverId: driver2.id)
-        }
-        let car3 = Car(identificationNumber: "C03", description: "Crossover", isSelfDrive: true, manufacturerName: "Nissan", isInsured: true, insuranceProviderName: "Car Insaurance", vehicleNoOfSeats: 7, fuelType: "Diesel", ratePerDay: 15, ratePerKm: 5, carColor: "White", carType: "CUV")
-        if (car3.isSelfDrive == false){
-            car3.addDriver(drivers: driver3, driverId: driver3.id)
-        }
-        let car4 = Car(identificationNumber: "C04", description: "Convertible and Crossover", isSelfDrive: true, manufacturerName: "Lamborghini", isInsured: true, insuranceProviderName: "Convertion Insurances", vehicleNoOfSeats: 2, fuelType: "Diesel", ratePerDay: 30, ratePerKm: 8, carColor: "Red", carType: "Convertible")
-        if (car4.isSelfDrive == false){
-            car4.addDriver(drivers: driver4, driverId: driver4.id)
-        }
-        let car5 = Car(identificationNumber: "C05", description: "Mercedes Benz GLE Class", isSelfDrive: true, manufacturerName: "Mercedes", isInsured: true, insuranceProviderName: "National", vehicleNoOfSeats: 5, fuelType: "Diesel", ratePerDay: 30, ratePerKm: 5, carColor: "White", carType: "Passenger Car")
-        if (car5.isSelfDrive == false){
-            car5.addDriver(drivers: driver5, driverId: driver5.id)
-        }
+        let car1 = Car(identificationNumber: "C01", description: "Sedan", isSelfDrive: false, manufacturerName: "Polo", isInsured: true, insuranceProviderName: "National", vehicleNoOfSeats: 4, fuelType: "Petrol", ratePerDay: 10, ratePerKm: 5, carColor: "White", carType: "Sedan", driver : driver1)
+//        if (car1.isSelfDrive == false){
+//            car1.addDriver(drivers: driver1, driverId: driver1.id)
+//        }
+        let car2 = Car(identificationNumber: "C02", description: "SUV", isSelfDrive: true, manufacturerName: "Mahindra", isInsured: true, insuranceProviderName: "Thomas", vehicleNoOfSeats: 5, fuelType: "Petrol", ratePerDay: 12, ratePerKm: 3 , carColor: "Black", carType: "HatchBack", driver : driver2)
+//        if (car2.isSelfDrive == false){
+//            car2.addDriver(drivers: driver2, driverId: driver2.id)
+//        }
+        let car3 = Car(identificationNumber: "C03", description: "Crossover", isSelfDrive: true, manufacturerName: "Nissan", isInsured: true, insuranceProviderName: "Car Insaurance", vehicleNoOfSeats: 7, fuelType: "Diesel", ratePerDay: 15, ratePerKm: 5, carColor: "White", carType: "CUV", driver: driver3)
+//        if (car3.isSelfDrive == false){
+//            car3.addDriver(drivers: driver3, driverId: driver3.id)
+//        }
+        let car4 = Car(identificationNumber: "C04", description: "Convertible and Crossover", isSelfDrive: true, manufacturerName: "Lamborghini", isInsured: true, insuranceProviderName: "Convertion Insurances", vehicleNoOfSeats: 2, fuelType: "Diesel", ratePerDay: 30, ratePerKm: 8, carColor: "Red", carType: "Convertible", driver: driver4)
+//        if (car4.isSelfDrive == false){
+//            car4.addDriver(drivers: driver4, driverId: driver4.id)
+//        }
+        let car5 = Car(identificationNumber: "C05", description: "Mercedes Benz GLE Class", isSelfDrive: true, manufacturerName: "Mercedes", isInsured: true, insuranceProviderName: "National", vehicleNoOfSeats: 5, fuelType: "Diesel", ratePerDay: 30, ratePerKm: 5, carColor: "White", carType: "Passenger Car", driver: driver5)
+//        if (car5.isSelfDrive == false){
+//            car5.addDriver(drivers: driver5, driverId: driver5.id)
+//        }
         
         // Motorcycle objects
         let motorcycle1 = MotorCycle(identificationNumber: "MC01", description: "Classic",manufacturerName: "Bajaj", isSelfDrive: true, isInsured: true,  insuranceProviderName: "Overseas",vehicleNoOfSeats: 2,fuelType: "Petrol", ratePerDay: 5, ratePerKm: 5, maxTopSpeed: 60, milage: 25)
