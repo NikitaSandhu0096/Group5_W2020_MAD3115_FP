@@ -160,7 +160,7 @@ class AddNewVehicleRentViewController: UIViewController, UITextFieldDelegate {
         let dateFormatter1 = DateFormatter()
         dateFormatter1.dateStyle = .medium
         dateFormatter1.timeStyle = .none
-        txtREDate.text = dateFormatter1.string(from: datePicker1.date)
+        txtREDate.text = dateFormatter1.string(from: datePicker2.date)
         txtREDate.resignFirstResponder()
     }
      
