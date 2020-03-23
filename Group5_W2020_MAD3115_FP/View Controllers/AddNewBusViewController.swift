@@ -116,69 +116,65 @@ class AddNewBusViewController: UIViewController, UITextFieldDelegate {
             navigationController?.popViewController(animated: true)
         }
     }
-     override func didReceiveMemoryWarning()
-             {
-                 super.didReceiveMemoryWarning()
-             }
-            
-             func textFieldDidBeginEditing(_ textField: UITextField)
-             {
-                 self.pickDriver(self.txtDriver)
-             }
-            
-             func pickDriver(_ textField : UITextField)
-             {
-                 self.driverPicker = UIPickerView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 216))
-                self.driverPicker.delegate = self
-                 self.driverPicker.backgroundColor = UIColor.white
-                        
-                 textField.inputView = self.driverPicker
-              
-                 //ToolBar
-                 let toolBar = UIToolbar()
-                 toolBar.barStyle = .default
-                 toolBar.isTranslucent = true
-                 toolBar.tintColor = .blue//UIColor(red: 92/255, green: 216/255, blue 255/255, alpha : 1)
-                 toolBar.sizeToFit()
-              
-                 //Adding Button ToolBar
-              
-                 let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(AddNewCarViewController.doneClick))
-              
-                 let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-              
-                 let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(AddNewCarViewController.cancelClick))
-              
-                 toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
-                 toolBar.isUserInteractionEnabled = true
-                 textField.inputAccessoryView = toolBar
-             }
-             
-             @objc func doneClick(){
-                tempDriver = driverNames[self.driverPicker.selectedRow(inComponent: 0)];
-                txtDriver.text = driverNames[self.driverPicker.selectedRow(inComponent: 0)].fullName;
-                 txtDriver.resignFirstResponder()
-             }
-             
-             @objc func cancelClick(){
-                 txtDriver.resignFirstResponder()
-             }
-        }
-
-
-    extension AddNewBusViewController: UIPickerViewDelegate, UIPickerViewDataSource{
-        func numberOfComponents(in pickerView: UIPickerView) -> Int {
-            return 1;
-        }
-        
-        func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-            return driverNames.count
-        }
-        
-        func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-            return driverNames[row].fullName;
-        }
-        
+    
+    override func didReceiveMemoryWarning(){
+        super.didReceiveMemoryWarning()
     }
+            
+    func textFieldDidBeginEditing(_ textField: UITextField){
+        self.pickDriver(self.txtDriver)
+    }
+            
+    func pickDriver(_ textField : UITextField){
+        self.driverPicker = UIPickerView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 216))
+        self.driverPicker.delegate = self
+        self.driverPicker.backgroundColor = UIColor.white
+                        
+        textField.inputView = self.driverPicker
+              
+        //ToolBar
+        let toolBar = UIToolbar()
+        toolBar.barStyle = .default
+        toolBar.isTranslucent = true
+        toolBar.tintColor = .blue//UIColor(red: 92/255, green: 216/255, blue 255/255, alpha : 1)
+        toolBar.sizeToFit()
+              
+        //Adding Button ToolBar
+              
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(AddNewCarViewController.doneClick))
+        
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+              
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(AddNewCarViewController.cancelClick))
+              
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        textField.inputAccessoryView = toolBar
+    }
+             
+    @objc func doneClick(){
+        tempDriver = driverNames[self.driverPicker.selectedRow(inComponent: 0)]
+        txtDriver.text = driverNames[self.driverPicker.selectedRow(inComponent: 0)].fullName
+        txtDriver.resignFirstResponder()
+    }
+             
+    @objc func cancelClick(){
+        txtDriver.resignFirstResponder()
+    }
+}
+
+extension AddNewBusViewController: UIPickerViewDelegate, UIPickerViewDataSource{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1;
+    }
+        
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return driverNames.count
+    }
+        
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return driverNames[row].fullName;
+    }
+}
 
 

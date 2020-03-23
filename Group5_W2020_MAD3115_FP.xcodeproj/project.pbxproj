@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EE1466E92427DFA700DFA659 /* DriverDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1466E82427DFA700DFA659 /* DriverDetailsViewController.swift */; };
+		EE1466EB242867E900DFA659 /* AddNewVehicleRentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1466EA242867E900DFA659 /* AddNewVehicleRentViewController.swift */; };
 		EE62DC0C24229C2700B18BA9 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62DC0B24229C2700B18BA9 /* DataStorage.swift */; };
 		EE62DC0E2422A78F00B18BA9 /* PersonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62DC0D2422A78F00B18BA9 /* PersonListViewController.swift */; };
 		EE62DC102422BAA600B18BA9 /* PersonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62DC0F2422BAA600B18BA9 /* PersonDetailsViewController.swift */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		EE1466E82427DFA700DFA659 /* DriverDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailsViewController.swift; sourceTree = "<group>"; };
+		EE1466EA242867E900DFA659 /* AddNewVehicleRentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewVehicleRentViewController.swift; sourceTree = "<group>"; };
 		EE62DC0B24229C2700B18BA9 /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
 		EE62DC0D2422A78F00B18BA9 /* PersonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewController.swift; sourceTree = "<group>"; };
 		EE62DC0F2422BAA600B18BA9 /* PersonDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				EE920F9B242529F600B120ED /* AddNewBusViewController.swift */,
 				EE920F9D24252A0600B120ED /* AddNewMotorcycleViewController.swift */,
 				EE1466E82427DFA700DFA659 /* DriverDetailsViewController.swift */,
+				EE1466EA242867E900DFA659 /* AddNewVehicleRentViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				EE76165B2421A82600CC8606 /* Car.swift in Sources */,
 				EE62DC0E2422A78F00B18BA9 /* PersonListViewController.swift in Sources */,
 				EE920F9E24252A0600B120ED /* AddNewMotorcycleViewController.swift in Sources */,
+				EE1466EB242867E900DFA659 /* AddNewVehicleRentViewController.swift in Sources */,
 				EE1466E92427DFA700DFA659 /* DriverDetailsViewController.swift in Sources */,
 				EE76165C2421A82600CC8606 /* MotorCycle.swift in Sources */,
 				EE7616572421A81B00CC8606 /* CustomException.swift in Sources */,

@@ -98,18 +98,15 @@ class AddNewOwnerViewController: UIViewController, UITextFieldDelegate {
         }
     }
 
-    override func didReceiveMemoryWarning()
-    {
+    override func didReceiveMemoryWarning(){
         super.didReceiveMemoryWarning()
     }
         
-    func textFieldDidBeginEditing(_ textField: UITextField)
-    {
+    func textFieldDidBeginEditing(_ textField: UITextField){
         self.pickUpDate(self.textField_Date)
     }
     
-    func pickUpDate(_ textField : UITextField)
-    {
+    func pickUpDate(_ textField : UITextField){
         self.datePicker = UIDatePicker(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 216))
         self.datePicker.backgroundColor = UIColor.white
         self.datePicker.datePickerMode = UIDatePicker.Mode.date

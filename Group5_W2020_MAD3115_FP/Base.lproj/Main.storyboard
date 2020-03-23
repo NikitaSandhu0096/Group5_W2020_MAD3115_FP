@@ -122,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gxh-gU-fVx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2561" y="106"/>
+            <point key="canvasLocation" x="2561" y="108"/>
         </scene>
         <!--Add New Customer View Controller-->
         <scene sceneID="C1a-fA-8Q9">
@@ -225,7 +225,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5IX-By-Fl4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2560.8695652173915" y="-548.4375"/>
+            <point key="canvasLocation" x="1754" y="-581"/>
         </scene>
         <!--Add New Owner View Controller-->
         <scene sceneID="Waw-VQ-YaP">
@@ -335,7 +335,68 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rJV-wU-Nzy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3384.057971014493" y="-550.44642857142856"/>
+            <point key="canvasLocation" x="2561" y="-581"/>
+        </scene>
+        <!--Add New Vehicle Rent View Controller-->
+        <scene sceneID="JiS-Ft-rHh">
+            <objects>
+                <viewController storyboardIdentifier="AddNewVehicleRentViewController" id="2Jk-gX-TYn" customClass="AddNewVehicleRentViewController" customModule="Group5_W2020_MAD3115_FP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dls-Tc-nax">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter New Vehicle Rent Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yig-At-wQb">
+                                <rect key="frame" x="20" y="140" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Vehicle Rent ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bx3-c4-cmp">
+                                <rect key="frame" x="20" y="188" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Rent Start Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4IR-Zb-YuK">
+                                <rect key="frame" x="20" y="230" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Rent End date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c2I-MC-jN0">
+                                <rect key="frame" x="20" y="272" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Number of KM Drived" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PVl-cq-h8h">
+                                <rect key="frame" x="20" y="314" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Vehicle" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Zo-sY-UXK">
+                                <rect key="frame" x="20" y="356" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="e3e-r7-tye"/>
+                    </view>
+                    <connections>
+                        <outlet property="txtNoofKM" destination="PVl-cq-h8h" id="L9J-Sc-rV4"/>
+                        <outlet property="txtREDate" destination="c2I-MC-jN0" id="NbH-V8-hZC"/>
+                        <outlet property="txtRSDate" destination="4IR-Zb-YuK" id="gh6-NA-Yqq"/>
+                        <outlet property="txtVRID" destination="Bx3-c4-cmp" id="swg-vJ-Vtc"/>
+                        <outlet property="txtVehicle" destination="6Zo-sY-UXK" id="DiU-WN-vny"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tY5-4s-aVT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4177" y="-581"/>
         </scene>
         <!--Person's Details-->
         <scene sceneID="xP5-EJ-ccs">
@@ -522,7 +583,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbs-pq-6yX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3382.608695652174" y="106.47321428571428"/>
+            <point key="canvasLocation" x="3383" y="108"/>
         </scene>
         <!--Add New Car View Controller-->
         <scene sceneID="f3r-jB-zKb">
@@ -639,7 +700,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FRx-Vt-bSc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3392.753623188406" y="778.79464285714278"/>
+            <point key="canvasLocation" x="2561" y="817"/>
         </scene>
         <!--Add New Bus View Controller-->
         <scene sceneID="esE-c2-DGI">
@@ -763,7 +824,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h0r-C5-UHv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4192" y="784"/>
+            <point key="canvasLocation" x="3383" y="817"/>
         </scene>
         <!--Add New Motorcycle View Controller-->
         <scene sceneID="1Ke-Dz-eso">
@@ -873,7 +934,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7aY-K8-jx0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4990" y="784"/>
+            <point key="canvasLocation" x="4178" y="817"/>
         </scene>
         <!--Vehicle's Details-->
         <scene sceneID="XyJ-VA-V8D">
@@ -1082,9 +1143,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kgE-LK-4Je" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4178.2608695652179" y="104.46428571428571"/>
+            <point key="canvasLocation" x="4177" y="108"/>
         </scene>
-        <!--Driver Details View Controller-->
+        <!--Driver's Details-->
         <scene sceneID="Osq-HN-360">
             <objects>
                 <viewController storyboardIdentifier="DriverDetailsViewController" id="x5c-7b-WFn" customClass="DriverDetailsViewController" customModule="Group5_W2020_MAD3115_FP" customModuleProvider="target" sceneMemberID="viewController">
@@ -1194,7 +1255,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="B7f-aZ-hDu"/>
                     </view>
-                    <navigationItem key="navigationItem" id="aBL-38-2Jw"/>
+                    <navigationItem key="navigationItem" title="Driver's Details" id="aBL-38-2Jw"/>
                     <connections>
                         <outlet property="lblAge" destination="1j2-9v-Kao" id="dUG-Nc-wrF"/>
                         <outlet property="lblBirthdate" destination="Ler-Iq-iPu" id="Tmb-3C-DtM"/>
@@ -1214,7 +1275,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x1b-o7-5UC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4960" y="107"/>
+            <point key="canvasLocation" x="4961" y="108"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Shy-co-0Hd">
@@ -1233,7 +1294,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IxX-rj-lCV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1754" y="106"/>
+            <point key="canvasLocation" x="1754" y="108"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eAJ-Ay-eFe">

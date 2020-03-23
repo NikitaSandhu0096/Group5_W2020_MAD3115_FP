@@ -13,6 +13,7 @@ class DataStorage{
     private lazy var customerDictionary = [Int : Customer]()
     private lazy var ownerDictionary = [Int : Owner]()
     private lazy var driverDictionary = [Int : Driver]()
+    private lazy var vehicleDictionary = [String : Vehicle]()
     
     private init(){}
     
@@ -33,6 +34,11 @@ class DataStorage{
     func addDriver(driver : Driver){
         let did = driver.id
         self.driverDictionary.updateValue(driver, forKey: did)
+    }
+    
+    func addVehicle(vehicle : Vehicle){
+        let vid = vehicle.identificationNumber
+        self.vehicleDictionary.updateValue(vehicle, forKey: vid)
     }
     
     func loadPersonDetails(){
@@ -172,35 +178,37 @@ class DataStorage{
         addDriver(driver: driver3)
         addDriver(driver: driver4)
         addDriver(driver: driver5)
+        
+        addVehicle(vehicle: bus1)
+        addVehicle(vehicle: bus2)
+        addVehicle(vehicle: bus3)
+        addVehicle(vehicle: bus4)
+        addVehicle(vehicle: bus5)
+        addVehicle(vehicle: car1)
+        addVehicle(vehicle: car2)
+        addVehicle(vehicle: car3)
+        addVehicle(vehicle: car4)
+        addVehicle(vehicle: car5)
+        addVehicle(vehicle: motorcycle1)
+        addVehicle(vehicle: motorcycle2)
+        addVehicle(vehicle: motorcycle3)
+        addVehicle(vehicle: motorcycle4)
+        addVehicle(vehicle: motorcycle5)
     }
         
     func getAllCustomers() -> [Customer]{
-//        var customerList : [Customer] = []
-//        for i in customerDictionary{
-//            customerList.append(i.value)
-//        }
-//        return customerList
-        
         return Array(self.customerDictionary.values)
     }
     
     func getAllOwners() -> [Owner]{
-//        var ownerList : [Owner] = []
-//        for j in ownerDictionary{
-//            ownerList.append(j.value)
-//        }
-//        return ownerList
-        
         return Array(self.ownerDictionary.values)
     }
     
     func getAllDrivers() -> [Driver]{
-//        var driverList : [Driver] = []
-//        for k in driverDictionary{
-//            driverList.append(k.value)
-//        }
-//        return driverList
-        
-        return Array(self.driverDictionary.values);
+        return Array(self.driverDictionary.values)
+    }
+    
+    func getAllVehicles() -> [Vehicle]{
+        return Array(self.vehicleDictionary.values)
     }
 }

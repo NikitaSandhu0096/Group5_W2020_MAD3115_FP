@@ -100,6 +100,11 @@ class PersonDetailsViewController: UIViewController {
                 self.navigationController?.pushViewController(addNewMotorcycleViewController, animated: true)
             }))
             self.present(alert, animated: true, completion: nil)
+        }else{
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let addNewVehicleRentViewController = sb.instantiateViewController(identifier: "AddNewVehicleRentViewController") as! AddNewVehicleRentViewController
+            addNewVehicleRentViewController.person = self.person
+            self.navigationController?.pushViewController(addNewVehicleRentViewController, animated: true)
         }
     }
 }

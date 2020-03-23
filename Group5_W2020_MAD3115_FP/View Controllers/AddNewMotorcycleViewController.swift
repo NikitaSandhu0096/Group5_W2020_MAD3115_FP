@@ -31,6 +31,7 @@ class AddNewMotorcycleViewController: UIViewController {
         let bbAddMotorcycle = UIBarButtonItem(title: "Add Motorcycle", style: .plain, target: self, action: #selector(addMotorcycle))
         navigationItem.rightBarButtonItem = bbAddMotorcycle
     }
+    
      @objc func addMotorcycle(){
         if ((((txtIDNo.text == "" && txtDescription.text == "") && (txtSelfDrive.text == "" && txtManufacturerName.text == "")) && ((txtInsured.text == "" && txtNoofSeats.text == "") && (txtInsurancePName.text == "" && txtFuelType.text == ""))) && ((txtRateDay.text == "" && txtRateKM.text == "") && (txtMaxSpeed.text == "" && txtMilage.text == ""))){
             let alertController = UIAlertController(title: "No new Motorcycle created", message: "Enter all the required details to create new Motorcycle", preferredStyle: .alert)
