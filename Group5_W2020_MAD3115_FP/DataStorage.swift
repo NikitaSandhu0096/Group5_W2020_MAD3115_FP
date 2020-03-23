@@ -175,26 +175,32 @@ class DataStorage{
     }
         
     func getAllCustomers() -> [Customer]{
-        var customerList : [Customer] = []
-        for i in customerDictionary{
-            customerList.append(i.value)
-        }
-        return customerList
+//        var customerList : [Customer] = []
+//        for i in customerDictionary{
+//            customerList.append(i.value)
+//        }
+//        return customerList
+        
+        return Array(self.customerDictionary.values)
     }
     
     func getAllOwners() -> [Owner]{
-        var ownerList : [Owner] = []
-        for j in ownerDictionary{
-            ownerList.append(j.value)
-        }
-        return ownerList
+//        var ownerList : [Owner] = []
+//        for j in ownerDictionary{
+//            ownerList.append(j.value)
+//        }
+//        return ownerList
+        
+        return Array(self.ownerDictionary.values)
     }
     
     func getAllDrivers() -> [Driver]{
-        var driverList : [Driver] = []
-        for k in driverDictionary{
-            driverList.append(k.value)
-        }
-        return driverList
+//        var driverList : [Driver] = []
+//        for k in driverDictionary{
+//            driverList.append(k.value)
+//        }
+//        return driverList
+        
+        return Array(self.driverDictionary.values);
     }
 }

@@ -33,6 +33,9 @@ class PersonDetailsViewController: UIViewController {
         super.viewDidLoad()
         display()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        tblVehicle.reloadData();
+    }
     
     func display(){
         if person?.type == "Owner"{
@@ -79,7 +82,7 @@ class PersonDetailsViewController: UIViewController {
             
                 let sb = UIStoryboard(name: "Main", bundle: nil)
                 let addNewCarViewController = sb.instantiateViewController(identifier: "AddNewCarViewController") as! AddNewCarViewController
-//            addNewCustomerViewController.person = self.customerNames
+                addNewCarViewController.person = self.person;
                 self.navigationController?.pushViewController(addNewCarViewController, animated: true)
             }))
             alert.addAction(UIAlertAction(title: "Bus", style: .default, handler:{ (action) in
