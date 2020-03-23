@@ -8,7 +8,12 @@
 
 import UIKit
 
-class AddNewBusViewController: UIViewController {
+class AddNewBusViewController: UIViewController, UITextFieldDelegate {
+    
+    var person : Person?
+    var driverNames : [Driver] = []
+    
+    var driverPicker : UIPickerView!
 
     @IBOutlet weak var txtIDNo: UITextField!
     @IBOutlet weak var txtDescription: UITextField!
@@ -23,12 +28,21 @@ class AddNewBusViewController: UIViewController {
     @IBOutlet weak var txtBusType: UITextField!
     @IBOutlet weak var txtAccessibility: UITextField!
     @IBOutlet weak var txtWifi: UITextField!
+    @IBOutlet weak var txtDriver: UITextField!
+    
+    var tempDriver : Driver?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let bbAddBus = UIBarButtonItem(title: "Add Bus", style: .plain, target: self, action: #selector(addBus))
         navigationItem.rightBarButtonItem = bbAddBus
+        
+        txtDriver.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        driverNames = DataStorage.getInstance().getAllDrivers()
     }
     
     @objc func addBus(){
@@ -89,8 +103,78 @@ class AddNewBusViewController: UIViewController {
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alertController, animated: true, completion: nil)
         }else{
+            
+            let owner = person as! Owner
+            let tempobj = Bus(identificationNumber: txtIDNo.text ?? "", description: txtDescription.text ?? "", isSelfDrive: Bool(txtSelfDrive.text ?? "")!, manufacturerName: txtManufacturerName.text ?? "", isInsured: Bool(txtInsured.text ?? "")!, vehicleNoOfSeats: Int(txtNoofSeats.text ?? "")!, insuranceProviderName: txtInsurancePName.text ?? "", fuelType: txtFuelType.text ?? "", ratePerDay: Float(txtRateDay.text ?? "")!, ratePerKm: Float(txtRateKM.text ?? "")!, busType: txtBusType.text ?? "", iswifiAvailable: Bool(txtWifi.text ?? "")!, isAccessibiltyServiceAvailable: Bool(txtAccessibility.text ?? "")!, driver: tempDriver!)
+            
+            owner.addVehicleOwned(vehicleOwned: tempobj, vehicleIdentificationNumber: tempobj.identificationNumber)
+            
             navigationController?.popViewController(animated: true)
         }
     }
-}
+     override func didReceiveMemoryWarning()
+             {
+                 super.didReceiveMemoryWarning()
+             }
+            
+             func textFieldDidBeginEditing(_ textField: UITextField)
+             {
+                 self.pickDriver(self.txtDriver)
+             }
+            
+             func pickDriver(_ textField : UITextField)
+             {
+                 self.driverPicker = UIPickerView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 216))
+                self.driverPicker.delegate = self
+                 self.driverPicker.backgroundColor = UIColor.white
+                        
+                 textField.inputView = self.driverPicker
+              
+                 //ToolBar
+                 let toolBar = UIToolbar()
+                 toolBar.barStyle = .default
+                 toolBar.isTranslucent = true
+                 toolBar.tintColor = .blue//UIColor(red: 92/255, green: 216/255, blue 255/255, alpha : 1)
+                 toolBar.sizeToFit()
+              
+                 //Adding Button ToolBar
+              
+                 let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(AddNewCarViewController.doneClick))
+              
+                 let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+              
+                 let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(AddNewCarViewController.cancelClick))
+              
+                 toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+                 toolBar.isUserInteractionEnabled = true
+                 textField.inputAccessoryView = toolBar
+             }
+             
+             @objc func doneClick(){
+                tempDriver = driverNames[self.driverPicker.selectedRow(inComponent: 0)];
+                txtDriver.text = driverNames[self.driverPicker.selectedRow(inComponent: 0)].fullName;
+                 txtDriver.resignFirstResponder()
+             }
+             
+             @objc func cancelClick(){
+                 txtDriver.resignFirstResponder()
+             }
+        }
+
+
+    extension AddNewBusViewController: UIPickerViewDelegate, UIPickerViewDataSource{
+        func numberOfComponents(in pickerView: UIPickerView) -> Int {
+            return 1;
+        }
+        
+        func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+            return driverNames.count
+        }
+        
+        func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+            return driverNames[row].fullName;
+        }
+        
+    }
+
 

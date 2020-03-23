@@ -82,15 +82,14 @@ class PersonDetailsViewController: UIViewController {
             
                 let sb = UIStoryboard(name: "Main", bundle: nil)
                 let addNewCarViewController = sb.instantiateViewController(identifier: "AddNewCarViewController") as! AddNewCarViewController
-                addNewCarViewController.person = self.person;
+                addNewCarViewController.person = self.person
                 self.navigationController?.pushViewController(addNewCarViewController, animated: true)
             }))
             alert.addAction(UIAlertAction(title: "Bus", style: .default, handler:{ (action) in
             
                 let sb = UIStoryboard(name: "Main", bundle: nil)
                 let addNewBusViewController = sb.instantiateViewController(identifier: "AddNewBusViewController") as! AddNewBusViewController
-                
-//            addNewOwnerViewController.customer = self.customer
+                addNewBusViewController.person = self.person
                 self.navigationController?.pushViewController(addNewBusViewController, animated: true)
             }))
             alert.addAction(UIAlertAction(title: "Motorcycle", style: .default, handler:{ (action) in

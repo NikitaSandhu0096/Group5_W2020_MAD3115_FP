@@ -27,9 +27,9 @@ class AddNewCarViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var txtRateKM: UITextField!
     @IBOutlet weak var txtCarType: UITextField!
     @IBOutlet weak var txtCarColor: UITextField!
-    @IBOutlet weak var lblDriver: UITextField!
+    @IBOutlet weak var txtDriver: UITextField!
     
-    var tempDriver:Driver?;
+    var tempDriver : Driver?
     
     override func viewDidLoad() {
         
@@ -38,7 +38,7 @@ class AddNewCarViewController: UIViewController, UITextFieldDelegate {
         let bbAddCar = UIBarButtonItem(title: "Add Car", style: .plain, target: self, action: #selector(addCar))
         navigationItem.rightBarButtonItem = bbAddCar
         
-        lblDriver.delegate = self
+        txtDriver.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -99,19 +99,15 @@ class AddNewCarViewController: UIViewController, UITextFieldDelegate {
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alertController, animated: true, completion: nil)
         }else{
-//            if person?.type == "Owner"{
                 let owner = person as! Owner
                 let tempobj = Car(identificationNumber: txtIDNo.text ?? "", description: txtDescription.text ?? "", isSelfDrive: Bool(txtSelfDrive.text ?? "")!, manufacturerName: txtManufacturerName.text ?? "", isInsured: Bool(txtInsured.text ?? "")!, insuranceProviderName: txtInsurancePName.text ?? "", vehicleNoOfSeats: Int(txtNoofSeats.text ?? "")!, fuelType: txtFuelType.text ?? "", ratePerDay: Float(txtRateDay.text ?? "")!, ratePerKm: Float(txtRateKM.text ?? "")!, carColor: txtCarColor.text ?? "", carType: txtCarType.text ?? "", driver: tempDriver!);
 
                 owner.addVehicleOwned(vehicleOwned: tempobj, vehicleIdentificationNumber: tempobj.identificationNumber)
 
                 navigationController?.popViewController(animated: true)
-
-//            }else{
-//                print("Error")
-//            }
         }
     }
+    
     override func didReceiveMemoryWarning()
          {
              super.didReceiveMemoryWarning()
@@ -119,13 +115,13 @@ class AddNewCarViewController: UIViewController, UITextFieldDelegate {
         
          func textFieldDidBeginEditing(_ textField: UITextField)
          {
-             self.pickDriver(self.lblDriver)
+             self.pickDriver(self.txtDriver)
          }
         
          func pickDriver(_ textField : UITextField)
          {
              self.driverPicker = UIPickerView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 216))
-            self.driverPicker.delegate = self;
+            self.driverPicker.delegate = self
              self.driverPicker.backgroundColor = UIColor.white
                     
              textField.inputView = self.driverPicker
@@ -152,12 +148,12 @@ class AddNewCarViewController: UIViewController, UITextFieldDelegate {
          
          @objc func doneClick(){
             tempDriver = driverNames[self.driverPicker.selectedRow(inComponent: 0)];
-            lblDriver.text = driverNames[self.driverPicker.selectedRow(inComponent: 0)].fullName;
-             lblDriver.resignFirstResponder()
+            txtDriver.text = driverNames[self.driverPicker.selectedRow(inComponent: 0)].fullName;
+             txtDriver.resignFirstResponder()
          }
          
          @objc func cancelClick(){
-             lblDriver.resignFirstResponder()
+             txtDriver.resignFirstResponder()
          }
     }
 

@@ -611,7 +611,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Driver" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ny7-vh-4n8">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Driver" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8mn-jS-lZX">
                                 <rect key="frame" x="20" y="687" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -622,10 +622,10 @@
                         <viewLayoutGuide key="safeArea" id="FWC-T5-H9d"/>
                     </view>
                     <connections>
-                        <outlet property="lblDriver" destination="ny7-vh-4n8" id="nEe-S9-QfH"/>
                         <outlet property="txtCarColor" destination="l5g-YQ-tzx" id="H4g-PV-qdt"/>
                         <outlet property="txtCarType" destination="FXw-Oz-PW3" id="whp-Dh-QE4"/>
                         <outlet property="txtDescription" destination="CEM-zl-fCp" id="BOB-dh-Qsg"/>
+                        <outlet property="txtDriver" destination="8mn-jS-lZX" id="8tS-Oi-whc"/>
                         <outlet property="txtFuelType" destination="UqB-GU-dT9" id="P7g-sd-ctV"/>
                         <outlet property="txtIDNo" destination="A3O-GB-sPc" id="K8j-78-brC"/>
                         <outlet property="txtInsurancePName" destination="8sF-JJ-MRo" id="8dw-2F-kc9"/>
@@ -734,6 +734,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Driver" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vDR-A6-1wz">
+                                <rect key="frame" x="20" y="725" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="2ym-2C-cld"/>
@@ -742,6 +748,7 @@
                         <outlet property="txtAccessibility" destination="Qa6-lY-4SU" id="0aB-nl-NvZ"/>
                         <outlet property="txtBusType" destination="gGc-UY-05Y" id="ogC-Ux-m0b"/>
                         <outlet property="txtDescription" destination="zFI-sS-ZHv" id="TTb-xt-7Hg"/>
+                        <outlet property="txtDriver" destination="vDR-A6-1wz" id="0a3-xV-cLk"/>
                         <outlet property="txtFuelType" destination="IMC-Fz-kwg" id="Dr7-Sp-RUx"/>
                         <outlet property="txtIDNo" destination="BTB-mr-J3x" id="0DN-KT-Sqr"/>
                         <outlet property="txtInsurancePName" destination="EBx-MS-aht" id="JvH-Ii-vsl"/>
