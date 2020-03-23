@@ -111,7 +111,7 @@ class AddNewVehicleRentViewController: UIViewController, UITextFieldDelegate {
                      
     @objc func doneClick(){
         tempVehicle = vehicleNames[self.vehiclePicker.selectedRow(inComponent: 0)]
-        txtVehicle.text = vehicleNames[self.vehiclePicker.selectedRow(inComponent: 0)].type
+        txtVehicle.text = "\(vehicleNames[self.vehiclePicker.selectedRow(inComponent: 0)].type)  :  \(vehicleNames[self.vehiclePicker.selectedRow(inComponent: 0)].description)"
         txtVehicle.resignFirstResponder()
     }
                      
@@ -130,6 +130,6 @@ extension AddNewVehicleRentViewController: UIPickerViewDelegate, UIPickerViewDat
     }
                 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return vehicleNames[row].description
+        return "\(vehicleNames[row].type)  :  \(vehicleNames[row].description)"
     }
 }
