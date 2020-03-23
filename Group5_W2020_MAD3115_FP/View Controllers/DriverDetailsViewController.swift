@@ -48,7 +48,7 @@ class DriverDetailsViewController: UIViewController {
         lblPassword.text = "Password                          :  \(driver!.password)"
         lblDetail11.text = "License Number               :  \(driver!.drivingLicenseNumber)"
         lblDetail12.text = "Driving History Cleared? :  \(driver!.isDrivingHistoryCleared)"
-        lblDetail13.text = "Salary                                :  \(driver!.salary)"
+        lblDetail13.text = "Salary                                :  \(driver!.salary.currency())"
         }
     }
 //}

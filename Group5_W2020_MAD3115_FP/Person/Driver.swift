@@ -27,9 +27,9 @@ class Driver : Person{
     
     var drivingLicenseNumber : String
     var isDrivingHistoryCleared : Bool
-    var salary : Int
+    var salary : Float
     
-    init(id: Int, firstName: String, lastName: String, gender: String, birthDate: String, mobileNumber: String, email: String, userName: String, password: String, drivingLicenseNumber : String, isDrivingHistoryCleared : Bool, salary : Int) {
+    init(id: Int, firstName: String, lastName: String, gender: String, birthDate: String, mobileNumber: String, email: String, userName: String, password: String, drivingLicenseNumber : String, isDrivingHistoryCleared : Bool, salary : Float) {
         self.id = id
         self.firstName = firstName
         self.lastName = lastName
