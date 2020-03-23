@@ -46,7 +46,7 @@ class AddNewCarViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func addCar(){
-        if ((((txtIDNo.text == "" && txtDescription.text == "") && (txtSelfDrive.text == "" && txtManufacturerName.text == "")) && ((txtInsured.text == "" && txtNoofSeats.text == "") && (txtInsurancePName.text == "" && txtFuelType.text == ""))) && ((txtRateDay.text == "" && txtRateKM.text == "") && (txtCarType.text == "" && txtCarColor.text == ""))){
+        if ((((txtIDNo.text == "" && txtDescription.text == "") && (txtSelfDrive.text == "" && txtManufacturerName.text == "")) && ((txtInsured.text == "" && txtNoofSeats.text == "") && (txtInsurancePName.text == "" && txtFuelType.text == ""))) && (((txtRateDay.text == "" && txtRateKM.text == "") && (txtCarType.text == "" && txtCarColor.text == "")) && txtDriver.text == "")){
             let alertController = UIAlertController(title: "No new Car created", message: "Enter all the required details to create new Car", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alertController, animated: true, completion: nil)
@@ -96,6 +96,10 @@ class AddNewCarViewController: UIViewController, UITextFieldDelegate {
             self.present(alertController, animated: true, completion: nil)
         }else if txtCarColor.text == "" {
             let alertController = UIAlertController(title: "No new Car created", message: "Enter Car's Color", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }else if txtDriver.text == ""{
+            let alertController = UIAlertController(title: "No new Car created", message: "Enter Car's Driver", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alertController, animated: true, completion: nil)
         }else{

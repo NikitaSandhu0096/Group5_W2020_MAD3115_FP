@@ -46,7 +46,8 @@ class AddNewBusViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func addBus(){
-        if ((((txtIDNo.text == "" && txtDescription.text == "") && (txtSelfDrive.text == "" && txtManufacturerName.text == "")) && ((txtInsured.text == "" && txtNoofSeats.text == "") && (txtInsurancePName.text == "" && txtFuelType.text == ""))) && (((txtRateDay.text == "" && txtRateKM.text == "") && (txtBusType.text == "" && txtAccessibility.text == "")) && txtWifi.text == "")){
+        if ((((txtIDNo.text == "" && txtDescription.text == "") && (txtSelfDrive.text == "" && txtManufacturerName.text == "")) && ((txtInsured.text == "" && txtNoofSeats.text == "") && (txtInsurancePName.text == "" && txtFuelType.text == ""))) &&
+            (((txtRateDay.text == "" && txtRateKM.text == "") && (txtBusType.text == "" && txtAccessibility.text == "")) && (txtWifi.text == "" && txtDriver.text == ""))){
             let alertController = UIAlertController(title: "No new Bus created", message: "Enter all the required details to create new Bus", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alertController, animated: true, completion: nil)
@@ -102,8 +103,11 @@ class AddNewBusViewController: UIViewController, UITextFieldDelegate {
             let alertController = UIAlertController(title: "No new Bus created", message: "Enter Bus's Is Wifi Available?", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alertController, animated: true, completion: nil)
+        }else if txtDriver.text == ""{
+            let alertController = UIAlertController(title: "No new Bus created", message: "Enter Bus's Driver", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
         }else{
-            
             let owner = person as! Owner
             let tempobj = Bus(identificationNumber: txtIDNo.text ?? "", description: txtDescription.text ?? "", isSelfDrive: Bool(txtSelfDrive.text ?? "")!, manufacturerName: txtManufacturerName.text ?? "", isInsured: Bool(txtInsured.text ?? "")!, vehicleNoOfSeats: Int(txtNoofSeats.text ?? "")!, insuranceProviderName: txtInsurancePName.text ?? "", fuelType: txtFuelType.text ?? "", ratePerDay: Float(txtRateDay.text ?? "")!, ratePerKm: Float(txtRateKM.text ?? "")!, busType: txtBusType.text ?? "", iswifiAvailable: Bool(txtWifi.text ?? "")!, isAccessibiltyServiceAvailable: Bool(txtAccessibility.text ?? "")!, driver: tempDriver!)
             
