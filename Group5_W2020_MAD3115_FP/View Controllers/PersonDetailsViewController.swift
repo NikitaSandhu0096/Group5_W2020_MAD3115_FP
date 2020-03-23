@@ -94,11 +94,11 @@ class PersonDetailsViewController: UIViewController {
             }))
             alert.addAction(UIAlertAction(title: "Motorcycle", style: .default, handler:{ (action) in
                         
-                            let sb = UIStoryboard(name: "Main", bundle: nil)
-                            let addNewMotorcycleViewController = sb.instantiateViewController(identifier: "AddNewMotorcycleViewController") as! AddNewMotorcycleViewController
-            //            addNewOwnerViewController.customer = self.customer
-                            self.navigationController?.pushViewController(addNewMotorcycleViewController, animated: true)
-                        }))
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+                let addNewMotorcycleViewController = sb.instantiateViewController(identifier: "AddNewMotorcycleViewController") as! AddNewMotorcycleViewController
+                addNewMotorcycleViewController.person = self.person
+                self.navigationController?.pushViewController(addNewMotorcycleViewController, animated: true)
+            }))
             self.present(alert, animated: true, completion: nil)
         }
     }

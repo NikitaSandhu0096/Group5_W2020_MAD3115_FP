@@ -10,6 +10,8 @@ import UIKit
 
 class AddNewMotorcycleViewController: UIViewController {
 
+    var person : Person?
+
     @IBOutlet weak var txtIDNo: UITextField!
     @IBOutlet weak var txtDescription: UITextField!
     @IBOutlet weak var txtSelfDrive: UITextField!
@@ -83,7 +85,12 @@ class AddNewMotorcycleViewController: UIViewController {
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alertController, animated: true, completion: nil)
         }else{
-                navigationController?.popViewController(animated: true)
+            let owner = person as! Owner
+            let tempobj = MotorCycle(identificationNumber: txtIDNo.text ?? "", description: txtDescription.text ?? "", manufacturerName: txtManufacturerName.text ?? "", isSelfDrive: Bool(txtSelfDrive.text ?? "")!, isInsured: Bool(txtInsured.text ?? "")!, insuranceProviderName: txtInsurancePName.text ?? "", vehicleNoOfSeats: Int(txtNoofSeats.text ?? "")!, fuelType: txtFuelType.text ?? "", ratePerDay: Float(txtRateDay.text ?? "")!, ratePerKm: Float(txtRateKM.text ?? "")!, maxTopSpeed: Int(txtMaxSpeed.text ?? "")!, milage: Int(txtMilage.text ?? "")!)
+            
+            owner.addVehicleOwned(vehicleOwned: tempobj, vehicleIdentificationNumber: tempobj.identificationNumber)
+            
+            navigationController?.popViewController(animated: true)
         }
     }
 }
