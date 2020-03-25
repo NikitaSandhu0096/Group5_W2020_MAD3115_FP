@@ -67,7 +67,7 @@ class Owner : Person{
         vehicleListOwned.updateValue(vehicleOwned, forKey: vehicleIdentificationNumber)
     }
     
-    func removeVehicleRent(vehicleIdentificationNumber: String)
+    func removeVehicleOwned(vehicleIdentificationNumber: String)
     {
         vehicleListOwned.removeValue(forKey: vehicleIdentificationNumber)
     }

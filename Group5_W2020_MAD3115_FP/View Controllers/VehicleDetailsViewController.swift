@@ -12,6 +12,8 @@ class VehicleDetailsViewController: UIViewController {
     
     @IBOutlet weak var tblDriver: UITableView!
     
+    var person : Person?
+    
     var previousVC : String?
     var vehicle : Vehicle?
     var vehicleRent : VehicleRent?
@@ -42,7 +44,50 @@ class VehicleDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let bbVehicle = UIBarButtonItem(title: "Delete Vehicle", style: .plain, target: self, action: #selector(remove))
+        navigationItem.rightBarButtonItem = bbVehicle
+        
         display()
+    }
+    
+    @objc func remove(){
+        
+        if previousVC == "Owner"{
+            let owner = person as! Owner
+            if vehicle?.type == "Car"{
+                let car = vehicle as! Car
+                owner.removeVehicleOwned(vehicleIdentificationNumber: car.identificationNumber)
+                navigationController?.popViewController(animated: true)
+            } else if vehicle?.type == "Bus"{
+                let bus = vehicle as! Bus
+                owner.removeVehicleOwned(vehicleIdentificationNumber: bus.identificationNumber)
+                navigationController?.popViewController(animated: true)
+            } else{
+                let motorcycle = vehicle as! MotorCycle
+                owner.removeVehicleOwned(vehicleIdentificationNumber: motorcycle.identificationNumber)
+                navigationController?.popViewController(animated: true)
+            }
+        }
+//        else{
+//            let customer = person as! Customer
+//            customer.removeVehicleRent(vehicleRentID: vehicleRent!.vehicleRentID)
+//        }
+        
+//        if vehicle?.type == "Car"{
+//            let car = vehicle as! Car
+//            DataStorage.getInstance().removeVehicle(vehicle: Car(identificationNumber: car.identificationNumber, description: car.description, isSelfDrive: car.isSelfDrive, manufacturerName: car.manufacturerName, isInsured: car.isInsured, insuranceProviderName: car.insuranceProviderName, vehicleNoOfSeats: car.vehicleNoOfSeats, fuelType: car.fuelType, ratePerDay: car.ratePerDay, ratePerKm: car.ratePerKm, carColor: car.carColor, carType: car.carType, driver: car.driver))
+//            navigationController?.popViewController(animated: true)
+//        }
+//            else if vehicle?.type == "Bus"{
+//            let bus = vehicle as! Bus
+//            DataStorage.getInstance().removeVehicle(vehicle: Bus(identificationNumber: bus.identificationNumber, description: bus.description, isSelfDrive: bus.isSelfDrive, manufacturerName: bus.manufacturerName, isInsured: bus.isInsured, vehicleNoOfSeats: bus.vehicleNoOfSeats, insuranceProviderName: bus.insuranceProviderName, fuelType: bus.fuelType, ratePerDay: bus.ratePerDay, ratePerKm: bus.ratePerKm, busType: bus.busType, iswifiAvailable: bus.iswifiAvailable, isAccessibiltyServiceAvailable: bus.isAccessibiltyServiceAvailable, driver: bus.driver))
+//            navigationController?.popViewController(animated: true)
+//        }else{
+//            let motorcycle = vehicle as! MotorCycle
+//            DataStorage.getInstance().removeVehicle(vehicle: MotorCycle(identificationNumber: motorcycle.identificationNumber, description: motorcycle.description, manufacturerName: motorcycle.manufacturerName, isSelfDrive: motorcycle.isSelfDrive, isInsured: motorcycle.isInsured, insuranceProviderName: motorcycle.insuranceProviderName, vehicleNoOfSeats: motorcycle.vehicleNoOfSeats, fuelType: motorcycle.fuelType, ratePerDay: motorcycle.ratePerDay, ratePerKm: motorcycle.ratePerKm, maxTopSpeed: motorcycle.maxTopSpeed, milage: motorcycle.milage))
+//            navigationController?.popViewController(animated: true)
+//        }
     }
     
     func display(){
@@ -61,7 +106,7 @@ class VehicleDetailsViewController: UIViewController {
             lblRatePerKm.text = "Rate Per KM                          :  \(car.ratePerKm.currency())"
             lblDetail1.text = "Car Type                                :  \(car.carType)"
             lblDetail2.text = "Car Color                               :  \(car.carColor)"
-                lblDriver.text = "Car's Driver"
+                lblDriver.text = "Driver Details"
 //                if car.driver != nil{
 //                    lblDriver.text = "\(car.driver.fullName)"
 //                }
