@@ -41,6 +41,36 @@ class DataStorage{
         self.vehicleDictionary.updateValue(vehicle, forKey: vid)
     }
     
+//    func addDriver(drivers: Driver, driverId: Int)
+    //    {
+    //        driver.updateValue(drivers, forKey: driverId)
+    //    }
+    //
+    //    func removeDriver(driverId: Int)
+    //    {
+    //        driver.removeValue(forKey: driverId)
+    //    }
+    
+    func removeCustomer(customer : Customer){
+        let cid = customer.id
+        self.customerDictionary.removeValue(forKey: cid)
+    }
+    
+    func removeOwner(owner : Owner){
+        let oid = owner.id
+        self.ownerDictionary.removeValue(forKey: oid)
+    }
+    
+    func removeDriver(driver : Driver){
+        let did = driver.id
+        self.driverDictionary.removeValue(forKey: did)
+    }
+    
+    func removeVehicle(vehicle : Vehicle){
+        let vid = vehicle.identificationNumber
+        self.vehicleDictionary.removeValue(forKey: vid)
+    }
+    
     func loadPersonDetails(){
         // Customer objects
         let customer1 = Customer(id: 1, firstName: "Nikita", lastName: "Sandhu", gender: "Female", birthDate: "Oct 13, 1994", mobileNumber: "3647912580", email: "nsandhu@gmail.com", userName: "nsandhu", password: "Nsandhu94".encrypt(key: "encrypt", iv: "encrypt") ?? "encrypt", address: "159, Yorkland Blvd", city: "Toronto")

@@ -29,13 +29,23 @@ class DriverDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let bbDelete = UIBarButtonItem(title: "Delete Driver", style: .plain, target: self, action: #selector(remove))
+        navigationItem.rightBarButtonItem = bbDelete
+        
         display()
+    }
+    
+    @objc func remove(){
+        DataStorage.getInstance().removeDriver(driver:Driver(id: driver!.id, firstName: driver!.firstName, lastName: driver!.lastName, gender: driver!.gender, birthDate: driver!.birthDate, mobileNumber: driver!.mobileNumber, email: driver!.email, userName: driver!.userName, password: driver!.password, drivingLicenseNumber: driver!.drivingLicenseNumber, isDrivingHistoryCleared: driver!.isDrivingHistoryCleared, salary: driver!.salary))
+        navigationController?.popViewController(animated: true)
     }
     
     func display(){
 //        if person?.type == "Driver"{
             lblDetail14.text = "Driver's Details"
 //            let driver = person as! Driver
+        
         lblID.text = "ID                                       :  \(driver!.id)"
         lblFirstName.text = "First Name                        :  \(driver!.firstName)"
         lblLastName.text = "Last Name                        :  \(driver!.lastName)"
