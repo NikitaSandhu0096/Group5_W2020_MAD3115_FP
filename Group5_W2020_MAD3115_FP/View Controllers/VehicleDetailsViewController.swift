@@ -12,7 +12,7 @@ class VehicleDetailsViewController: UIViewController {
     
     @IBOutlet weak var tblDriver: UITableView!
     
-    var previousVC:String?;
+    var previousVC : String?
     var vehicle : Vehicle?
     var vehicleRent : VehicleRent?
 

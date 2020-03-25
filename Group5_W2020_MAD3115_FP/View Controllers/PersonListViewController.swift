@@ -28,7 +28,27 @@ class PersonListViewController: UIViewController {
     }
     
     @IBAction func bbLogout(_ sender: UIBarButtonItem) {
-        self.navigationController?.popViewController(animated: true)
+        let alert = UIAlertController(title: "Menu", message: "Select an option", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "About Us", style: .default, handler: { (action) in
+        
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let contactAboutViewController = sb.instantiateViewController(identifier: "ContactAboutViewController") as! ContactAboutViewController
+            contactAboutViewController.menuVC = "About Us"
+//            addNewCarViewController.person = self.person
+            self.navigationController?.pushViewController(contactAboutViewController, animated: true)
+        }))
+        alert.addAction(UIAlertAction(title: "Contact Us", style: .default, handler: { (action) in
+                
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let contactAboutViewController = sb.instantiateViewController(identifier: "ContactAboutViewController") as! ContactAboutViewController
+            contactAboutViewController.menuVC = "Contact Us"
+            self.navigationController?.pushViewController(contactAboutViewController, animated: true)
+        }))
+        alert.addAction(UIAlertAction(title: "Logout", style: .default, handler: { (action) in
+            self.navigationController?.popViewController(animated: true)
+        }))
+        self.present(alert, animated: true, completion: nil)
+
     }
     
     @IBAction func segPerson(_ sender: UISegmentedControl) {
