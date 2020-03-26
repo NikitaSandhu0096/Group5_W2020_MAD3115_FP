@@ -34,6 +34,7 @@ class PersonDetailsViewController: UIViewController {
         display()
     }
     override func viewWillAppear(_ animated: Bool) {
+        display()
         tblVehicle.reloadData();
     }
     
