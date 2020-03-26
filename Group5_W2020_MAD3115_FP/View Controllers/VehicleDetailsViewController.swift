@@ -45,34 +45,25 @@ class VehicleDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let bbVehicle = UIBarButtonItem(title: "Delete Vehicle", style: .plain, target: self, action: #selector(remove))
-        navigationItem.rightBarButtonItem = bbVehicle
+//        let bbVehicle = UIBarButtonItem(title: "Delete Vehicle", style: .plain, target: self, action: #selector(remove))
+//        navigationItem.rightBarButtonItem = bbVehicle
         
         display()
     }
     
-    @objc func remove(){
+//    @IBAction func bbDelete(_ sender: UIBarButtonItem) {
+//        if previousVC == "Owner"{
+//            let owner = person as! Owner
+//            if vehicle?.type == "Car"{
+//                let car = vehicle as! Car
+////                let temp = Car(identificationNumber: car.identificationNumber, description: car.description, isSelfDrive: car.isSelfDrive, manufacturerName: car.manufacturerName, isInsured: car.isInsured, insuranceProviderName: car.insuranceProviderName, vehicleNoOfSeats: car.vehicleNoOfSeats, fuelType: car.fuelType, ratePerDay: car.ratePerDay, ratePerKm: car.ratePerKm, carColor: car.carColor, carType: car.carType, driver: car.driver)
+//                owner.removeVehicleOwned(vehicle: Car(identificationNumber: car.identificationNumber, description: car.description, isSelfDrive: car.isSelfDrive, manufacturerName: car.manufacturerName, isInsured: car.isInsured, insuranceProviderName: car.insuranceProviderName, vehicleNoOfSeats: car.vehicleNoOfSeats, fuelType: car.fuelType, ratePerDay: car.ratePerDay, ratePerKm: car.ratePerKm, carColor: car.carColor, carType: car.carType, driver: car.driver))
+////                DataStorage.getInstance().removeVehicle(vehicle: Car(identificationNumber: car.identificationNumber, description: car.description, isSelfDrive: car.isSelfDrive, manufacturerName: car.manufacturerName, isInsured: car.isInsured, insuranceProviderName: car.insuranceProviderName, vehicleNoOfSeats: car.vehicleNoOfSeats, fuelType: car.fuelType, ratePerDay: car.ratePerDay, ratePerKm: car.ratePerKm, carColor: car.carColor, carType: car.carType, driver: car.driver))
+//                navigationController?.popViewController(animated: true)
+//            }
+//        }
         
-        if previousVC == "Owner"{
-            let owner = person as! Owner
-            if vehicle?.type == "Car"{
-                let car = vehicle as! Car
-                owner.removeVehicleOwned(vehicleIdentificationNumber: car.identificationNumber)
-                navigationController?.popViewController(animated: true)
-            } else if vehicle?.type == "Bus"{
-                let bus = vehicle as! Bus
-                owner.removeVehicleOwned(vehicleIdentificationNumber: bus.identificationNumber)
-                navigationController?.popViewController(animated: true)
-            } else{
-                let motorcycle = vehicle as! MotorCycle
-                owner.removeVehicleOwned(vehicleIdentificationNumber: motorcycle.identificationNumber)
-                navigationController?.popViewController(animated: true)
-            }
-        } else if previousVC == "Customer"{
-            let customer = person as! Customer
-            customer.removeVehicleRent(vehicleRentID: vehicleRent!.vehicleRentID)
-        }
-    }
+//    }
     
     func display(){
             if vehicle?.type == "Car"{

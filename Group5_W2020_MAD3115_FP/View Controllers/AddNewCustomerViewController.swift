@@ -83,7 +83,7 @@ class AddNewCustomerViewController: UIViewController, UITextFieldDelegate {
             self.present(alertController, animated: true, completion: nil)
         }else{
             if (txtMobile.text?.mobileValid() == true && txtEmail.text?.emailValid() == true) {
-                DataStorage.getInstance().addCustomer(customer: Customer(id: Int(txtID.text ?? "")!, firstName: txtFirstName.text ?? "", lastName: txtLastName.text ?? "", gender: txtGender.text ?? "", birthDate: textField_Date.text ?? "", mobileNumber: txtMobile.text ?? "", email: txtEmail.text ?? "", userName: txtUserName.text ?? "", password: txtPassword.text ?? "", address: txtAddress.text ?? "", city: txtCity.text ?? ""))
+                DataStorage.getInstance().addCustomer(customer: Customer(id: Int(txtID.text ?? "")!, firstName: txtFirstName.text ?? "", lastName: txtLastName.text ?? "", gender: txtGender.text ?? "", birthDate: textField_Date.text ?? "", mobileNumber: txtMobile.text ?? "", email: txtEmail.text ?? "", userName: txtUserName.text ?? "", password: (txtPassword.text ?? "").encrypt(key: "encrypt", iv: "encrypt") ?? "encrypt", address: txtAddress.text ?? "", city: txtCity.text ?? ""))
                navigationController?.popViewController(animated: true)
             } else{
                 let alertController = UIAlertController(title: "No New Customer created", message: "Enter valid Mobile Number and Email", preferredStyle: .alert)

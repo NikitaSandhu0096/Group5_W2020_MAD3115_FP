@@ -88,7 +88,7 @@ class AddNewDriverViewController: UIViewController, UITextFieldDelegate {
                 self.present(alertController, animated: true, completion: nil)
             }else{
                 if (txtMobile.text?.mobileValid() == true && txtEmail.text?.emailValid() == true) {
-                    DataStorage.getInstance().addDriver(driver: Driver(id: Int(txtID.text ?? "")!, firstName: txtFirstName.text ?? "", lastName: txtLastName.text ?? "", gender: txtGender.text ?? "", birthDate: textField_Date.text ?? "", mobileNumber: txtMobile.text ?? "", email: txtEmail.text ?? "", userName: txtUserName.text ?? "", password: txtPassword.text ?? "", drivingLicenseNumber: txtLNumber.text ?? "", isDrivingHistoryCleared: Bool(txtDHCleared.text ?? "")!, salary: Float(txtSalary.text ?? "")!))
+                    DataStorage.getInstance().addDriver(driver: Driver(id: Int(txtID.text ?? "")!, firstName: txtFirstName.text ?? "", lastName: txtLastName.text ?? "", gender: txtGender.text ?? "", birthDate: textField_Date.text ?? "", mobileNumber: txtMobile.text ?? "", email: txtEmail.text ?? "", userName: txtUserName.text ?? "", password: (txtPassword.text ?? "").encrypt(key: "encrypt", iv: "encrypt") ?? "encrypt", drivingLicenseNumber: txtLNumber.text ?? "", isDrivingHistoryCleared: Bool(txtDHCleared.text ?? "")!, salary: Float(txtSalary.text ?? "")!))
                     navigationController?.popViewController(animated: true)
                 }else{
                     let alertController = UIAlertController(title: "No New Driver created", message: "Enter valid Mobile Number and Email", preferredStyle: .alert)
