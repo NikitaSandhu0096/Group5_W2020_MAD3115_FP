@@ -74,6 +74,17 @@ class PersonDetailsViewController: UIViewController {
             lblVehicleList.text = "Vehicles rented by customer"
         }
     }
+    @IBAction func bbDelete(_ sender: UIBarButtonItem){
+        if person?.type == "Owner"{
+            let owner = person as! Owner
+            DataStorage.getInstance().removeOwner(owner: Owner(id: owner.id, firstName: owner.firstName, lastName: owner.lastName, gender: owner.gender, birthDate: owner.birthDate, mobileNumber: owner.mobileNumber, email: owner.email, userName: owner.userName, password: owner.password, companyTitle: owner.companyTitle, businessLandLineNumber: owner.businessLandLineNumber, website: owner.website))
+            navigationController?.popViewController(animated: true)
+        } else{
+            let customer = person as! Customer
+            DataStorage.getInstance().removeCustomer(customer: Customer(id: customer.id, firstName: customer.firstName, lastName: customer.lastName, gender: customer.gender, birthDate: customer.birthDate, mobileNumber: customer.mobileNumber, email: customer.email, userName: customer.userName, password: customer.password, address: customer.address, city: customer.city))
+            navigationController?.popViewController(animated: true)
+        }
+    }
     
     @IBAction func bbAdd(_ sender: UIBarButtonItem) {
         if person?.type == "Owner"{
