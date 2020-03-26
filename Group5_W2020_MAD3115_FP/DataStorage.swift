@@ -66,10 +66,10 @@ class DataStorage{
         self.driverDictionary.removeValue(forKey: did)
     }
     
-    func removeVehicle(vehicle : Vehicle){
-        let vid = vehicle.identificationNumber
-        self.vehicleDictionary.removeValue(forKey: vid)
-    }
+//    func removeVehicle(vehicle : Vehicle){
+//        let vid = vehicle.identificationNumber
+//        self.vehicleDictionary.removeValue(forKey: vid)
+//    }
     
     func loadPersonDetails(){
         // Customer objects

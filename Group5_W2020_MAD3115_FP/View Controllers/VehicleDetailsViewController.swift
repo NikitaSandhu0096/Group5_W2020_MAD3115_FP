@@ -68,26 +68,10 @@ class VehicleDetailsViewController: UIViewController {
                 owner.removeVehicleOwned(vehicleIdentificationNumber: motorcycle.identificationNumber)
                 navigationController?.popViewController(animated: true)
             }
+        } else if previousVC == "Customer"{
+            let customer = person as! Customer
+            customer.removeVehicleRent(vehicleRentID: vehicleRent!.vehicleRentID)
         }
-//        else{
-//            let customer = person as! Customer
-//            customer.removeVehicleRent(vehicleRentID: vehicleRent!.vehicleRentID)
-//        }
-        
-//        if vehicle?.type == "Car"{
-//            let car = vehicle as! Car
-//            DataStorage.getInstance().removeVehicle(vehicle: Car(identificationNumber: car.identificationNumber, description: car.description, isSelfDrive: car.isSelfDrive, manufacturerName: car.manufacturerName, isInsured: car.isInsured, insuranceProviderName: car.insuranceProviderName, vehicleNoOfSeats: car.vehicleNoOfSeats, fuelType: car.fuelType, ratePerDay: car.ratePerDay, ratePerKm: car.ratePerKm, carColor: car.carColor, carType: car.carType, driver: car.driver))
-//            navigationController?.popViewController(animated: true)
-//        }
-//            else if vehicle?.type == "Bus"{
-//            let bus = vehicle as! Bus
-//            DataStorage.getInstance().removeVehicle(vehicle: Bus(identificationNumber: bus.identificationNumber, description: bus.description, isSelfDrive: bus.isSelfDrive, manufacturerName: bus.manufacturerName, isInsured: bus.isInsured, vehicleNoOfSeats: bus.vehicleNoOfSeats, insuranceProviderName: bus.insuranceProviderName, fuelType: bus.fuelType, ratePerDay: bus.ratePerDay, ratePerKm: bus.ratePerKm, busType: bus.busType, iswifiAvailable: bus.iswifiAvailable, isAccessibiltyServiceAvailable: bus.isAccessibiltyServiceAvailable, driver: bus.driver))
-//            navigationController?.popViewController(animated: true)
-//        }else{
-//            let motorcycle = vehicle as! MotorCycle
-//            DataStorage.getInstance().removeVehicle(vehicle: MotorCycle(identificationNumber: motorcycle.identificationNumber, description: motorcycle.description, manufacturerName: motorcycle.manufacturerName, isSelfDrive: motorcycle.isSelfDrive, isInsured: motorcycle.isInsured, insuranceProviderName: motorcycle.insuranceProviderName, vehicleNoOfSeats: motorcycle.vehicleNoOfSeats, fuelType: motorcycle.fuelType, ratePerDay: motorcycle.ratePerDay, ratePerKm: motorcycle.ratePerKm, maxTopSpeed: motorcycle.maxTopSpeed, milage: motorcycle.milage))
-//            navigationController?.popViewController(animated: true)
-//        }
     }
     
     func display(){
