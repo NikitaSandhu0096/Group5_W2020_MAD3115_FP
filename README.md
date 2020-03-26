@@ -6,6 +6,8 @@
 # Kamalpreet Kaur: C0777682
 
 
+Jira Link: https://team-1581126235150.atlassian.net/secure/RapidBoard.jspa?rapidView=3&projectKey=VRS&view=reporting&chart=sprintRetrospective&sprint=10
+
 References:
 ___________
 
