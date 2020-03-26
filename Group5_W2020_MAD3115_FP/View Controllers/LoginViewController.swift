@@ -15,8 +15,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        txtEmail.text = "nsandhu@gmail.com"
-        txtPassword.text = "nsandhu"
+//        txtEmail.text = "nsandhu@gmail.com"
+//        txtPassword.text = "nsandhu"
 //        let bbLogin = UIBarButtonItem(title: "Login", style: .plain, target: self, action: #selector(login))
 //        navigationItem.rightBarButtonItem = bbLogin
     }
@@ -31,7 +31,7 @@ class LoginViewController: UIViewController {
     @IBAction func bbLogin(_ sender: UIBarButtonItem) {
 //    }
 //    @objc func login(){
-        if (txtEmail.text == "nsandhu@gmail.com" && txtPassword.text == "nsandhu"){
+        if (txtEmail.text == "nsandhu@gmail.com" && txtPassword.text == "nsandhu") || (txtEmail.text == "kkaur@yahoo.com" && txtPassword.text == "kkaur") || (txtEmail.text == "jthomas@yahoo.com" && txtPassword.text == "jthomas"){
         if (txtEmail.text?.emailValid() == true && txtPassword.text != ""){
 //            let alertController = UIAlertController(title: "Login Successful", message:
 //                "Valid email and password", preferredStyle: .alert)
