@@ -83,7 +83,7 @@ class AddNewDriverViewController: UIViewController, UITextFieldDelegate {
                 alertController.addAction(UIAlertAction(title: "OK", style: .default))
                 self.present(alertController, animated: true, completion: nil)
             }else if txtSalary.text == "" {
-                let alertController = UIAlertController(title: "No new Driver created", message: "Enter Driver's Website", preferredStyle: .alert)
+                let alertController = UIAlertController(title: "No new Driver created", message: "Enter Driver's Salary", preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "OK", style: .default))
                 self.present(alertController, animated: true, completion: nil)
             }else{
