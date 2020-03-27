@@ -15,8 +15,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        txtEmail.text = "nsandhu@gmail.com"
-        txtPassword.text = "nsandhu"
+//        txtEmail.text = "nsandhu@gmail.com"
+//        txtPassword.text = "nsandhu"
 //        let bbLogin = UIBarButtonItem(title: "Login", style: .plain, target: self, action: #selector(login))
 //        navigationItem.rightBarButtonItem = bbLogin
     }
