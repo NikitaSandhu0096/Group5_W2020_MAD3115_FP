@@ -10,9 +10,6 @@ Jira Link: https://team-1581126235150.atlassian.net/secure/RapidBoard.jspa?rapid
 
 References:
 ___________
-
-https://stackoverflow.com/questions/43108563/log-to-both-xcode-console-and-file
-
 https://stackoverflow.com/questions/27998409/email-phone-validation-in-swift
 
 https://forums.developer.apple.com/thread/89272
