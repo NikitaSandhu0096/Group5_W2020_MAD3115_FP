@@ -1,9 +1,9 @@
 # Group5_W2020_MAD3115_FP
 ## Vehicle Renting System
 
-# Nikita Sandhu : C0766552
-# Jyothi Thomas: C0775696
-# Kamalpreet Kaur: C0777682
+# Nikita Sandhu
+# Jyothi Thomas
+# Kamalpreet Kaur
 
 
 Jira Link: https://team-1581126235150.atlassian.net/secure/RapidBoard.jspa?rapidView=3&projectKey=VRS&view=reporting&chart=sprintRetrospective&sprint=10
