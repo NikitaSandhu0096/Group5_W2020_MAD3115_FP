@@ -18,3 +18,4 @@ https://stackoverflow.com/questions/35700281/date-format-in-swift
 
 https://stackoverflow.com/questions/24723431/swift-days-between-two-nsdates
 
+https://www.flaticon.com/free-icon/rent-a-car_887360?term=vehicle%20renting&page=1&position=74
